@@ -4,7 +4,7 @@ Murder Mystery
 
 :: StoryData
 {
-  "ifid": "12fa01c9-f15b-4349-9ddc-25dc1d874816",
+  "ifid": "0d1fea0d-b2d7-4233-be81-d4e90658929b",
   "format": "Harlowe",
   "format-version": "3.3.9",
   "tag-colors": {
@@ -17,6 +17,9 @@ Murder Mystery
 :: Alvin's Room {"position":"3750,1475","size":"100,100"}
 (display:"Increase time by 1")
 (display:"Print Time")
+
+(text-colour:lime)[ [[alvin gun<-gun]]]
+(text-colour:lime)[ [[alvin bed<-bed]]]
 
 
 :: Ballroom {"position":"2100,600","size":"200,200"}
@@ -31,7 +34,6 @@ You step into the Ballroom, and the scale of the room immediately strikes you. T
 :: Ben's Room {"position":"3500,875","size":"100,100"}
 (display:"Increase time by 1")
 (display:"Print Time")
-
 
 
 :: Butler's Room {"position":"1100,1000","size":"100,100"}
@@ -62,7 +64,7 @@ You step into the Dining Hall, greeted by a sense of grandeur and formality. A l
 
 <img src="https://tinypic.host/images/2024/08/13/hall.jpeg"\>
 
-You step into the ''Grand Foyer''. 2 grand chandeliers overhead bath the room in warm, golden light, its crystals shimmering like a thousand tiny stars. Two curved staircases rise majestically on either side of the foyer, their dark oak banisters polished to perfection. (if:$chef_leading is 0)[Each step is carpeted in deep crimson, the plush fabric soft underfoot, inviting you to(text-colour:orange)[ [[Mezzanine<-ascend to the mezzanine above]]]. Directly ahead, beneath the mezzanine, are imposing double doors that lead to the(text-colour:orange)[ [[Main Hallway<-main hallway.]]] A richly woven rug, adorned with intricate patterns, spreads out beneath your feet, cushioning your steps as you move through the room. To the right, there is a door leading to the(text-colour:orange)[ [[Parlor<-Parlor]]], while on the left, an almost hidden door leads to(text-colour:orange)[ [[Staff Hallway #1<-a staff hallway]]]. Next to that is a more noticeable dark wood door leading to the(text-colour:orange)[ [[Guest Bedroom<-Guest Bedroom]]]. The(text-colour:orange)[ [[Porch<-large dark oak front door]]] is the biggest door in the room.
+You step into the ''Grand Foyer''. 2 grand chandeliers overhead bath the room in warm, golden light, its crystals shimmering like a thousand tiny stars. Two curved staircases rise majestically on either side of the foyer, their dark oak banisters polished to perfection. (if:$chef_leading is 0)[Each step is carpeted in deep crimson, the plush fabric soft underfoot, inviting you to(text-colour:orange)[ [[Mezzanine<-ascend to the mezzanine above]]]. Directly ahead, beneath the mezzanine, are imposing double doors that lead to the(text-colour:orange)[ [[Main Hallway<-main hallway.]]] A richly woven rug, adorned with intricate patterns, spreads out beneath your feet, cushioning your steps as you move through the room. To the right, there is a door leading to the(text-colour:orange)[ [[Parlor<-Parlor]]], while on the left, an almost hidden door leads to(text-colour:orange)[ [[Staff Hallway #1<-a staff hallway]]]. Next to that is a more noticeable dark wood door leading to the(text-colour:orange)[ [[Guest Bedroom<-Guest Bedroom]]]. The(text-colour:orange)[ [[Porch<-large dark oak front door]]] is the biggest door in the room.]
 
 (if:$chef_leading is 1)[The chef steps through(text-colour:orange)[ [[Main Hallway<-two double doors]]].]
 
@@ -126,7 +128,7 @@ If you want to complete an analysis on any evidence, head outside to the police 
 (display:"Increase time by 1")
 (display:"Print Time")
 
-You step into the ''Library'', and the room greets you with an air of quiet contemplation. The walls are lined with dark wooden bookshelves, filled with an array of old, leather-bound books. A large, plush armchair sits in the center of the room, its upholstery worn from years of use.
+You step into the ''Library'', and the room greets you with an air of quiet contemplation. The walls are lined with dark wooden bookshelves, filled with an array of old, leather-bound books. A large, plush armchair sits in the center of the room, its upholstery worn from years of use. Nearby, a small side table holds a(text-colour:lime)[ [[library mug<-empty mug]]].(text-colour:lime)[ [[library lamp<-A lamp]]] rests on the table, currently turned off.(text-colour:lime)[ [[library rug<-A highly constractable rug]]] lies underfoot, its pattern faded but still recognizable. Across the room, a tall window is framed by heavy curtains, partially drawn to reveal the storm outside. In one corner, a fireplace crackles softly, its warmth filling the room. Above the fireplace,(text-colour:lime)[ [[library painting<-a large painting]]] hangs, its subject a dark, stormy seascape. (text-colour:lime)[ [[library bookshelf<-A bookshelf]]] stands by the window, with one book slightly ajar.
 
 You can head back to the(text-colour:orange)[ [[Mezzanine<-Mezzanine]]] whenever you want.
 
@@ -159,7 +161,7 @@ Ascending the Grand Staircase, you arrive at the Mezzanine above the Grand Foyer
 
 You step into the ''Parlor'', and the room exudes an air of refined elegance. The walls are adorned with dark oak paneling, rich in texture and warmth, creating a cozy yet sophisticated atmosphere. A large, intricately carved fireplace dominates the left wall, its hearth crackling with a lively fire that casts flickering shadows across the room. The mantel above is adorned with an ornate gilded mirror, reflecting the golden light of the fire.
 
-Positioned on the rug are four armchairs and a matching sofa, all upholstered in deep burgundy velvet. The furniture is arranged around a low, mahogany coffee table, upon which rests a delicate porcelain tea set and a few well-thumbed books. To the right, large, mullioned windows stretch nearly from floor to ceiling, offering a view of the storm raging outside. The rain beats heavily against the glass, distorting the view of the darkened garden beyond. Behind you is the(text-colour:orange)[ [[Grand Foyer<-door you entered from]]]
+At the center of the room, a plush cream-coloured rug covers the polished wooden floor, its soft fibers muffling your footsteps. Positioned on the rug are four armchairs and a matching sofa, all upholstered in deep burgundy velvet. The furniture is arranged around a low, mahogany coffee table, upon which rests a delicate porcelain tea set and a few well-thumbed books. To the right, large, mullioned windows stretch nearly from floor to ceiling, offering a view of the storm raging outside. The rain beats heavily against the glass, distorting the view of the darkened garden beyond. Behind you is the(text-colour:orange)[ [[Grand Foyer<-door you entered from]]]
 
 
 :: Porch {"position":"2000,1775","size":"100,100"}
@@ -228,3 +230,216 @@ You've just been called out to a crime scene of a murder scene. You have at an o
 
 :: Untitled Passage {"position":"700,300","size":"100,100"}
 
+
+
+:: alvin bed {"position":"4150,1550","size":"100,100"}
+(display:"Increase time by 1")
+(display:"Print Time")
+
+You examine the bed. It's a four-poster bed.
+
+[[alvin notes<-Take a look under it]]]
+
+[[Alvin's Room<-Stop examining]]
+
+
+:: alvin gun {"position":"3975,1725","size":"100,100"}
+(display:"Increase time by 1")
+(display:"Print Time")
+
+(if:$evidence_alvin_gun is 0)[(set:$evidence_alvin_gun to 1)]
+
+(if:$evidence_alvin_gun is 1)[An unloaded gun is laying on one of the drawers.
+
+[[alvin gun2<-Collect fingerprints from the gun (takes 5 mins)]]]
+
+(if:$evidence_alvin_gun is 2)[An unloaded gun is laying on one of the drawers. You've already collected fingerprints from it.]
+
+[[Alvin's Room<-Stop examining]]
+
+
+:: alvin gun2 {"position":"3875,2075","size":"100,100"}
+(set:$evidence_alvin_gun to 2)
+(display:"Increase time by 1")
+(display:"Increase time by 1")
+(display:"Increase time by 1")
+(display:"Increase time by 1")
+(display:"Increase time by 1")
+(go-to:"alvin gun")
+
+
+:: alvin notes {"position":"4275,1725","size":"100,100"}
+(display:"Increase time by 1")
+(display:"Print Time")
+
+(if:$evidence_alvin_notes is 0)[(set:$evidence_alvin_notes to 1)]
+
+(if:$evidence_alvin_notes is 1)[There is a thick stack of notes under the bed.
+
+[[alvin notes2<-Read the notes (takes 3 mins)]]]
+
+(if:$evidence_alvin_notes is 2)[There is a thick stack of notes under the bed. By reading them, it seems that Alvin owes a lot of people a lot of money. Some of names you noticed were Benjamin McIntosh, Luis McMillan, Jack Farmer and Patricia Curtis.]
+
+[[alvin bed<-Stop examining]]
+
+
+:: alvin notes2 {"position":"4275,1850","size":"100,100"}
+(set:$evidence_alvin_notes to 2)
+(display:"Increase time by 1")
+(display:"Increase time by 1")
+(display:"Increase time by 1")
+(go-to:"alvin notes")
+
+
+:: library bookshelf {"position":"3375,2100","size":"100,100"}
+(display:"Increase time by 1")
+(display:"Print Time")
+
+You take a close look at the bookshelf. It has perfect rows of books on it.
+
+[[library bookshelf 2<-Look behind it]]
+
+[[Library<-Stop examining]]
+
+
+:: library bookshelf 2 {"position":"3425,2275","size":"100,100"}
+(display:"Increase time by 1")
+(display:"Print Time")
+
+(if:$evidence_library_lamp_cord is 0)[(set:$evidence_library_lamp_cord to 1)]
+
+(if:$evidence_library_lamp_cord is 1)[Behind the bookshelf, you find a lamp cord with specks of blood on it.
+
+[[library bookshelf3<-Collect the cord (takes 3 mins)]]]
+(if:$evidence_library_lamp_cord is 2)[There is nothing else behind the bookshelf. This is where you found the lamp cord.]
+
+[[library bookshelf<-Stop examining]]
+
+
+:: library bookshelf3 {"position":"3425,2400","size":"100,100"}
+(set:$evidence_library_lamp_cord to 2)
+(display:"Increase time by 1")
+(display:"Increase time by 1")
+(display:"Increase time by 1")
+(go-to:"library bookshelf 2")
+
+
+:: library carpet blood {"position":"3250,2350","size":"100,100"}
+(display:"Increase time by 1")
+(display:"Print Time")
+
+(if:$evidence_library_bloodstains is 0)[(set:$evidence_library_bloodstains to 1)]
+
+(if:$evidence_library_bloodstains is 1)[You examine the blood stains on the carpet.
+
+[[library carpet blood2<-Take a sample (takes 5 mins)]]]
+
+(if:$evidence_library_bloodstains is 2)[You examine the blood stains on the carpet. You've already taken a sample of the blood.]
+
+[[library rug<-Stop examining]]
+
+
+:: library carpet blood2 {"position":"3250,2475","size":"100,100"}
+(set:$evidence_library_bloodstains to 2)
+(display:"Increase time by 1")
+(display:"Increase time by 1")
+(display:"Increase time by 1")
+(display:"Increase time by 1")
+(display:"Increase time by 1")
+(go-to:"library carpet blood")
+
+
+:: library footprint {"position":"2850,2300","size":"100,100"}
+(display:"Increase time by 1")
+(display:"Print Time")
+
+(if:$evidence_library_footprint is 0)[(set:$evidence_library_footprint to 1)]
+
+(if:$evidence_library_footprint is 1)[You examine the footprint on the carpet.
+[[library footprint2<-Take a sample (takes 5 mins)]]]
+
+(if:$evidence_library_footprint is 2)[You examine the footprint on the carpet. You've already taken a sample of the footprint.]
+
+[[library rug<-Stop examining]]
+
+
+:: library footprint2 {"position":"2850,2425","size":"100,100"}
+(set:$evidence_library_footprint to 2)
+(display:"Increase time by 1")
+(display:"Increase time by 1")
+(display:"Increase time by 1")
+(display:"Increase time by 1")
+(display:"Increase time by 1")
+(go-to:"library footprint")
+
+
+:: library glass {"position":"3050,2300","size":"100,100"}
+(display:"Increase time by 1")
+(display:"Print Time")
+
+(if:$evidence_library_glass is 0)[(set:$evidence_library_glass to 1)]
+
+(if:$evidence_library_glass is 1)[You examine the blood stains on the glass shard.
+
+[[library glass2<-Collect the glass shard safety (takes 5 mins)]]]
+
+(if:$evidence_library_glass is 2)[You've already collected the glass shard.]
+
+[[library rug<-Stop examining]]
+
+
+:: library glass2 {"position":"3050,2425","size":"100,100"}
+(set:$evidence_library_glass to 2)
+(display:"Increase time by 1")
+(display:"Increase time by 1")
+(display:"Increase time by 1")
+(display:"Increase time by 1")
+(display:"Increase time by 1")
+(go-to:"library glass")
+
+
+:: library lamp {"position":"3375,1975","size":"100,100"}
+(display:"Increase time by 1")
+(display:"Print Time")
+
+You take a close look at the lamp. You notice that the cord is missing from the lamp.
+
+(set:$evidence_library_lamp to 1)
+
+[[Library<-Stop examining]]
+
+
+:: library mug {"position":"3250,1975","size":"100,100"}
+(display:"Increase time by 1")
+(display:"Print Time")
+
+You take a close look at the mug. It is empty, but there are some coffee stains along the inside of it.
+
+[[Library<-Stop examining]]
+
+
+:: library painting {"position":"3250,2100","size":"100,100"}
+(display:"Increase time by 1")
+(display:"Print Time")
+
+You take a close look at the painting. It's very old and faded, but it looks it's a picture of someone.
+
+[[Library<-Stop examining]]
+
+
+:: library rug {"position":"3125,1975","size":"100,100"}
+(display:"Increase time by 1")
+(display:"Print Time")
+
+(if:$action_library_rug_moved is 0)[You take a close look at the rug. It doesn't really seem like it fits in this room...
+
+[[library rug2<-Move the rug aside.]]]
+
+(if:$action_library_rug_moved is 1)[With the rug out of the way, you can see a small piece of(text-colour:lime)[ [[library glass<-blood stained glass]]], a(text-colour:lime)[ [[library footprint<-footprint]]], and some (text-colour:lime)[ [[library carpet blood<-blood stains]]] on the carpet.]
+
+[[Library<-Stop examining]]
+
+
+:: library rug2 {"position":"2900,2000","size":"100,100"}
+(set:$action_library_rug_moved to 1)
+(go-to:"library rug")
