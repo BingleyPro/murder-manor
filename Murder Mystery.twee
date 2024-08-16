@@ -1,12 +1,13 @@
 :: StoryTitle
-Murder Mystery
+Everwood Manor
 
 
 :: StoryData
 {
-  "ifid": "f0521cf1-f1a4-4b1f-b1a1-24a1b2cf03b2",
+  "ifid": "551D7C2C-6530-4A07-8ED6-0451C3F874CA",
   "format": "Harlowe",
   "format-version": "3.3.9",
+  "start": "Start",
   "tag-colors": {
     "Functions": "yellow"
   },
@@ -34,6 +35,9 @@ You step into the Ballroom, and the scale of the room immediately strikes you. T
 :: Ben's Room {"position":"3500,875","size":"100,100"}
 (display:"Increase time by 1")
 (display:"Print Time")
+
+(text-colour:lime)[ [[ben diary<-diary]]]
+(text-colour:lime)[ [[ben fireplace<-fireplace]]]
 
 
 :: Butler's Room {"position":"1100,1000","size":"100,100"}
@@ -64,7 +68,9 @@ You step into the Dining Hall, greeted by a sense of grandeur and formality. A l
 
 <img src="https://tinypic.host/images/2024/08/13/hall.jpeg"\>
 
-You step into the ''Grand Foyer''. 2 grand chandeliers overhead bath the room in warm, golden light, its crystals shimmering like a thousand tiny stars. Two curved staircases rise majestically on either side of the foyer, their dark oak banisters polished to perfection. (if:$chef_leading is 0)[Each step is carpeted in deep crimson, the plush fabric soft underfoot, inviting you to(text-colour:orange)[ [[Mezzanine<-ascend to the mezzanine above]]]. Directly ahead, beneath the mezzanine, are imposing double doors that lead to the(text-colour:orange)[ [[Main Hallway<-main hallway.]]] A richly woven rug, adorned with intricate patterns, spreads out beneath your feet, cushioning your steps as you move through the room. To the right, there is a door leading to the(text-colour:orange)[ [[Parlor<-Parlor]]], while on the left, an almost hidden door leads to(text-colour:orange)[ [[Staff Hallway #1<-a staff hallway]]]. Next to that is a more noticeable dark wood door leading to the(text-colour:orange)[ [[Guest Bedroom<-Guest Bedroom]]]. The(text-colour:orange)[ [[Porch<-large dark oak front door]]] is the biggest door in the room.]
+You step into the ''Grand Foyer''. 2 grand chandeliers overhead bath the room in warm, golden light, its crystals shimmering like a thousand tiny stars. Two curved staircases rise majestically on either side of the foyer, their dark oak banisters polished to perfection. (if:$chef_leading is 0)[Each step is carpeted in deep crimson, the plush fabric soft underfoot, inviting you to(text-colour:orange)[ [[Mezzanine<-ascend to the mezzanine above]]]. Directly ahead, beneath the mezzanine, are imposing double doors that lead to the(text-colour:orange)[ [[Main Hallway<-main hallway.]]] A richly woven rug, adorned with intricate patterns, spreads out beneath your feet, cushioning your steps as you move through the room. To the right, there is a door leading to the(text-colour:orange)[ [[Parlor<-Parlor]]], while on the left, an almost hidden door leads to(text-colour:orange)[ [[Staff Hallway #1<-a staff hallway]]]. Next to that is a more noticeable dark wood door leading to the(text-colour:orange)[ [[Guest Bedroom<-Guest Bedroom]]]. The(text-colour:orange)[ [[Porch<-large dark oak front door]]] is the biggest door in the room.
+
+There is a(text-colour:lime)[ [[foyer phone<-phone on a small table]]] next to the staircase.]
 
 (if:$chef_leading is 1)[The chef steps through(text-colour:orange)[ [[Main Hallway<-two double doors]]].]
 
@@ -84,7 +90,7 @@ You step into the Guest Bathroom, and the room is immediately welcoming, with a 
 
 <img src="https://tinypic.host/images/2024/08/13/2b6b1423b9a500c92d018965c315386d-3396371670.jpg" width=400\>
 
-You step into the ''Guest Bedroom'', and the room welcomes you with a sense of understated luxury. The dark oak paneling of the walls adds warmth and richness, while the floor is covered in a thick, deep blue rug that muffles your footsteps. A large, four-poster bed dominates the center of the room, draped in heavy, burgundy curtains with golden tassels. The bed is adorned with a plush comforter and numerous decorative pillows, inviting you to sink into its softness. To the right, two doors lead off into(text-colour:orange)[ <span title="Enter the Guest Walk-in-Wardrobe">[[Guest Walk-in-Wardrobe<-a walk-in wardrobe]]</span> ]and(text-colour:orange)[ [[Guest Bathroom<-a  private bathroom]]]. The wardrobe door is made of polished oak, while the bathroom door is painted in a deep green hue, complementing the earthy tones of the room. A tall, narrow window on the far wall is framed by heavy, velvet curtains, through which the storm outside rages on, the rain battering against the glass. A small writing desk with an ornate chair sits by the window, the surface cluttered with an old-fashioned oil lamp, a quill, and a stack of parchment.
+You step into the ''Guest Bedroom'', and the room welcomes you with a sense of understated luxury. The dark oak paneling of the walls adds warmth and richness, while the floor is covered in a thick, deep blue rug that muffles your footsteps. A large, four-poster bed dominates the center of the room, draped in heavy, burgundy curtains with golden tassels. The bed is adorned with a plush comforter and numerous decorative pillows, inviting you to sink into its softness. To the right, two doors lead off into(text-colour:orange)[ <span title="Enter the Guest Walk-in-Wardrobe">[[Guest Walk-in-Wardrobe<-a walk-in wardrobe]]</span> ]and(text-colour:orange)[ [[Guest Bathroom<-a  private bathroom]]]. The wardrobe door is made of polished oak, while the bathroom door is painted in a deep green hue, complementing the earthy tones of the room. A tall, narrow window on the far wall is framed by heavy, velvet curtains, through which the storm outside rages on, the rain battering against the glass. A small writing desk with an ornate chair sits by the window, the surface cluttered with an old-fashioned oil lamp, a quill, and a stack of parchment. An armchair, upholstered in a rich, patterned fabric, sits beside the bed, with a small side table with a(text-colour:lime)[ [[guest cigarettes<-pack of cigarettes]]] on it. Next to them, there is a(text-colour:lime)[ [[guest knives<-collection of knives]]]. A(text-colour:lime)[ [[guest lighter<-lighter]]] is on the ground.
 
 
 :: Guest Walk-in-Wardrobe {"position":"1100,1850","size":"100,100"}
@@ -159,9 +165,9 @@ Ascending the Grand Staircase, you arrive at the Mezzanine above the Grand Foyer
 
 <img width=400 src="https://tinypic.host/images/2024/08/13/lounge.webp"\>
 
-You step into the ''Parlor'', and the room exudes an air of refined elegance. The walls are adorned with dark oak paneling, rich in texture and warmth, creating a cozy yet sophisticated atmosphere. A large, intricately carved fireplace dominates the left wall, its hearth crackling with a lively fire that casts flickering shadows across the room. The mantel above is adorned with an ornate gilded mirror, reflecting the golden light of the fire.
+You step into the ''Parlor'', and the room exudes an air of refined elegance. The walls are adorned with dark oak paneling, rich in texture and warmth, creating a cozy yet sophisticated atmosphere. A large, intricately carved fireplace dominates the left wall, its hearth crackling with a lively fire that casts flickering shadows across the room. The mantel above is adorned with an ornate gilded mirror, reflecting the golden light of the fire. There is a(text-colour:lime)[ [[parlor wine bottle<-wine bottle]]] on the ground.
 
-At the center of the room, a plush cream-coloured rug covers the polished wooden floor, its soft fibers muffling your footsteps. Positioned on the rug are four armchairs and a matching sofa, all upholstered in deep burgundy velvet. The furniture is arranged around a low, mahogany coffee table, upon which rests a delicate porcelain tea set and a few well-thumbed books. To the right, large, mullioned windows stretch nearly from floor to ceiling, offering a view of the storm raging outside. The rain beats heavily against the glass, distorting the view of the darkened garden beyond. Behind you is the(text-colour:orange)[ [[Grand Foyer<-door you entered from]]]
+At the center of the room, a(text-colour:lime)[ [[parlor rug<-plush cream-coloured rug]]] covers the polished wooden floor, its soft fibers muffling your footsteps. Positioned on the rug are four armchairs and a matching sofa, all upholstered in deep burgundy velvet. The furniture is arranged around a low, mahogany coffee table, upon which rests a delicate porcelain tea set and a few well-thumbed books. To the right, large, mullioned windows stretch nearly from floor to ceiling, offering a view of the storm raging outside. The rain beats heavily against the glass, distorting the view of the darkened garden beyond. Behind you is the(text-colour:orange)[ [[Grand Foyer<-door you entered from]]]
 
 
 :: Porch {"position":"2000,1775","size":"100,100"}
@@ -291,6 +297,59 @@ You examine the bed. It's a four-poster bed.
 (go-to:"alvin notes")
 
 
+:: ben diary {"position":"3575,1050","size":"100,100"}
+(display:"Increase time by 1")
+(display:"Print Time")
+
+(if:$evidence_ben_diary is 0)[(set:$evidence_ben_diary to 1)]
+
+(if:$evidence_ben_diary is 1)[A diary is laying on the table.
+
+[[ben diary2<-Skip your morals lesson and read the diary (takes 5 mins)]]]
+
+(if:$evidence_ben_diary is 2)[A diary is laying on the table. In it, you find that Ben seemed to have quite a few arguments with his father, Alvin.]
+
+[[Ben's Room<-Stop examining]]
+
+
+:: ben diary2 {"position":"3775,1225","size":"100,100"}
+(set:$evidence_ben_diary to 2)
+(display:"Increase time by 1")
+(display:"Increase time by 1")
+(display:"Increase time by 1")
+(display:"Increase time by 1")
+(display:"Increase time by 1")
+(go-to:"ben diary")
+
+
+:: ben fireplace {"position":"3825,875","size":"100,100"}
+(display:"Increase time by 1")
+(display:"Print Time")
+
+You examine the fireplace. (if:$action_fire_out is 0)[There seems to be something inside that isn't burning...
+
+(if:$water_bucket is 0)[You have nothing to put the fire out with.]
+
+(if:$water_bucket is 1)[[ben gloves<-Put out the fire with the water bucket.]]]]
+
+(if:$action_fire_out is 1)[You already put the fire out. Inside the fireplace, you find some charred leather gloves.]
+
+[[Ben's Room<-Stop examining]]
+
+
+:: ben gloves {"position":"3825,1000","size":"100,100"}
+(display:"Increase time by 1")
+(display:"Print Time")
+
+(set:$action_fire_out to 1)
+
+(set:$evidence_ben_burnt_gloves to 1)
+
+Inside the fireplace, you find some charred leather gloves.
+
+[[Ben's Room<-Stop Examining]]
+
+
 :: butler awake {"position":"750,1075","size":"100,100"}
 (set:$evidence_bulter_sleeping to 2)
 (display:"Increase time by 1")
@@ -393,6 +452,100 @@ You examine the phone. The cord looks broken and is unplugged.
 (display:"Increase time by 1")
 (display:"Increase time by 1")
 (go-to:"butler phone")
+
+
+:: foyer phone {"position":"2300,1750","size":"100,100"}
+(display:"Increase time by 1")
+(display:"Print Time")
+
+(if:$evidence_foyer_phone is 0)[(set:$evidence_foyer_phone to 1)]
+
+You take a close look at the phone.
+
+(if:$evidence_foyer_phone is 1)[ [[foyer phone2<-Collect fingerprints (takes 5 mins)]]]
+
+(if:$evidence_foyer_phone is 2)[You already collected fingerprint samples from the phone.]
+
+[[Grand Foyer<-Stop examining]]
+
+
+:: foyer phone2 {"position":"2475,1775","size":"100,100"}
+(set:$evidence_foyer_phone to 2)
+(display:"Increase time by 1")
+(display:"Increase time by 1")
+(display:"Increase time by 1")
+(display:"Increase time by 1")
+(display:"Increase time by 1")
+(go-to:"foyer phone")
+
+
+:: guest cigarettes {"position":"1575,1850","size":"100,100"}
+(display:"Increase time by 1")
+(display:"Print Time")
+
+(if:$evidence_guest_cigars is 0)[(set:$evidence_guest_cigars to 1)]
+
+(if:$evidence_guest_cigars is 1)[You examine the packs of cigarettes next to the bed. They are mostly full, but some have been taken already.
+
+[[guest cigars2<-Collect a pack of cigarettes safely (takes 3 mins)]]]
+
+(if:$evidence_guest_cigars is 2)[You examine the packs of cigarettes next to the bed. They are mostly full, but some have been taken already. You've already collected a pack of the cigarettes.]
+
+[[Guest Bedroom<-Stop examining]]
+
+
+:: guest cigars2 {"position":"1500,2025","size":"100,100"}
+(set:$evidence_guest_cigars to 2)
+(display:"Increase time by 1")
+(display:"Increase time by 1")
+(display:"Increase time by 1")
+(go-to:"guest cigarettes")
+
+
+:: guest knives {"position":"1375,1950","size":"100,100"}
+(display:"Increase time by 1")
+(display:"Print Time")
+
+(if:$evidence_guest_knives is 0)[(set:$evidence_guest_knives to 1)]
+
+(if:$evidence_guest_knives is 1)[You examine the collection of knives. They look very sharp. One is missing.
+[[guest knives2<-Collect fingerprint samples from the other knives (takes 5 mins)]]]
+
+(if:$evidence_guest_knives is 2)[You examine the collection of knives. They look very sharp. One is missing. You already collected fingerprints from the other knives.]
+
+[[Guest Bedroom<-Stop examining]]
+
+
+:: guest knives2 {"position":"1375,2075","size":"100,100"}
+(set:$evidence_guest_knives to 2)
+(display:"Increase time by 1")
+(display:"Increase time by 1")
+(display:"Increase time by 1")
+(display:"Increase time by 1")
+(display:"Increase time by 1")
+(go-to:"guest knives")
+
+
+:: guest lighter {"position":"1175,1975","size":"100,100"}
+(display:"Increase time by 1")
+(display:"Print Time")
+
+(if:$evidence_guest_lighter is 0)[(set:$evidence_guest_lighter to 1)]
+
+(if:$evidence_guest_lighter is 1)[You examine the lighter. It's warm to the touch, and is almost out of fuel.
+[[guest lighter2<-Collect the lighter safely (takes 3 mins)]]]
+
+(if:$evidence_guest_lighter is 2)[You already collected the lighter.]
+
+[[Guest Bedroom<-Stop examining]]
+
+
+:: guest lighter2 {"position":"1150,2150","size":"100,100"}
+(set:$evidence_guest_lighter to 2)
+(display:"Increase time by 1")
+(display:"Increase time by 1")
+(display:"Increase time by 1")
+(go-to:"guest lighter")
 
 
 :: library bookshelf {"position":"3375,2100","size":"100,100"}
@@ -547,3 +700,39 @@ You take a close look at the painting. It's very old and faded, but it looks it'
 :: library rug2 {"position":"2900,2000","size":"100,100"}
 (set:$action_library_rug_moved to 1)
 (go-to:"library rug")
+
+
+:: parlor rug {"position":"2575,1475","size":"100,100"}
+(display:"Increase time by 1")
+(display:"Print Time")
+
+(if:$evidence_parlor_rug is 0)[(set:$evidence_parlor_rug to 1)]
+
+You examine the rug. It looks like a pretty normal rug.
+
+[[Parlor<-Stop examining]]
+
+
+:: parlor wine bottle {"position":"2400,1525","size":"100,100"}
+(display:"Increase time by 1")
+(display:"Print Time")
+
+(if:$evidence_parlor_winebottle is 0)[(set:$evidence_parlor_winebottle to 1)]
+
+(if:$evidence_parlor_winebottle is 1)[A wine bottle is laying on the ground.
+
+[[parlor wine bottle2<-Take fingerprint samples (takes 5 mins)]]]
+
+(if:$evidence_parlor_winebottle is 2)[A wine bottle is laying on the ground. You already collected fingerprint samples from it.]
+
+[[Parlor<-Stop examining]]
+
+
+:: parlor wine bottle2 {"position":"2525,1650","size":"100,100"}
+(set:$evidence_parlor_winebottle to 2)
+(display:"Increase time by 1")
+(display:"Increase time by 1")
+(display:"Increase time by 1")
+(display:"Increase time by 1")
+(display:"Increase time by 1")
+(go-to:"parlor wine bottle")
