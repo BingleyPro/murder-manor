@@ -4,7 +4,7 @@ Murder Mystery
 
 :: StoryData
 {
-  "ifid": "0d1fea0d-b2d7-4233-be81-d4e90658929b",
+  "ifid": "f0521cf1-f1a4-4b1f-b1a1-24a1b2cf03b2",
   "format": "Harlowe",
   "format-version": "3.3.9",
   "tag-colors": {
@@ -42,7 +42,7 @@ You step into the Ballroom, and the scale of the room immediately strikes you. T
 
 <img width=400 src="https://tinypic.host/images/2024/08/13/03333e24b70e1ff86540930d97a27a27-1140514414.jpg"\>
 
-You step into the Butler's Room, and the atmosphere shifts from the utilitarian to one of subdued comfort. The room is small but well-appointed. The walls are lined with shelves filled with neatly organized household records and a few personal items. A wardrobe stands in one corner, its doors slightly ajar, revealing a selection of well-pressed uniforms. The rain outside is faintly audible, the sound barely penetrating the thick walls. The(text-colour:orange)[ [[Staff Hallway #1<-door behind you leads back to the Staff Hallway]]].
+You step into the Butler's Room, and the atmosphere shifts from the utilitarian to one of subdued comfort. The room is small but well-appointed. There is a single bed with(text-colour:lime)[ [[butler bed<-someone sleeping in it]]]. A sturdy(text-colour:lime)[ [[butler desk<-wooden desk]]] sits beneath a small, curtained window, the surface cluttered with ledgers, papers, and a quill. The walls are lined with shelves filled with neatly organized household records and a few personal items. A wardrobe stands in one corner, its doors slightly ajar, revealing a selection of well-pressed uniforms. The rain outside is faintly audible, the sound barely penetrating the thick walls. The(text-colour:orange)[ [[Staff Hallway #1<-door behind you leads back to the Staff Hallway]]]. There is a(text-colour:lime)[ [[butler phone<-phone on the wall]]].
 
 
 :: Dining Hall {"position":"1900,925","size":"100,100"}
@@ -289,6 +289,110 @@ You examine the bed. It's a four-poster bed.
 (display:"Increase time by 1")
 (display:"Increase time by 1")
 (go-to:"alvin notes")
+
+
+:: butler awake {"position":"750,1075","size":"100,100"}
+(set:$evidence_bulter_sleeping to 2)
+(display:"Increase time by 1")
+(display:"Increase time by 1")
+(go-to:"butler bed")
+
+
+:: butler bed {"position":"875,950","size":"100,100"}
+(display:"Increase time by 1")
+(display:"Print Time")
+
+(if:$evidence_butler_sleeping is 0)[(set:$evidence_butler_sleeping to 1)]
+
+(if:$evidence_butler_sleeping is 1)[The butler is sleeping in their bed. They look very tired.]
+
+(if:$evidence_butler_sleeping is 1)[ [[butler awake<-Wake up the butler]]]
+
+(if:$evidence_butler_sleeping is 2)[The butler was sleeping here before.]
+
+[[Butler's Room<-Stop examining]]
+
+
+:: butler desk {"position":"875,1375","size":"100,100"}
+(display:"Increase time by 1")
+(display:"Print Time")
+
+On the butler's desk, you can see(text-colour:lime)[ [[butler gloves<-some gloves]]] and a(text-colour:lime)[ [[butler knife<-kitchen knife]]].
+
+[[Butler's Room<-Stop examining]]
+
+
+:: butler gloves {"position":"950,1575","size":"100,100"}
+(display:"Increase time by 1")
+(display:"Print Time")
+
+(if:$evidence_butler_gloves is 0)[(set:$evidence_butler_gloves to 1)]
+
+(if:$evidence_butler_gloves is 1)[You examine the gloves on the desk
+[[butler gloves2<-Collect the gloves safely (takes 3 mins)]]]
+
+(if:$evidence_butler_gloves is 2)[You've already collected the gloves.]
+
+[[butler desk<-Stop examining]]
+
+
+:: butler gloves2 {"position":"850,1750","size":"100,100"}
+(set:$evidence_butler_gloves to 2)
+(display:"Increase time by 1")
+(display:"Increase time by 1")
+(display:"Increase time by 1")
+(display:"Increase time by 1")
+(display:"Increase time by 1")
+(go-to:"butler gloves")
+
+
+:: butler knife {"position":"750,1500","size":"100,100"}
+(display:"Increase time by 1")
+(display:"Print Time")
+
+(if:$evidence_butler_knife is 0)[(set:$evidence_butler_knife to 1)]
+
+(if:$evidence_butler_knife is 1)[You examine the knife on the desk. It's a kitchen knife.
+[[butler knife2<-Collect fingerprint samples (takes 5 mins)]]]
+
+(if:$evidence_butler_knife is 2)[You examine the knife on the desk. You've already collected fingerprint samples.]
+
+[[butler desk<-Stop examining]]
+
+
+:: butler knife2 {"position":"750,1625","size":"100,100"}
+(set:$evidence_butler_knife to 2)
+(display:"Increase time by 1")
+(display:"Increase time by 1")
+(display:"Increase time by 1")
+(display:"Increase time by 1")
+(display:"Increase time by 1")
+(go-to:"butler knife")
+
+
+:: butler phone {"position":"875,1125","size":"100,100"}
+(display:"Increase time by 1")
+(display:"Print Time")
+
+(if:$evidence_butler_phone is 0)[(set:$evidence_butler_phone to 1)]
+
+You examine the phone. The cord looks broken and is unplugged.
+
+(if:$evidence_butler_phone is 1)[ [[butler phone2<-Collect fingerprints (takes 5 mins)]]]
+
+(if:$evidence_butler_phone is 2)[You already collected fingerprints from the phone.]
+
+[[Butler's Room<-Stop examining]]
+
+
+:: butler phone2 {"position":"525,1450","size":"100,100"}
+(set:$evidence_butler_phone to 2)
+(display:"Increase time by 1")
+(display:"Increase time by 1")
+(display:"Increase time by 1")
+(display:"Increase time by 1")
+(display:"Increase time by 1")
+(go-to:"butler phone")
 
 
 :: library bookshelf {"position":"3375,2100","size":"100,100"}
