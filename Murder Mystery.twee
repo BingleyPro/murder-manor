@@ -1,5 +1,5 @@
 :: StoryTitle
-Everwood Manor
+Murder Manor
 
 
 :: StoryData
@@ -19,8 +19,9 @@ Everwood Manor
 (display:"Increase time by 1")
 (display:"Print Time")
 
-(text-colour:lime)[ [[alvin gun<-gun]]]
-(text-colour:lime)[ [[alvin bed<-bed]]]
+<img width=400 src="https://tinypic.host/images/2024/08/17/alvins-room.png">
+
+The ''Master Bedroom'' exudes luxury, with a grand king-sized bed framed by heavy drapes and an intricately detailed ceiling. A(text-colour:lime)[ [[alvin gun<-gun]]] is on the polished wood bedside table. The dark wood-paneled walls and plush red rug beneath the bed enhance the room's warmth, while tall windows let in the faint light of the storm outside. You notice a small bit of paper sticking out from(text-colour:lime)[ [[alvin bed<-under the bed]]]. The room is filled with the sound of heavy rain pounding against the windows. You can head back to the(text-colour:orange)[ [[Mezzanine<-Mezzanine]]] at any time.
 
 
 :: Ballroom {"position":"2100,600","size":"200,200"}
@@ -31,13 +32,49 @@ Everwood Manor
 
 You step into the Ballroom, and the scale of the room immediately strikes you. The ceiling soars overhead, adorned with elaborate frescoes and gilded moldings. The polished marble floor stretches out before you, its surface reflecting the soft glow of the chandeliers that hang from above. Tall, arched windows line the walls, though the heavy rain outside blurs the view of the gardens beyond. The room is vast, with enough space to accommodate a large gathering, yet it feels intimate due to the careful arrangement of the seating areas along the walls. A grand piano sits in one corner, its lid propped open, ready to fill the room with music. The(text-colour:orange)[ [[Main Hallway<-door behind you leads back to the Main Hallway]]].
 
+Some of the police officers have gathered everyone in the house into this room. One of them must have done the murder.
+
+[[Talk to Selena Franco]]
+[[Talk to Luis McMillan]]
+[[Talk to Patricia Curtis]]
+[[Talk to Leonardo Greene]]
+[[Talk to Jack Farmer]]
+[[Talk to Benjamin Franco]]
+
 
 :: Ben's Room {"position":"3500,875","size":"100,100"}
 (display:"Increase time by 1")
 (display:"Print Time")
 
-(text-colour:lime)[ [[ben diary<-diary]]]
-(text-colour:lime)[ [[ben fireplace<-fireplace]]]
+<img width=400 src="https://tinypic.host/images/2024/08/17/benjamins-room.png">
+
+You enter into ''Ben's Room'', which feels cozy yet refined, with a bed draped in soft linens and framed by delicate curtains. The walls are adorned with dark wood paneling, and a(text-colour:lime)[ [[ben fireplace<-fireplace]]] at the far end crackles gently, casting a warm glow over the room. A small table beside the bed(text-colour:lime)[ [[ben diary<-holds a book]]]. The room is inviting but carries a sense of unease, heightened by the storm outside. You can head back to the(text-colour:orange)[ [[Mezzanine<-Mezzanine]]] at any time.
+
+
+
+
+
+:: Ben1 {"position":"2650,300","size":"100,100"}
+(display:"Increase time by 1")
+(display:"Print Time")
+
+"I was in the Guest Room looking for Leonardo. I couldn't find him, so I went back up to my room I tripped and got a cut of my head. That's why I have a band-aid on my head, from the first-aid kit in my room. I just went straight to sleep. Until that police officer told me to head over here," says Ben.
+
+(if:$found_firstaid_kit is 0)[(set:$found_firstaid_kit to 1)]
+
+
+:: Ben2 {"position":"2650,425","size":"100,100"}
+(display:"Increase time by 1")
+(display:"Print Time")
+
+"I could hear Patricia cleaning in Alvin's room." says Ben.
+
+
+:: Ben3 {"position":"2650,550","size":"100,100"}
+(display:"Increase time by 1")
+(display:"Print Time")
+
+"Selena Franco, must have been. Although the relationship between Selena and Alvin semmed happy on the surface level, there was a lot of uncertainty from either side. Selena was struggling for money, while Alvin was rich." says Ben.
 
 
 :: Butler's Room {"position":"1100,1000","size":"100,100"}
@@ -107,6 +144,42 @@ You step into the Guest Walk-in-Wardrobe, and the room is a model of organizatio
 (if:$time_min > 59)[(set: $time_min to 60 - $time_min,$time_hr to $time_hr + 1)]
 
 
+:: Jack1 {"position":"1575,475","size":"100,100"}
+(display:"Increase time by 1")
+(display:"Print Time")
+
+"I was in the outdoor greenhouse for a few hours since 7 o'clock. I was heading inside because of the storm when I heard the panic about the murder," says Jack.
+
+[[Ballroom<-Stop Talking to Jack Farmer]]
+
+[[Jack2<-"Do you know anything that anyone else was doing?"]]
+[[Jack3<-"Is there anyone you think could have done it?]]
+
+
+:: Jack2 {"position":"1512.5,600","size":"100,100"}
+(display:"Increase time by 1")
+(display:"Print Time")
+
+"I saw Leonardo smoking outside, but that's about it. I was outside for some time," says Jack.
+
+[[Ballroom<-Stop Talking to Jack Farmer]]
+
+[[Jack1<-"Where were you during the murder?"]]
+[[Jack3<-"Is there anyone you think could have done it?]]
+
+
+:: Jack3 {"position":"1650,600","size":"100,100"}
+(display:"Increase time by 1")
+(display:"Print Time")
+
+"I have no idea," says Jack.
+
+[[Ballroom<-Stop Talking to Jack Farmer]]
+
+[[Jack1<-"Where were you during the murder?"]]
+[[Jack2<-"Do you know anything that anyone else was doing?"]]
+
+
 :: Kitchen 1 {"position":"1650,1000","size":"100,100"}
 (display:"Increase time by 1")
 (display:"Print Time")
@@ -130,6 +203,46 @@ If you want to complete an analysis on any evidence, head outside to the police 
 (set:$chef_leading to 0)]
 
 
+:: Leonardo1 {"position":"2250,475","size":"100,100"}
+(display:"Increase time by 1")
+(display:"Print Time")
+
+"Where was I? Uh.... I don't really remember. Actually, I think I was taking a break. Taking a nice peaceful, calm stroll of the manor grounds. Yes, that was it," says Leonardo.
+
+[[Ballroom<-Stop Talking to Leonardo Greene]]
+
+[[Leonardo2<-"Do you know anything that anyone else was doing?"]]
+[[Leonardo3<-"Is there anyone you think could have done it?]]
+
+
+:: Leonardo2 {"position":"2375,475","size":"100,100"}
+(display:"Increase time by 1")
+(display:"Print Time")
+
+"The gardener was well... gardening. But other than that? Um... no..." says Leonardo.
+
+[[Ballroom<-Stop Talking to Leonardo Greene]]
+
+[[Leonardo1<-"Where were you during the murder?"]]
+[[Leonardo3<-"Is there anyone you think could have done it?]]
+
+
+:: Leonardo3 {"position":"2500,475","size":"100,100"}
+(display:"Increase time by 1")
+(display:"Print Time")
+
+(if:$water_bucket is 1)["Hmm... I'll place my bets on Ben. Don't really have any reason too, though." says Leonardo.]
+
+(if:$water_bucket is 0)["Hmm... I'll place my bets on Ben. Don't really have any reason too, though. Oh, hey, do you want a water bucket?" says Leonardo.
+
+Leonardo hands you a bucket full of water.]
+
+[[Ballroom<-Stop Talking to Leonardo Greene]]
+
+[[Leonardo1<-"Where were you during the murder?"]]
+[[Leonardo2<-"Do you know anything that anyone else was doing?"]]
+
+
 :: Library {"position":"3250,1850","size":"100,100"}
 (display:"Increase time by 1")
 (display:"Print Time")
@@ -137,6 +250,42 @@ If you want to complete an analysis on any evidence, head outside to the police 
 You step into the ''Library'', and the room greets you with an air of quiet contemplation. The walls are lined with dark wooden bookshelves, filled with an array of old, leather-bound books. A large, plush armchair sits in the center of the room, its upholstery worn from years of use. Nearby, a small side table holds a(text-colour:lime)[ [[library mug<-empty mug]]].(text-colour:lime)[ [[library lamp<-A lamp]]] rests on the table, currently turned off.(text-colour:lime)[ [[library rug<-A highly constractable rug]]] lies underfoot, its pattern faded but still recognizable. Across the room, a tall window is framed by heavy curtains, partially drawn to reveal the storm outside. In one corner, a fireplace crackles softly, its warmth filling the room. Above the fireplace,(text-colour:lime)[ [[library painting<-a large painting]]] hangs, its subject a dark, stormy seascape. (text-colour:lime)[ [[library bookshelf<-A bookshelf]]] stands by the window, with one book slightly ajar.
 
 You can head back to the(text-colour:orange)[ [[Mezzanine<-Mezzanine]]] whenever you want.
+
+
+:: Luis1 {"position":"2025,200","size":"100,100"}
+(display:"Increase time by 1")
+(display:"Print Time")
+
+"I had gone to my van to get the groceries for tomorrow. When I got back into the Kitchen, I, uh, saw the body. With the knife sticking out. I want straight away to the phone to call for the police," says Luis.
+
+[[Ballroom<-Stop Talking to Luis McMillan]]
+
+[[Luis2<-"Do you know anything that anyone else was doing?"]]
+[[Luis3<-"Is there anyone you think could have done it?]]
+
+
+:: Luis2 {"position":"2150,200","size":"100,100"}
+(display:"Increase time by 1")
+(display:"Print Time")
+
+"I past the butler on the way to the Kitchen where I discovered the body," says Luis.
+
+[[Ballroom<-Stop Talking to Luis McMillan]]
+
+[[Luis1<-"Where were you during the murder?"]]
+[[Luis3<-"Is there anyone you think could have done it?]]
+
+
+:: Luis3 {"position":"2025,325","size":"100,100"}
+(display:"Increase time by 1")
+(display:"Print Time")
+
+"It could have been the butler. They were really suspicious. It must be them! Uh, but also it could be Patricia, since they know Alvin's schedule, and what's he doing at anytime." says Luis.
+
+[[Ballroom<-Stop Talking to Luis McMillan]]
+
+[[Luis1<-"Where were you during the murder?"]]
+[[Luis2<-"Do you know anything that anyone else was doing?"]]
 
 
 :: Main Hallway {"position":"2100,1200","size":"100,100"}
@@ -170,6 +319,42 @@ You step into the ''Parlor'', and the room exudes an air of refined elegance. Th
 At the center of the room, a(text-colour:lime)[ [[parlor rug<-plush cream-coloured rug]]] covers the polished wooden floor, its soft fibers muffling your footsteps. Positioned on the rug are four armchairs and a matching sofa, all upholstered in deep burgundy velvet. The furniture is arranged around a low, mahogany coffee table, upon which rests a delicate porcelain tea set and a few well-thumbed books. To the right, large, mullioned windows stretch nearly from floor to ceiling, offering a view of the storm raging outside. The rain beats heavily against the glass, distorting the view of the darkened garden beyond. Behind you is the(text-colour:orange)[ [[Grand Foyer<-door you entered from]]]
 
 
+:: Patricia1 {"position":"2200,325","size":"100,100"}
+(display:"Increase time by 1")
+(display:"Print Time")
+
+"I was cleaning in the master bedroom," says Patricia.
+
+[[Ballroom<-Stop Talking to Patricia Curtis]]
+
+[[Patricia2<-"Do you know anything that anyone else was doing?"]]
+[[Patricia3<-"Is there anyone you think could have done it?]]
+
+
+:: Patricia2 {"position":"2325,325","size":"100,100"}
+(display:"Increase time by 1")
+(display:"Print Time")
+
+"Master Alvin retired from his room to go and read in the Library as scheduled," says Patricia.
+
+[[Ballroom<-Stop Talking to Patricia Curtis]]
+
+[[Patricia1<-"Where were you during the murder?"]]
+[[Patricia3<-"Is there anyone you think could have done it?]]
+
+
+:: Patricia3 {"position":"2450,325","size":"100,100"}
+(display:"Increase time by 1")
+(display:"Print Time")
+
+"I wouldn't be sure at all. Maybe even a suicide. I never really liked Alvin," says Patricia.
+
+[[Ballroom<-Stop Talking to Patricia Curtis]]
+
+[[Patricia1<-"Where were you during the murder?"]]
+[[Patricia2<-"Do you know anything that anyone else was doing?"]]
+
+
 :: Porch {"position":"2000,1775","size":"100,100"}
 (display:"Increase time by 1")
 (display:"Print Time")
@@ -183,6 +368,45 @@ You step onto the ''Porch'', immediately greeted by the sound of rain pounding a
 
 :: Print Time [Functions] {"position":"2300,2100","size":"100,100"}
 (print:$time_hr)(text-style:"blink")[:](print:$time_min) pm
+
+
+:: Rufus1 {"position":"1687.5,375","size":"100,100"}
+
+
+
+:: Rufus2 {"position":"1812.5,375","size":"100,100"}
+
+
+
+:: Rufus3 {"position":"1875,250","size":"100,100"}
+
+
+
+:: Selena1 {"position":"1575,800","size":"100,100"}
+"I was relaxing in the Parlor when I heard the chef hang up the phone. He entered the Parlor and told me what happened," says Selena.
+
+[[Ballroom<-Stop Talking to Selena Franco]]
+
+[[Selena2<-"Do you know anything that anyone else was doing?"]]
+[[Selena3<-"Is there anyone you think could have done it?]]
+
+
+:: Selena2 {"position":"1700,800","size":"100,100"}
+"I knew that Alvin was going to read in the Library, since he usually does that before going to bed. I don't why he went to the Kitchen, it seems strange," says Selena.
+
+[[Ballroom<-Stop Talking to Selena Franco]]
+
+[[Selena1<-"Where were you during the murder?"]]
+[[Selena3<-"Is there anyone you think could have done it?]]
+
+
+:: Selena3 {"position":"1825,800","size":"100,100"}
+"It must have been the chef. No one else goes into the kitchen except for the butler sometimes," says Selena.
+
+[[Ballroom<-Stop Talking to Selena Franco]]
+
+[[Selena1<-"Where were you during the murder?"]]
+[[Selena2<-"Do you know anything that anyone else was doing?"]]
 
 
 :: Staff Hallway #1 {"position":"1400,1350","size":"100,100"}
@@ -201,7 +425,9 @@ You've just been called out to a crime scene of a murder scene. You have at an o
 
 [[Porch<-Click here to start the game!]]
 
-(set:$chef_leading to 1))
+(set:$chef_leading to 1)
+
+(set:$found_firstaid_kit to 0)
 
 (set:$evidence_library_lamp to 0)
 (set:$evidence_library_lamp_cord to 0)
@@ -232,6 +458,83 @@ You've just been called out to a crime scene of a murder scene. You have at an o
 
 (set:$evidence_parlor_winebottle to 0)
 (set:$evidence_parlor_rug to 0)
+
+
+:: Talk to Benjamin Franco {"position":"2525,175","size":"100,100"}
+(display:"Increase time by 1")
+(display:"Print Time")
+
+[[Ballroom<-Stop Talking to Benjamin Franco]]
+
+[[Ben1<-"Where were you during the murder?"]]
+[[Ben2<-"Do you know anything that anyone else was doing?"]]
+[[Ben3<-"Is there anyone you think could have done it?]]
+
+
+:: Talk to Jack Farmer {"position":"1575,350","size":"100,100"}
+(display:"Increase time by 1")
+(display:"Print Time")
+
+[[Ballroom<-Stop Talking to Jack Farmer]]
+
+[[Jack1<-"Where were you during the murder?"]]
+[[Jack2<-"Do you know anything that anyone else was doing?"]]
+[[Jack3<-"Is there anyone you think could have done it?]]
+
+
+:: Talk to Leonardo Greene {"position":"2375,100","size":"100,100"}
+(display:"Increase time by 1")
+(display:"Print Time")
+
+[[Ballroom<-Stop Talking to Leonardo Greene]]
+
+[[Leonardo1<-"Where were you during the murder?"]]
+[[Leonardo2<-"Do you know anything that anyone else was doing?"]]
+[[Leonardo3<-"Is there anyone you think could have done it?]]
+
+
+:: Talk to Luis McMillan {"position":"2025,75","size":"100,100"}
+(display:"Increase time by 1")
+(display:"Print Time")
+
+[[Ballroom<-Stop Talking to Luis McMillan]]
+
+[[Luis1<-"Where were you during the murder?"]]
+[[Luis2<-"Do you know anything that anyone else was doing?"]]
+[[Luis3<-"Is there anyone you think could have done it?]]
+
+
+:: Talk to Patricia Curtis {"position":"2200,75","size":"100,100"}
+(display:"Increase time by 1")
+(display:"Print Time")
+
+[[Ballroom<-Stop Talking to Patricia Curtis]]
+
+[[Patricia1<-"Where were you during the murder?"]]
+[[Patricia2<-"Do you know anything that anyone else was doing?"]]
+[[Patricia3<-"Is there anyone you think could have done it?]]
+
+
+:: Talk to Rufus Wagner {"position":"1875,125","size":"100,100"}
+(display:"Increase time by 1")
+(display:"Print Time")
+
+[[Ballroom<-Stop Talking to Rufus Wagner]]
+
+[[Rufus1<-"Where were you during the murder?"]]
+[[Rufus2<-"Do you know anything that anyone else was doing?"]]
+[[Rufus3<-"Is there anyone you think could have done it?]]
+
+
+:: Talk to Selena Franco {"position":"1700,175","size":"100,100"}
+(display:"Increase time by 1")
+(display:"Print Time")
+
+[[Ballroom<-Stop Talking to Selena Franco]]
+
+[[Selena1<-"Where were you during the murder?"]]
+[[Selena2<-"Do you know anything that anyone else was doing?"]]
+[[Selena3<-"Is there anyone you think could have done it?]]
 
 
 :: Untitled Passage {"position":"700,300","size":"100,100"}
@@ -330,7 +633,7 @@ You examine the fireplace. (if:$action_fire_out is 0)[There seems to be somethin
 
 (if:$water_bucket is 0)[You have nothing to put the fire out with.]
 
-(if:$water_bucket is 1)[[ben gloves<-Put out the fire with the water bucket.]]]]
+(if:$water_bucket is 1)[[ben gloves<-Put out the fire with the water bucket.]]]
 
 (if:$action_fire_out is 1)[You already put the fire out. Inside the fireplace, you find some charred leather gloves.]
 
@@ -341,13 +644,25 @@ You examine the fireplace. (if:$action_fire_out is 0)[There seems to be somethin
 (display:"Increase time by 1")
 (display:"Print Time")
 
-(set:$action_fire_out to 1)
+(if:$action_fire_out to 0)[(set:$action_fire_out to 1)]
 
-(set:$evidence_ben_burnt_gloves to 1)
+(if:$evidence_ben_burnt_gloves is 0)[(set:$evidence_ben_burnt_gloves to 1)]
 
-Inside the fireplace, you find some charred leather gloves.
+(if:$evidence_ben_burnt_gloves is 1)[Inside the fireplace, you find some charred leather gloves.
+
+[[ben gloves2<-Collect the gloves safely(takes 3 mins)]]]
+
+(if:$evidence_ben_burnt_gloves is 2)[YThe fireplace is where you got the gloves. You already collected them.]
 
 [[Ben's Room<-Stop Examining]]
+
+
+:: ben gloves2 {"position":"3950,1125","size":"100,100"}
+(set:$evidence_ben_burnt_gloves to 2)
+(display:"Increase time by 1")
+(display:"Increase time by 1")
+(display:"Increase time by 1")
+(go-to:"ben gloves")
 
 
 :: butler awake {"position":"750,1075","size":"100,100"}
@@ -638,7 +953,7 @@ You take a close look at the bookshelf. It has perfect rows of books on it.
 
 (if:$evidence_library_glass is 1)[You examine the blood stains on the glass shard.
 
-[[library glass2<-Collect the glass shard safety (takes 5 mins)]]]
+[[library glass2<-Collect the glass shard safely (takes 5 mins)]]]
 
 (if:$evidence_library_glass is 2)[You've already collected the glass shard.]
 
