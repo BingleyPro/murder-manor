@@ -24,6 +24,10 @@ Murder Manor
 The ''Master Bedroom'' exudes luxury, with a grand king-sized bed framed by heavy drapes and an intricately detailed ceiling. A(text-colour:lime)[ [[alvin gun<-gun]]] is on the polished wood bedside table. The dark wood-paneled walls and plush red rug beneath the bed enhance the room's warmth, while tall windows let in the faint light of the storm outside. You notice a small bit of paper sticking out from(text-colour:lime)[ [[alvin bed<-under the bed]]]. The room is filled with the sound of heavy rain pounding against the windows. You can head back to the(text-colour:orange)[ [[Mezzanine<-Mezzanine]]] at any time.
 
 
+:: Analyze residues {"position":"1400,2925","size":"100,100"}
+
+
+
 :: Ballroom {"position":"2100,600","size":"200,200"}
 (display:"Increase time by 1")
 (display:"Print Time")
@@ -40,6 +44,7 @@ Some of the police officers have gathered everyone in the house into this room. 
 [[Talk to Leonardo Greene]]
 [[Talk to Jack Farmer]]
 [[Talk to Benjamin Franco]]
+(if:$evidence_butler_sleeping is 2)[ [[Talk to Rufus Wagner]]]
 
 
 :: Ben's Room {"position":"3500,875","size":"100,100"}
@@ -50,8 +55,9 @@ Some of the police officers have gathered everyone in the house into this room. 
 
 You enter into ''Ben's Room'', which feels cozy yet refined, with a bed draped in soft linens and framed by delicate curtains. The walls are adorned with dark wood paneling, and a(text-colour:lime)[ [[ben fireplace<-fireplace]]] at the far end crackles gently, casting a warm glow over the room. A small table beside the bed(text-colour:lime)[ [[ben diary<-holds a book]]]. The room is inviting but carries a sense of unease, heightened by the storm outside. You can head back to the(text-colour:orange)[ [[Mezzanine<-Mezzanine]]] at any time.
 
+(if:$found_firstaid_kit is 1)[Benjamin mentioned a first-aid kit when you spoke to him, but you can't see it anywhere. Where don't you try(text-colour:lime)[ [[ben search<-search for it]]] (takes 5 mins)?]
 
-
+(if:$found_firstaid_kit is 2)[Benjamin mentioned a first-aid kit when you spoke to him, but you can't see it anywhere. You already tried to find it, but couldn't locate it anywhere.]
 
 
 :: Ben1 {"position":"2650,300","size":"100,100"}
@@ -62,6 +68,11 @@ You enter into ''Ben's Room'', which feels cozy yet refined, with a bed draped i
 
 (if:$found_firstaid_kit is 0)[(set:$found_firstaid_kit to 1)]
 
+[[Ballroom<-Stop Talking to Benjamin Franco]]
+
+[[Ben2<-"Do you know anything that anyone else was doing?"]]
+[[Ben3<-"Is there anyone you think could have done it?]]
+
 
 :: Ben2 {"position":"2650,425","size":"100,100"}
 (display:"Increase time by 1")
@@ -69,12 +80,22 @@ You enter into ''Ben's Room'', which feels cozy yet refined, with a bed draped i
 
 "I could hear Patricia cleaning in Alvin's room." says Ben.
 
+[[Ballroom<-Stop Talking to Benjamin Franco]]
+
+[[Ben1<-"Where were you during the murder?"]]
+[[Ben3<-"Is there anyone you think could have done it?]]
+
 
 :: Ben3 {"position":"2650,550","size":"100,100"}
 (display:"Increase time by 1")
 (display:"Print Time")
 
 "Selena Franco, must have been. Although the relationship between Selena and Alvin semmed happy on the surface level, there was a lot of uncertainty from either side. Selena was struggling for money, while Alvin was rich." says Ben.
+
+[[Ballroom<-Stop Talking to Benjamin Franco]]
+
+[[Ben1<-"Where were you during the murder?"]]
+[[Ben2<-"Do you know anything that anyone else was doing?"]]
 
 
 :: Butler's Room {"position":"1100,1000","size":"100,100"}
@@ -84,6 +105,10 @@ You enter into ''Ben's Room'', which feels cozy yet refined, with a bed draped i
 <img width=400 src="https://tinypic.host/images/2024/08/13/03333e24b70e1ff86540930d97a27a27-1140514414.jpg"\>
 
 You step into the Butler's Room, and the atmosphere shifts from the utilitarian to one of subdued comfort. The room is small but well-appointed. There is a single bed with(text-colour:lime)[ [[butler bed<-someone sleeping in it]]]. A sturdy(text-colour:lime)[ [[butler desk<-wooden desk]]] sits beneath a small, curtained window, the surface cluttered with ledgers, papers, and a quill. The walls are lined with shelves filled with neatly organized household records and a few personal items. A wardrobe stands in one corner, its doors slightly ajar, revealing a selection of well-pressed uniforms. The rain outside is faintly audible, the sound barely penetrating the thick walls. The(text-colour:orange)[ [[Staff Hallway #1<-door behind you leads back to the Staff Hallway]]]. There is a(text-colour:lime)[ [[butler phone<-phone on the wall]]].
+
+
+:: Check for other forensic clues {"position":"1650,2925","size":"100,100"}
+
 
 
 :: Dining Hall {"position":"1900,925","size":"100,100"}
@@ -97,6 +122,112 @@ You step into the Dining Hall, greeted by a sense of grandeur and formality. A l
 (if:$chef_leading is 0)[A (text-colour:orange)[ [[Kitchen 1<-a door is located to your left]]], and there is also(text-colour:orange)[ [[Main Hallway<-a door behind you]]].]
 
 (if:$chef_leading is 1)[The chef steps through(text-colour:orange)[ [[Kitchen 1<-another door]]].]
+
+
+:: Examine Evidence [Functions] {"position":"1400,2800","size":"100,100"}
+\::EvidenceAnalysis
+You have the following piece of evidence to analyze:
+
+**[Evidence Item Name]**
+
+What analysis would you like to perform on this evidence?
+
+* [[Perform fingerprint analysis]]
+* [[Test for DNA]]
+* [[Analyze residues]]
+* [[Examine for tampering]]
+* [[Check for other forensic clues]]
+
+---
+
+Forensic analysis involves various techniques to uncover valuable information from evidence. Below are explanations of each type of test you can perform:
+
+1. **Fingerprint analysis:** Identifies and matches fingerprints found on the evidence to known individuals. In this case
+2. **DNA testing:** Determines if the DNA found on the evidence matches any known profiles.
+3. **Residue analysis:** Tests for traces of substances that may indicate the evidence’s involvement in the crime.
+4. **Examination for tampering:** Looks for signs that the evidence may have been altered or handled inappropriately.
+5. **Other forensic clues:** Includes any additional tests or observations relevant to the evidence, such as examining for specific patterns or materials.
+
+Select the test you wish to perform from the options above. Each test will provide different insights and contribute to solving the case.
+
+---
+
+
+
+:: Examine footprint mould taken from under the victim's body {"position":"962.5,2575","size":"100,100"}
+
+
+
+:: Examine for tampering {"position":"1525,2925","size":"100,100"}
+
+
+
+:: Examine knife found in the victim's body {"position":"837.5,2575","size":"100,100"}
+
+
+
+:: Examine the charred gloves found in Benjamin's room {"position":"1712.5,2575","size":"100,100"}
+
+
+
+:: Examine the diary found in Benjamin's room {"position":"1837.5,2575","size":"100,100"}
+
+
+
+:: Examine the fingerprint samples taken from the wine bottle found in the Parlor {"position":"2962.5,2575","size":"100,100"}
+
+
+
+:: Examine the fingerprints taken from the phone in the Grand Foyer {"position":"2212.5,2575","size":"100,100"}
+
+
+
+:: Examine the fingerprints taken from the phone in the butler's room {"position":"2087.5,2575","size":"100,100"}
+
+
+
+:: Examine the footprint mould taken from the library {"position":"1587.5,2575","size":"100,100"}
+
+
+
+:: Examine the glass shard found in the library {"position":"1337.5,2575","size":"100,100"}
+
+
+
+:: Examine the gloves found in the butler's room {"position":"1962.5,2575","size":"100,100"}
+
+
+
+:: Examine the gun found in Alvin's room {"position":"2337.5,2575","size":"100,100"}
+
+
+
+:: Examine the knives found in the guest room {"position":"2712.5,2575","size":"100,100"}
+
+
+
+:: Examine the lamp cord found in the library {"position":"1212.5,2575","size":"100,100"}
+
+
+
+:: Examine the lighter found in the guest room {"position":"2837.5,2575","size":"100,100"}
+
+
+
+:: Examine the notes found in Alvin's room {"position":"2462.5,2575","size":"100,100"}
+
+
+
+:: Examine the pack of cigars found in the guest room {"position":"2587.5,2575","size":"100,100"}
+
+
+
+:: Examine the sample of blood found in the library {"position":"1462.5,2575","size":"100,100"}
+
+
+
+:: Examine wok found in the kitchen {"position":"1087.5,2575","size":"100,100"}
+
 
 
 :: Grand Foyer {"position":"2050,1525","size":"100,100"}
@@ -139,7 +270,7 @@ You step into the ''Guest Bedroom'', and the room welcomes you with a sense of u
 You step into the Guest Walk-in-Wardrobe, and the room is a model of organization and luxury. The walls are lined with shelves and hanging rods, each section meticulously organized with clothing, shoes, and accessories. The floor is carpeted in a plush, deep grey, muffling your footsteps as you move through the space. A large, full-length mirror occupies one wall, reflecting the warm light from the overhead fixture. The rain outside is barely audible here, the thick walls insulating the room from the storm. There is a door behind you leading back to the(text-colour:orange)[ [[Guest Bedroom<- Guest Bedroom]]].
 
 
-:: Increase time by 1 [Functions] {"position":"2425,2075","size":"100,100"}
+:: Increase time by 1 [Functions] {"position":"2300,2000","size":"100,100"}
 (set: $time_min to $time_min + 1)
 (if:$time_min > 59)[(set: $time_min to 60 - $time_min,$time_hr to $time_hr + 1)]
 
@@ -191,6 +322,11 @@ You are in the ''Kitchen'', the scene of the crime. Shelves cluttered with utens
 On the ground is a dead man wearing a suit. A knife is sticking out of their chest.
 
 There is(text-colour:orange)[ [[Dining Hall<-a door leading to the Dining Hall]]], and another(text-colour:orange)[ [[Staff Hallway #1<-small door leading to the Staff Hallway]]].
+
+(if:$chef_leading is 0)[
+(if:$time_hr > 9 or $time_min > 39)[The team has finished investigating. The knife stuck into the body had two sets of fingerprints on it, althrough only one was recoverable. There was also a size 11 footprint found under the victim's body. Utensils have done knocked over. Some blood on a wok found. The victim is wearing size 12 shoes. There was also signs of high tension around the victim's neck.
+
+The team hands you all the evidence.(set:$evidence_kitchen_all to 0)]]
 
 (if:$chef_leading is 1)["Here is the scene. I can't stand it here, so I will head off to my room." the Chef says as he leaves through another door.
 
@@ -355,31 +491,133 @@ At the center of the room, a(text-colour:lime)[ [[parlor rug<-plush cream-colour
 [[Patricia2<-"Do you know anything that anyone else was doing?"]]
 
 
+:: Perform fingerprint analysis {"position":"1150,2925","size":"100,100"}
+
+
+
+:: Police Tent {"position":"1900,2200","size":"100,100"}
+(display:"Increase time by 1")
+(display:"Print Time")
+
+You enter the ''Police Tent''. Here, you can examine any piece of evidence you've collected so far.
+
+(if: $evidence_kitchen_all is 2)[
+    [[Examine knife found in the victim's body]]
+    [[Examine footprint mould taken from under the victim's body]]
+    [[Examine wok found in the kitchen]]
+]
+
+(if: $evidence_library_lamp_cord is 2)[
+    [[Examine the lamp cord found in the library]]
+]
+
+(if: $evidence_library_glass is 2)[
+    [[Examine the glass shard found in the library]]
+]
+
+(if: $evidence_library_bloodstains is 2)[
+    [[Examine the sample of blood found in the library]]
+]
+
+(if: $evidence_library_footprint is 2)[
+    [[Examine the footprint mould taken from the library]]
+]
+
+(if: $evidence_ben_burnt_gloves is 2)[
+    [[Examine the charred gloves found in Benjamin's room]]
+]
+
+(if: $evidence_ben_diary is 2)[
+    [[Examine the diary found in Benjamin's room]]
+]
+
+(if: $evidence_butler_gloves is 2)[
+    [[Examine the gloves found in the butler's room]]
+]
+
+(if: $evidence_butler_phone is 2)[
+    [[Examine the fingerprints taken from the phone in the butler's room]]
+]
+
+(if: $evidence_foyer_phone is 2)[
+    [[Examine the fingerprints taken from the phone in the Grand Foyer]]
+]
+
+(if: $evidence_alvin_gun is 2)[
+    [[Examine the gun found in Alvin's room]]
+]
+
+(if: $evidence_alvin_notes is 2)[
+    [[Examine the notes found in Alvin's room]]
+]
+
+(if: $evidence_guest_cigars is 2)[
+    [[Examine the pack of cigars found in the guest room]]
+]
+
+(if: $evidence_guest_knives is 2)[
+    [[Examine the knives found in the guest room]]
+]
+
+(if: $evidence_guest_lighter is 2)[
+    [[Examine the lighter found in the guest room]]
+]
+
+(if: $evidence_parlor_winebottle is 2)[
+    [[Examine the fingerprint samples taken from the wine bottle found in the Parlor]]
+]
+
+
+
 :: Porch {"position":"2000,1775","size":"100,100"}
 (display:"Increase time by 1")
 (display:"Print Time")
 
 You step onto the ''Porch'', immediately greeted by the sound of rain pounding against the roof and the wind howling through the trees surrounding the mansion.
-(if:$chef_leading is 0)[The(text-colour:orange)[ [[Grand Foyer<-front door]]] of the mansion looms in front of you, solid and imposing, offering a refuge from the storm.]
+(if:$chef_leading is 0)[The(text-colour:orange)[ [[Grand Foyer<-front door]]] of the mansion looms in front of you, solid and imposing, offering a refuge from the storm. The police have setup a(text-colour:orange)[ [[Police Tent<-tent for evidence analysis.]]]]
 (if:$chef_leading is 1)[Someone is waiting for you. They introduce themselves as the chef, Luis McMillian.
 
 "(text-colour:orange)[ [[Grand Foyer<-Follow me.]]]" he says.]
 
 
-:: Print Time [Functions] {"position":"2300,2100","size":"100,100"}
+:: Print Time [Functions] {"position":"2200,2000","size":"100,100"}
 (print:$time_hr)(text-style:"blink")[:](print:$time_min) pm
 
 
 :: Rufus1 {"position":"1687.5,375","size":"100,100"}
+(display:"Increase time by 1")
+(display:"Print Time")
+
+"I found the body in the Kitchen. It was such a surprise, I knocked over some utensils. I went to call the police, and that's the last thing I remember before you woke me up," says Rufus.
+
+[[Ballroom<-Stop Talking to Rufus Wagner]]
+
+[[Rufus2<-"Do you know anything that anyone else was doing?"]]
+[[Rufus3<-"Is there anyone you think could have done it?]]
 
 
+:: Rufus2 {"position":"1800,375","size":"100,100"}
+(display:"Increase time by 1")
+(display:"Print Time")
 
-:: Rufus2 {"position":"1812.5,375","size":"100,100"}
+"I know Alvin was in the Library and that the Chef was getting something from this van, but that's all I'm afraid," says Rufus.
 
+[[Ballroom<-Stop Talking to Rufus Wagner]]
+
+[[Rufus1<-"Where were you during the murder?"]]
+[[Rufus3<-"Is there anyone you think could have done it?]]
 
 
 :: Rufus3 {"position":"1875,250","size":"100,100"}
+(display:"Increase time by 1")
+(display:"Print Time")
 
+"Oh, I don't think anyone in this household could have done it. I wouldn't believe it." says Rufus.
+
+[[Ballroom<-Stop Talking to Rufus Wagner]]
+
+[[Rufus1<-"Where were you during the murder?"]]
+[[Rufus2<-"Do you know anything that anyone else was doing?"]]
 
 
 :: Selena1 {"position":"1575,800","size":"100,100"}
@@ -418,7 +656,7 @@ You step onto the ''Porch'', immediately greeted by the sound of rain pounding a
 Entering the Staff Hallway, you are greeted by a space designed for efficiency rather than aesthetics. The hallway is narrow, with low ceilings and plain, unadorned walls. The wooden floorboards, though sturdy, show signs of wear from years of use. A few doors line the hallway, leading to other functional areas of the mansion used by the staff. The dim lighting from the sconces on the walls casts faint shadows, and the sound of the storm outside is more noticeable here, with the wind occasionally rattling the windows. You can head to the(text-colour:orange)[ [[Butler's Room<-Butler's Room]]], the (text-colour:orange)[ [[Kitchen 1<-Kitchen]]] or the(text-colour:orange)[ [[Grand Foyer<-Grand Foyer]]].
 
 
-:: Start {"position":"1975,2075","size":"100,100"}
+:: Start {"position":"1800,1825","size":"100,100"}
 (set:$time_hr to 9,$time_min to 14)
 
 You've just been called out to a crime scene of a murder scene. You have at an old European style Victorian mansion. You are a forensic scientist. Good luck!
@@ -428,6 +666,7 @@ You've just been called out to a crime scene of a murder scene. You have at an o
 (set:$chef_leading to 1)
 
 (set:$found_firstaid_kit to 0)
+(set:$evidence_kitchen_all to 0)
 
 (set:$evidence_library_lamp to 0)
 (set:$evidence_library_lamp_cord to 0)
@@ -443,6 +682,8 @@ You've just been called out to a crime scene of a murder scene. You have at an o
 (set:$evidence_butler_gloves to 0)
 (set:$evidence_butler_phone to 0)
 (set:$evidence_butler_sleeping to 0)
+
+(set:$butler_just_awoke to 0)
 
 (set:$evidence_foyer_phone to 0)
 
@@ -464,6 +705,8 @@ You've just been called out to a crime scene of a murder scene. You have at an o
 (display:"Increase time by 1")
 (display:"Print Time")
 
+Benjamin Franco is Alvin and Selena's son.
+
 [[Ballroom<-Stop Talking to Benjamin Franco]]
 
 [[Ben1<-"Where were you during the murder?"]]
@@ -474,6 +717,8 @@ You've just been called out to a crime scene of a murder scene. You have at an o
 :: Talk to Jack Farmer {"position":"1575,350","size":"100,100"}
 (display:"Increase time by 1")
 (display:"Print Time")
+
+Jack Farmer is the gardener.
 
 [[Ballroom<-Stop Talking to Jack Farmer]]
 
@@ -486,6 +731,8 @@ You've just been called out to a crime scene of a murder scene. You have at an o
 (display:"Increase time by 1")
 (display:"Print Time")
 
+Leonardo Greene is a guest.
+
 [[Ballroom<-Stop Talking to Leonardo Greene]]
 
 [[Leonardo1<-"Where were you during the murder?"]]
@@ -496,6 +743,8 @@ You've just been called out to a crime scene of a murder scene. You have at an o
 :: Talk to Luis McMillan {"position":"2025,75","size":"100,100"}
 (display:"Increase time by 1")
 (display:"Print Time")
+
+Luis McMillan is the chef.
 
 [[Ballroom<-Stop Talking to Luis McMillan]]
 
@@ -508,6 +757,8 @@ You've just been called out to a crime scene of a murder scene. You have at an o
 (display:"Increase time by 1")
 (display:"Print Time")
 
+Patricia Curtis is the housekeeper.
+
 [[Ballroom<-Stop Talking to Patricia Curtis]]
 
 [[Patricia1<-"Where were you during the murder?"]]
@@ -518,6 +769,8 @@ You've just been called out to a crime scene of a murder scene. You have at an o
 :: Talk to Rufus Wagner {"position":"1875,125","size":"100,100"}
 (display:"Increase time by 1")
 (display:"Print Time")
+
+Rufus Wagner is the butler of the house.
 
 [[Ballroom<-Stop Talking to Rufus Wagner]]
 
@@ -530,6 +783,8 @@ You've just been called out to a crime scene of a murder scene. You have at an o
 (display:"Increase time by 1")
 (display:"Print Time")
 
+Selena Franco is Alvin's husband and Benjamin's mother.
+
 [[Ballroom<-Stop Talking to Selena Franco]]
 
 [[Selena1<-"Where were you during the murder?"]]
@@ -537,7 +792,7 @@ You've just been called out to a crime scene of a murder scene. You have at an o
 [[Selena3<-"Is there anyone you think could have done it?]]
 
 
-:: Untitled Passage {"position":"700,300","size":"100,100"}
+:: Test for DNA {"position":"1275,2925","size":"100,100"}
 
 
 
@@ -652,7 +907,7 @@ You examine the fireplace. (if:$action_fire_out is 0)[There seems to be somethin
 
 [[ben gloves2<-Collect the gloves safely(takes 3 mins)]]]
 
-(if:$evidence_ben_burnt_gloves is 2)[YThe fireplace is where you got the gloves. You already collected them.]
+(if:$evidence_ben_burnt_gloves is 2)[The fireplace is where you got the gloves. You already collected them.]
 
 [[Ben's Room<-Stop Examining]]
 
@@ -665,10 +920,20 @@ You examine the fireplace. (if:$action_fire_out is 0)[There seems to be somethin
 (go-to:"ben gloves")
 
 
+:: ben search {"position":"3375,1000","size":"100,100"}
+(display:"Increase time by 1")
+(display:"Print Time")
+
+You searched the whole room, but couldn't find a first-aid kit anywhere.
+
+(if:$found_firstaid_kit is 1)[(set:$found_firstaid_kit to 2)]
+
+
 :: butler awake {"position":"750,1075","size":"100,100"}
 (set:$evidence_bulter_sleeping to 2)
 (display:"Increase time by 1")
 (display:"Increase time by 1")
+(set:$butler_just_awoke to 1)
 (go-to:"butler bed")
 
 
@@ -681,6 +946,8 @@ You examine the fireplace. (if:$action_fire_out is 0)[There seems to be somethin
 (if:$evidence_butler_sleeping is 1)[The butler is sleeping in their bed. They look very tired.]
 
 (if:$evidence_butler_sleeping is 1)[ [[butler awake<-Wake up the butler]]]
+
+(if:$butler_just_awoke is 1)["Oh, it's the police. Hmm... I don't remember falling asleep here..." says the butler as he leaves the room. (set:$butler_just_awoke to 1)]
 
 (if:$evidence_butler_sleeping is 2)[The butler was sleeping here before.]
 
@@ -970,7 +1237,7 @@ You take a close look at the bookshelf. It has perfect rows of books on it.
 (go-to:"library glass")
 
 
-:: library lamp {"position":"3375,1975","size":"100,100"}
+:: library lamp {"position":"3475,1850","size":"100,100"}
 (display:"Increase time by 1")
 (display:"Print Time")
 
