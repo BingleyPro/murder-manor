@@ -15,7 +15,7 @@ Murder Manor
 }
 
 
-:: Alvin's Room {"position":"3750,1475","size":"100,100"}
+:: Alvin's Room {"position":"5700,1550","size":"100,100"}
 (display:"Increase time by 1")
 (display:"Print Time")
 
@@ -24,11 +24,11 @@ Murder Manor
 The ''Master Bedroom'' exudes luxury, with a grand king-sized bed framed by heavy drapes and an intricately detailed ceiling. A(text-colour:lime)[ [[alvin gun<-gun]]] is on the polished wood bedside table. The dark wood-paneled walls and plush red rug beneath the bed enhance the room's warmth, while tall windows let in the faint light of the storm outside. You notice a small bit of paper sticking out from(text-colour:lime)[ [[alvin bed<-under the bed]]]. The room is filled with the sound of heavy rain pounding against the windows. You can head back to the(text-colour:orange)[ [[Mezzanine<-Mezzanine]]] at any time.
 
 
-:: Analyze residues {"position":"1400,2925","size":"100,100"}
+:: BallisticsGun {"position":"4650,2775","size":"100,100"}
 
 
 
-:: Ballroom {"position":"2100,600","size":"200,200"}
+:: Ballroom {"position":"4050,675","size":"200,200"}
 (display:"Increase time by 1")
 (display:"Print Time")
 
@@ -47,7 +47,7 @@ Some of the police officers have gathered everyone in the house into this room. 
 (if:$evidence_butler_sleeping is 2)[ [[Talk to Rufus Wagner]]]
 
 
-:: Ben's Room {"position":"3500,875","size":"100,100"}
+:: Ben's Room {"position":"5450,950","size":"100,100"}
 (display:"Increase time by 1")
 (display:"Print Time")
 
@@ -60,7 +60,7 @@ You enter into ''Ben's Room'', which feels cozy yet refined, with a bed draped i
 (if:$found_firstaid_kit is 2)[Benjamin mentioned a first-aid kit when you spoke to him, but you can't see it anywhere. You already tried to find it, but couldn't locate it anywhere.]
 
 
-:: Ben1 {"position":"2650,300","size":"100,100"}
+:: Ben1 {"position":"4600,375","size":"100,100"}
 (display:"Increase time by 1")
 (display:"Print Time")
 
@@ -74,7 +74,7 @@ You enter into ''Ben's Room'', which feels cozy yet refined, with a bed draped i
 [[Ben3<-"Is there anyone you think could have done it?]]
 
 
-:: Ben2 {"position":"2650,425","size":"100,100"}
+:: Ben2 {"position":"4600,500","size":"100,100"}
 (display:"Increase time by 1")
 (display:"Print Time")
 
@@ -86,7 +86,7 @@ You enter into ''Ben's Room'', which feels cozy yet refined, with a bed draped i
 [[Ben3<-"Is there anyone you think could have done it?]]
 
 
-:: Ben3 {"position":"2650,550","size":"100,100"}
+:: Ben3 {"position":"4600,625","size":"100,100"}
 (display:"Increase time by 1")
 (display:"Print Time")
 
@@ -98,7 +98,47 @@ You enter into ''Ben's Room'', which feels cozy yet refined, with a bed draped i
 [[Ben2<-"Do you know anything that anyone else was doing?"]]
 
 
-:: Butler's Room {"position":"1100,1000","size":"100,100"}
+:: BloodGlass {"position":"1650,3250","size":"100,100"}
+You have analyzed the blood sample from the glass shard.
+
+**Results:**
+- The blood is from the victim.
+
+[[Return to the Police Tent|ForensicAnalysis]]
+
+
+:: BloodKnife {"position":"700,3275","size":"100,100"}
+You have analyzed the blood sample from the knife.
+
+**Results:**
+- The blood sample is from the victim.
+
+[[Return to the Police Tent|ForensicAnalysis]]
+
+
+:: BloodLampCord {"position":"1525,3250","size":"100,100"}
+You have analyzed the blood sample from the lamp cord.
+
+**Results:**
+- The blood is from the victim, Alvin Franco.
+
+[[Return to the Police Tent|ForensicAnalysis]]
+
+
+:: BloodSampleAnalysis {"position":"2650,2775","size":"100,100"}
+
+
+
+:: BloodWok {"position":"1400,3250","size":"100,100"}
+You have analyzed the blood sample from the wok.
+
+**Results:**
+- The blood is from the butler.
+
+[[Return to the Police Tent|ForensicAnalysis]]
+
+
+:: Butler's Room {"position":"3050,1075","size":"100,100"}
 (display:"Increase time by 1")
 (display:"Print Time")
 
@@ -107,11 +147,95 @@ You enter into ''Ben's Room'', which feels cozy yet refined, with a bed draped i
 You step into the Butler's Room, and the atmosphere shifts from the utilitarian to one of subdued comfort. The room is small but well-appointed. There is a single bed with(text-colour:lime)[ [[butler bed<-someone sleeping in it]]]. A sturdy(text-colour:lime)[ [[butler desk<-wooden desk]]] sits beneath a small, curtained window, the surface cluttered with ledgers, papers, and a quill. The walls are lined with shelves filled with neatly organized household records and a few personal items. A wardrobe stands in one corner, its doors slightly ajar, revealing a selection of well-pressed uniforms. The rain outside is faintly audible, the sound barely penetrating the thick walls. The(text-colour:orange)[ [[Staff Hallway #1<-door behind you leads back to the Staff Hallway]]]. There is a(text-colour:lime)[ [[butler phone<-phone on the wall]]].
 
 
-:: Check for other forensic clues {"position":"1650,2925","size":"100,100"}
+:: DNAAlvinNotes {"position":"4900,2775","size":"100,100"}
 
 
 
-:: Dining Hall {"position":"1900,925","size":"100,100"}
+:: DNABenDiary {"position":"3525,2775","size":"100,100"}
+
+
+
+:: DNABenGloves {"position":"3275,2775","size":"100,100"}
+
+
+
+:: DNABloodSample {"position":"2525,2775","size":"100,100"}
+
+
+
+:: DNAButlerGloves {"position":"3775,2775","size":"100,100"}
+
+
+
+:: DNAButlerPhone {"position":"4025,2775","size":"100,100"}
+
+
+
+:: DNAFoyerPhone {"position":"4275,2775","size":"100,100"}
+
+
+
+:: DNAGlass {"position":"2400,2775","size":"100,100"}
+You have tested the glass shard for DNA.
+
+**Results:**
+- DNA analysis reveals the blood is from the victim.
+
+[[Return to the Police Tent|ForensicAnalysis]]
+
+
+:: DNAGuestCigars {"position":"5150,2775","size":"100,100"}
+
+
+
+:: DNAGuestKnives {"position":"5400,2775","size":"100,100"}
+
+
+
+:: DNAGuestLighter {"position":"5650,2775","size":"100,100"}
+
+
+
+:: DNAGun {"position":"4525,2775","size":"100,100"}
+
+
+
+:: DNAKnife {"position":"1775,2775","size":"100,100"}
+You have tested the knife found in the victim's body for DNA.
+
+**Results:**
+- DNA analysis reveals the blood is from the victim.
+
+[[Return to the Police Tent|ForensicAnalysis]]
+
+
+:: DNALampCord {"position":"2025,2775","size":"100,100"}
+You have tested the lamp cord for DNA.
+
+**Results:**
+- DNA analysis reveals the blood is from the victim, Alvin Franco.
+
+[[Return to the Police Tent|ForensicAnalysis]]
+
+
+:: DNALibraryFootprint {"position":"2900,2775","size":"100,100"}
+
+
+
+:: DNAWineBottle {"position":"5900,2775","size":"100,100"}
+
+
+
+:: DNAWok {"position":"2500,2900","size":"100,100"}
+You have tested the wok for DNA.
+
+**Results:**
+- DNA analysis reveals the blood is from the butler.
+
+[[Return to the Police Tent|ForensicAnalysis]]
+
+
+:: Dining Hall {"position":"3850,1000","size":"100,100"}
 (display:"Increase time by 1")
 (display:"Print Time")
 
@@ -124,113 +248,117 @@ You step into the Dining Hall, greeted by a sense of grandeur and formality. A l
 (if:$chef_leading is 1)[The chef steps through(text-colour:orange)[ [[Kitchen 1<-another door]]].]
 
 
-:: Examine Evidence [Functions] {"position":"1400,2800","size":"100,100"}
-\::EvidenceAnalysis
-You have the following piece of evidence to analyze:
+:: FingerprintAlvinNotes {"position":"4775,2775","size":"100,100"}
 
-**[Evidence Item Name]**
 
-What analysis would you like to perform on this evidence?
 
-* [[Perform fingerprint analysis]]
-* [[Test for DNA]]
-* [[Analyze residues]]
-* [[Examine for tampering]]
-* [[Check for other forensic clues]]
+:: FingerprintBenDiary {"position":"3400,2775","size":"100,100"}
 
----
 
-Forensic analysis involves various techniques to uncover valuable information from evidence. Below are explanations of each type of test you can perform:
 
-1. **Fingerprint analysis:** Identifies and matches fingerprints found on the evidence to known individuals. In this case
-2. **DNA testing:** Determines if the DNA found on the evidence matches any known profiles.
-3. **Residue analysis:** Tests for traces of substances that may indicate the evidence’s involvement in the crime.
-4. **Examination for tampering:** Looks for signs that the evidence may have been altered or handled inappropriately.
-5. **Other forensic clues:** Includes any additional tests or observations relevant to the evidence, such as examining for specific patterns or materials.
+:: FingerprintBenGloves {"position":"3150,2775","size":"100,100"}
 
-Select the test you wish to perform from the options above. Each test will provide different insights and contribute to solving the case.
 
----
 
+:: FingerprintBloodSample {"position":"1775,3250","size":"100,100"}
 
 
-:: Examine footprint mould taken from under the victim's body {"position":"962.5,2575","size":"100,100"}
 
+:: FingerprintButlerGloves {"position":"3650,2775","size":"100,100"}
 
 
-:: Examine for tampering {"position":"1525,2925","size":"100,100"}
 
+:: FingerprintButlerPhone {"position":"3900,2775","size":"100,100"}
 
 
-:: Examine knife found in the victim's body {"position":"837.5,2575","size":"100,100"}
 
+:: FingerprintFootprint {"position":"900,3125","size":"100,100"}
+You have performed a fingerprint analysis on the footprint mould taken from under the victim's body.
 
+**Results:**
+- No fingerprints found.
 
-:: Examine the charred gloves found in Benjamin's room {"position":"1712.5,2575","size":"100,100"}
+[[Return to the Police Tent|ForensicAnalysis]]
 
 
+:: FingerprintFoyerPhone {"position":"4150,2775","size":"100,100"}
 
-:: Examine the diary found in Benjamin's room {"position":"1837.5,2575","size":"100,100"}
 
 
+:: FingerprintGlass {"position":"2150,2775","size":"100,100"}
+You have performed a fingerprint analysis on the glass shard found in the library.
 
-:: Examine the fingerprint samples taken from the wine bottle found in the Parlor {"position":"2962.5,2575","size":"100,100"}
+**Results:**
+- No fingerprints found.
 
+[[Return to the Police Tent|ForensicAnalysis]]
 
 
-:: Examine the fingerprints taken from the phone in the Grand Foyer {"position":"2212.5,2575","size":"100,100"}
+:: FingerprintGuestCigars {"position":"5025,2775","size":"100,100"}
 
 
 
-:: Examine the fingerprints taken from the phone in the butler's room {"position":"2087.5,2575","size":"100,100"}
+:: FingerprintGuestKnives {"position":"5275,2775","size":"100,100"}
 
 
 
-:: Examine the footprint mould taken from the library {"position":"1587.5,2575","size":"100,100"}
+:: FingerprintGuestLighter {"position":"5525,2775","size":"100,100"}
 
 
 
-:: Examine the glass shard found in the library {"position":"1337.5,2575","size":"100,100"}
+:: FingerprintGun {"position":"4400,2775","size":"100,100"}
 
 
 
-:: Examine the gloves found in the butler's room {"position":"1962.5,2575","size":"100,100"}
+:: FingerprintKnife {"position":"725,3125","size":"100,100"}
+You have performed a fingerprint analysis on the knife found in the victim's body.
 
+**Results:**
+- Fingerprints match the butler, Rufus Wagner.
 
+[[Return to the Police Tent|Police Tent]]
 
-:: Examine the gun found in Alvin's room {"position":"2337.5,2575","size":"100,100"}
 
+:: FingerprintLampCord {"position":"1400,3125","size":"100,100"}
+You have performed a fingerprint analysis on the lamp cord found in the library.
 
+**Results:**
+- Fingerprints match the victim, Alvin.
 
-:: Examine the knives found in the guest room {"position":"2712.5,2575","size":"100,100"}
+[[Return to the Police Tent|ForensicAnalysis]]
 
 
+:: FingerprintLibraryFootprint {"position":"2775,2775","size":"100,100"}
 
-:: Examine the lamp cord found in the library {"position":"1212.5,2575","size":"100,100"}
 
 
+:: FingerprintWineBottle {"position":"5775,2775","size":"100,100"}
 
-:: Examine the lighter found in the guest room {"position":"2837.5,2575","size":"100,100"}
 
 
+:: FingerprintWok {"position":"875,3225","size":"100,100"}
+You have performed a fingerprint analysis on the wok found in the kitchen.
 
-:: Examine the notes found in Alvin's room {"position":"2462.5,2575","size":"100,100"}
+**Results:**
+- Fingerprints match the chef, Luis McMillan.
 
+[[Return to the Police Tent|ForensicAnalysis]]
 
 
-:: Examine the pack of cigars found in the guest room {"position":"2587.5,2575","size":"100,100"}
+:: ForensicAnalysis {"position":"1775,2900","size":"100,100"}
 
 
 
-:: Examine the sample of blood found in the library {"position":"1462.5,2575","size":"100,100"}
+:: GlassGlass {"position":"2275,2775","size":"100,100"}
+You have examined the glass fragments from the glass shard.
 
+**Results:**
+- Glass originates from the library window.
 
+[[Return to the Police Tent|ForensicAnalysis]]
 
-:: Examine wok found in the kitchen {"position":"1087.5,2575","size":"100,100"}
 
-
-
-:: Grand Foyer {"position":"2050,1525","size":"100,100"}
+:: Grand Foyer {"position":"4000,1600","size":"100,100"}
 (display:"Increase time by 1")
 (display:"Print Time")
 
@@ -243,7 +371,7 @@ There is a(text-colour:lime)[ [[foyer phone<-phone on a small table]]] next to t
 (if:$chef_leading is 1)[The chef steps through(text-colour:orange)[ [[Main Hallway<-two double doors]]].]
 
 
-:: Guest Bathroom {"position":"1100,1700","size":"100,100"}
+:: Guest Bathroom {"position":"3050,1775","size":"100,100"}
 (display:"Increase time by 1")
 (display:"Print Time")
 
@@ -252,7 +380,7 @@ There is a(text-colour:lime)[ [[foyer phone<-phone on a small table]]] next to t
 You step into the Guest Bathroom, and the room is immediately welcoming, with a sense of quiet luxury. The floor is covered with intricate, hand-laid tiles that feel cool underfoot. A large, clawfoot bathtub sits against one wall, its porcelain surface gleaming in the soft light from a crystal chandelier overhead. The walls are painted a soft, calming blue, complementing the white fixtures and the dark wood of the vanity. A large mirror hangs above the vanity, reflecting the light from the chandelier, while a small window lets in the muted light of the stormy day outside. Behind you is(text-colour:orange)[ [[Guest Bedroom<-the door you entered from]]].
 
 
-:: Guest Bedroom {"position":"1425,1725","size":"100,100"}
+:: Guest Bedroom {"position":"3375,1800","size":"100,100"}
 (display:"Increase time by 1")
 (display:"Print Time")
 
@@ -261,7 +389,7 @@ You step into the Guest Bathroom, and the room is immediately welcoming, with a 
 You step into the ''Guest Bedroom'', and the room welcomes you with a sense of understated luxury. The dark oak paneling of the walls adds warmth and richness, while the floor is covered in a thick, deep blue rug that muffles your footsteps. A large, four-poster bed dominates the center of the room, draped in heavy, burgundy curtains with golden tassels. The bed is adorned with a plush comforter and numerous decorative pillows, inviting you to sink into its softness. To the right, two doors lead off into(text-colour:orange)[ <span title="Enter the Guest Walk-in-Wardrobe">[[Guest Walk-in-Wardrobe<-a walk-in wardrobe]]</span> ]and(text-colour:orange)[ [[Guest Bathroom<-a  private bathroom]]]. The wardrobe door is made of polished oak, while the bathroom door is painted in a deep green hue, complementing the earthy tones of the room. A tall, narrow window on the far wall is framed by heavy, velvet curtains, through which the storm outside rages on, the rain battering against the glass. A small writing desk with an ornate chair sits by the window, the surface cluttered with an old-fashioned oil lamp, a quill, and a stack of parchment. An armchair, upholstered in a rich, patterned fabric, sits beside the bed, with a small side table with a(text-colour:lime)[ [[guest cigarettes<-pack of cigarettes]]] on it. Next to them, there is a(text-colour:lime)[ [[guest knives<-collection of knives]]]. A(text-colour:lime)[ [[guest lighter<-lighter]]] is on the ground.
 
 
-:: Guest Walk-in-Wardrobe {"position":"1100,1850","size":"100,100"}
+:: Guest Walk-in-Wardrobe {"position":"3050,1925","size":"100,100"}
 (display:"Increase time by 1")
 (display:"Print Time")
 
@@ -270,12 +398,12 @@ You step into the ''Guest Bedroom'', and the room welcomes you with a sense of u
 You step into the Guest Walk-in-Wardrobe, and the room is a model of organization and luxury. The walls are lined with shelves and hanging rods, each section meticulously organized with clothing, shoes, and accessories. The floor is carpeted in a plush, deep grey, muffling your footsteps as you move through the space. A large, full-length mirror occupies one wall, reflecting the warm light from the overhead fixture. The rain outside is barely audible here, the thick walls insulating the room from the storm. There is a door behind you leading back to the(text-colour:orange)[ [[Guest Bedroom<- Guest Bedroom]]].
 
 
-:: Increase time by 1 [Functions] {"position":"2300,2000","size":"100,100"}
+:: Increase time by 1 [Functions] {"position":"4250,2075","size":"100,100"}
 (set: $time_min to $time_min + 1)
 (if:$time_min > 59)[(set: $time_min to 60 - $time_min,$time_hr to $time_hr + 1)]
 
 
-:: Jack1 {"position":"1575,475","size":"100,100"}
+:: Jack1 {"position":"3525,550","size":"100,100"}
 (display:"Increase time by 1")
 (display:"Print Time")
 
@@ -287,7 +415,7 @@ You step into the Guest Walk-in-Wardrobe, and the room is a model of organizatio
 [[Jack3<-"Is there anyone you think could have done it?]]
 
 
-:: Jack2 {"position":"1512.5,600","size":"100,100"}
+:: Jack2 {"position":"3450,675","size":"100,100"}
 (display:"Increase time by 1")
 (display:"Print Time")
 
@@ -299,7 +427,7 @@ You step into the Guest Walk-in-Wardrobe, and the room is a model of organizatio
 [[Jack3<-"Is there anyone you think could have done it?]]
 
 
-:: Jack3 {"position":"1650,600","size":"100,100"}
+:: Jack3 {"position":"3600,675","size":"100,100"}
 (display:"Increase time by 1")
 (display:"Print Time")
 
@@ -311,7 +439,7 @@ You step into the Guest Walk-in-Wardrobe, and the room is a model of organizatio
 [[Jack2<-"Do you know anything that anyone else was doing?"]]
 
 
-:: Kitchen 1 {"position":"1650,1000","size":"100,100"}
+:: Kitchen 1 {"position":"3600,1075","size":"100,100"}
 (display:"Increase time by 1")
 (display:"Print Time")
 
@@ -339,7 +467,7 @@ If you want to complete an analysis on any evidence, head outside to the police 
 (set:$chef_leading to 0)]
 
 
-:: Leonardo1 {"position":"2250,475","size":"100,100"}
+:: Leonardo1 {"position":"4200,550","size":"100,100"}
 (display:"Increase time by 1")
 (display:"Print Time")
 
@@ -351,7 +479,7 @@ If you want to complete an analysis on any evidence, head outside to the police 
 [[Leonardo3<-"Is there anyone you think could have done it?]]
 
 
-:: Leonardo2 {"position":"2375,475","size":"100,100"}
+:: Leonardo2 {"position":"4325,550","size":"100,100"}
 (display:"Increase time by 1")
 (display:"Print Time")
 
@@ -363,7 +491,7 @@ If you want to complete an analysis on any evidence, head outside to the police 
 [[Leonardo3<-"Is there anyone you think could have done it?]]
 
 
-:: Leonardo3 {"position":"2500,475","size":"100,100"}
+:: Leonardo3 {"position":"4450,550","size":"100,100"}
 (display:"Increase time by 1")
 (display:"Print Time")
 
@@ -379,7 +507,7 @@ Leonardo hands you a bucket full of water.]
 [[Leonardo2<-"Do you know anything that anyone else was doing?"]]
 
 
-:: Library {"position":"3250,1850","size":"100,100"}
+:: Library {"position":"5200,1925","size":"100,100"}
 (display:"Increase time by 1")
 (display:"Print Time")
 
@@ -388,7 +516,7 @@ You step into the ''Library'', and the room greets you with an air of quiet cont
 You can head back to the(text-colour:orange)[ [[Mezzanine<-Mezzanine]]] whenever you want.
 
 
-:: Luis1 {"position":"2025,200","size":"100,100"}
+:: Luis1 {"position":"3975,275","size":"100,100"}
 (display:"Increase time by 1")
 (display:"Print Time")
 
@@ -400,7 +528,7 @@ You can head back to the(text-colour:orange)[ [[Mezzanine<-Mezzanine]]] whenever
 [[Luis3<-"Is there anyone you think could have done it?]]
 
 
-:: Luis2 {"position":"2150,200","size":"100,100"}
+:: Luis2 {"position":"4100,275","size":"100,100"}
 (display:"Increase time by 1")
 (display:"Print Time")
 
@@ -412,7 +540,7 @@ You can head back to the(text-colour:orange)[ [[Mezzanine<-Mezzanine]]] whenever
 [[Luis3<-"Is there anyone you think could have done it?]]
 
 
-:: Luis3 {"position":"2025,325","size":"100,100"}
+:: Luis3 {"position":"3975,400","size":"100,100"}
 (display:"Increase time by 1")
 (display:"Print Time")
 
@@ -424,7 +552,7 @@ You can head back to the(text-colour:orange)[ [[Mezzanine<-Mezzanine]]] whenever
 [[Luis2<-"Do you know anything that anyone else was doing?"]]
 
 
-:: Main Hallway {"position":"2100,1200","size":"100,100"}
+:: Main Hallway {"position":"4050,1275","size":"100,100"}
 (display:"Increase time by 1")
 (display:"Print Time")
 
@@ -437,14 +565,14 @@ You step into the ''Main Hallway''. The hallway is spacious, with polished woode
 (if:$chef_leading is 1)[The chef steps through(text-colour:orange)[ [[Dining Hall<-another door]]].]
 
 
-:: Mezzanine {"position":"3125,1100","size":"100,100"}
+:: Mezzanine {"position":"5075,1175","size":"100,100"}
 (display:"Increase time by 1")
 (display:"Print Time")
 
 Ascending the Grand Staircase, you arrive at the Mezzanine above the Grand Foyer, where the opulence of the mansion is fully on display. The mezzanine is a wide, open space that overlooks the(text-colour:orange)[ [[Grand Foyer<-Grand Foyer]]] below, offering a commanding view of the grand chandelier and the intricate marble floor. The balustrade is intricately carved, with polished wood and gold accents that gleam in the soft light. Large windows on the far wall provide a view of the stormy night outside, the rain streaming down the glass and distorting the world beyond. The ceiling is high, adorned with frescoes and gilded moldings, giving the space an air of grandeur. The sound of the rain is faint here, overshadowed by the stillness of the room. There is a(text-colour:orange)[ [[Library<-door leading to the Library]]]., one leading to the(text-colour:orange)[ [[Alvin's Room<-master bedroom]]], and one leading to(text-colour:orange)[ [[Ben's Room<-another bedroom]]].
 
 
-:: Parlor {"position":"2425,1400","size":"100,100"}
+:: Parlor {"position":"4375,1475","size":"100,100"}
 (display:"Increase time by 1")
 (display:"Print Time")
 
@@ -455,7 +583,7 @@ You step into the ''Parlor'', and the room exudes an air of refined elegance. Th
 At the center of the room, a(text-colour:lime)[ [[parlor rug<-plush cream-coloured rug]]] covers the polished wooden floor, its soft fibers muffling your footsteps. Positioned on the rug are four armchairs and a matching sofa, all upholstered in deep burgundy velvet. The furniture is arranged around a low, mahogany coffee table, upon which rests a delicate porcelain tea set and a few well-thumbed books. To the right, large, mullioned windows stretch nearly from floor to ceiling, offering a view of the storm raging outside. The rain beats heavily against the glass, distorting the view of the darkened garden beyond. Behind you is the(text-colour:orange)[ [[Grand Foyer<-door you entered from]]]
 
 
-:: Patricia1 {"position":"2200,325","size":"100,100"}
+:: Patricia1 {"position":"4150,400","size":"100,100"}
 (display:"Increase time by 1")
 (display:"Print Time")
 
@@ -467,7 +595,7 @@ At the center of the room, a(text-colour:lime)[ [[parlor rug<-plush cream-colour
 [[Patricia3<-"Is there anyone you think could have done it?]]
 
 
-:: Patricia2 {"position":"2325,325","size":"100,100"}
+:: Patricia2 {"position":"4275,400","size":"100,100"}
 (display:"Increase time by 1")
 (display:"Print Time")
 
@@ -479,7 +607,7 @@ At the center of the room, a(text-colour:lime)[ [[parlor rug<-plush cream-colour
 [[Patricia3<-"Is there anyone you think could have done it?]]
 
 
-:: Patricia3 {"position":"2450,325","size":"100,100"}
+:: Patricia3 {"position":"4400,400","size":"100,100"}
 (display:"Increase time by 1")
 (display:"Print Time")
 
@@ -491,85 +619,135 @@ At the center of the room, a(text-colour:lime)[ [[parlor rug<-plush cream-colour
 [[Patricia2<-"Do you know anything that anyone else was doing?"]]
 
 
-:: Perform fingerprint analysis {"position":"1150,2925","size":"100,100"}
-
-
-
-:: Police Tent {"position":"1900,2200","size":"100,100"}
+:: Police Tent {"position":"3850,2275","size":"100,100"}
 (display:"Increase time by 1")
 (display:"Print Time")
 
-You enter the ''Police Tent''. Here, you can examine any piece of evidence you've collected so far.
+You enter the ''Police Tent''. Here, you can examine any piece of evidence you've collected so far. Any analysis takes 5 minutes. You can also head back to the(text-colour:orange)[ [[Porch<-porch.]]]
 
+---
+
+**Forensic Analysis Options:**
+
+1. **Fingerprint Analysis:** Identifies and matches fingerprints found on the evidence to known individuals (e.g., suspects). This can link suspects to the crime scene or clear them if their prints are not found. This analysis is handled by the **Fingerprint Sciences** department of Victoria Police.
+
+2. **DNA Testing:** Compares DNA found on the evidence to known profiles. This method can definitively connect a suspect or victim to the crime scene. DNA testing is conducted by the **Biological Sciences** and **DNA Management** departments of Victoria Police.
+
+3. **Shoe Size Matching:** Compares shoe prints or moulds found at the crime scene to the shoe sizes of potential suspects. This can help identify individuals who were present based on their footwear. This analysis is typically handled by the **Major Crime Scene Investigation** department of Victoria Police.
+
+4. **Glass Fragment Examination:** Analyzes glass shards or fragments found at the scene to determine their origin and how they might relate to the crime. This can provide clues about how the crime was committed. Glass examination is handled by the **Chemical Trace** and **Major Crime Scene Investigation** departments of Victoria Police.
+
+5. **Blood Sample Analysis:** Tests blood samples to determine their origin, which can provide crucial information about the events that took place. This analysis is conducted by the **Biological Sciences** and **Chemical, Biological and Radiological/Disaster Victim Identification** departments of Victoria Police.
+
+6. **Ballistics Test:** Examines firearms and ammunition to determine if a particular weapon was used in the crime. This can link a gun to a specific shooting event. This test is performed by the **Ballistics** department of Victoria Police.
+
+**Note that if you can perform both a DNA and blood analysis, the DNA analysis won't give any results relating to the blood. **
+
+---
+
+**Detailed Analysis for Each Evidence Type:**
 (if: $evidence_kitchen_all is 2)[
-    [[Examine knife found in the victim's body]]
-    [[Examine footprint mould taken from under the victim's body]]
-    [[Examine wok found in the kitchen]]
+- **Knife found in the victim's body:**
+  * [[Perform fingerprint analysis on knife|FingerprintKnife]]
+  * [[Test knife for DNA|DNAKnife]]
+  * [[Analyze blood sample from knife|BloodKnife]]
+  * [[Perform trace analysis on knife|TraceKnife]]
+
+- **Footprint mould taken from under the victim's body:**
+  * [[Perform fingerprint analysis on footprint mould|FingerprintFootprint]]
+  * [[Analyze shoe print mould for matching|ShoePrintFootprint]]
+  * [[Perform trace analysis on footprint mould|TraceFootprint]]
+
+- **Wok found in the kitchen:**
+  * [[Perform fingerprint analysis on wok|FingerprintWok]]
+  * [[Test wok for DNA|DNAWok]]
+  * [[Analyze blood sample from wok|BloodWok]]
+  * [[Perform trace analysis on wok|TraceWok]]
+](if: $evidence_library_lamp_cord is 2)[
+- **Lamp cord found in the library:**
+  * [[Perform fingerprint analysis on lamp cord|FingerprintLampCord]]
+  * [[Test lamp cord for DNA|DNALampCord]]
+  * [[Analyze blood sample from lamp cord|BloodLampCord]]
+  * [[Perform trace analysis on lamp cord|TraceLampCord]]
+](if: $evidence_library_glass is 2)[
+- **Glass shard found in the library:**
+  * [[Perform fingerprint analysis on glass shard|FingerprintGlass]]
+  * [[Examine glass fragments from glass shard|GlassGlass]]
+  * [[Test glass shard for DNA|DNAGlass]]
+  * [[Analyze blood sample from glass shard|BloodGlass]]
+  * [[Perform trace analysis on glass shard|TraceGlass]]
+](if: $evidence_library_bloodstains is 2)[
+- **Sample of blood found in the library under the rug:**
+  * [[Perform fingerprint analysis on blood sample|FingerprintBloodSample]]
+  * [[Test blood sample for DNA|DNABloodSample]]
+  * [[Analyze blood sample itself|BloodSampleAnalysis]]
+  * [[Perform trace analysis on blood sample|TraceBloodSample]]
+](if: $evidence_library_footprint is 2)[
+- **Footprint mould taken from the library:**
+  * [[Perform fingerprint analysis on footprint mould|FingerprintLibraryFootprint]]
+  * [[Test footprint mould for DNA|DNALibraryFootprint]]
+  * [[Analyze shoe print mould for matching|ShoePrintLibraryFootprint]]
+  * [[Perform trace analysis on footprint mould|TraceLibraryFootprint]]
+](if: $evidence_ben_burnt_gloves is 2)[
+- **Charred gloves found in Benjamin's room:**
+  * [[Perform fingerprint analysis on gloves|FingerprintBenGloves]]
+  * [[Test gloves for DNA|DNABenGloves]]
+  * [[Perform trace analysis on gloves|TraceBenGloves]]
+](if: $evidence_ben_diary is 2)[
+- **Diary found in Benjamin's room:**
+  * [[Perform fingerprint analysis on diary|FingerprintBenDiary]]
+  * [[Test diary for DNA|DNABenDiary]]
+  * [[Perform trace analysis on diary|TraceBenDiary]]
+](if: $evidence_butler_gloves is 2)[
+- **Gloves found in the butler's room:**
+  * [[Perform fingerprint analysis on gloves|FingerprintButlerGloves]]
+  * [[Test gloves for DNA|DNAButlerGloves]]
+  * [[Perform trace analysis on gloves|TraceButlerGloves]]
+](if: $evidence_butler_phone is 2)[
+- **Fingerprint samples from the phone in the butler's room:**
+  * [[Perform fingerprint analysis on samples|FingerprintButlerPhone]]
+  * [[Test phone for DNA|DNAButlerPhone]]
+  * [[Perform trace analysis on phone|TraceButlerPhone]]
+](if: $evidence_foyer_phone is 2)[
+- **Fingerprint samples from the phone in the Grand Foyer:**
+  * [[Perform fingerprint analysis on phone|FingerprintFoyerPhone]]
+  * [[Test phone for DNA|DNAFoyerPhone]]
+  * [[Perform trace analysis on phone|TraceFoyerPhone]]
+](if: $evidence_alvin_gun is 2)[
+- **Gun found in Alvin's room:**
+  * [[Perform fingerprint analysis on gun|FingerprintGun]]
+  * [[Test gun for DNA|DNAGun]]
+  * [[Conduct ballistics test on gun|BallisticsGun]]
+  * [[Perform trace analysis on gun|TraceGun]]
+](if: $evidence_alvin_notes is 2)[
+- **Notes found in Alvin's room:**
+  * [[Perform fingerprint analysis on notes|FingerprintAlvinNotes]]
+  * [[Test notes for DNA|DNAAlvinNotes]]
+  * [[Perform trace analysis on notes|TraceAlvinNotes]]
+](if: $evidence_guest_cigars is 2)[
+- **Pack of cigars found in the guest room:**
+  * [[Perform fingerprint analysis on cigars|FingerprintGuestCigars]]
+  * [[Test cigars for DNA|DNAGuestCigars]]
+  * [[Perform trace analysis on cigars|TraceGuestCigars]]
+](if: $evidence_guest_knives is 2)[
+- **Knives found in the guest room:**
+  * [[Perform fingerprint analysis on knives|FingerprintGuestKnives]]
+  * [[Test knives for DNA|DNAGuestKnives]]
+  * [[Perform trace analysis on knives|TraceGuestKnives]]
+](if: $evidence_guest_lighter is 2)[
+- **Lighter found in the guest room:**
+  * [[Perform fingerprint analysis on lighter|FingerprintGuestLighter]]
+  * [[Test lighter for DNA|DNAGuestLighter]]
+  * [[Perform trace analysis on lighter|TraceGuestLighter]]
+](if: $evidence_parlor_winebottle is 2)[
+- **Wine bottle found in the Parlor:**
+  * [[Perform fingerprint analysis on wine bottle|FingerprintWineBottle]]
+  * [[Test wine bottle for DNA|DNAWineBottle]]
+  * [[Perform trace analysis on wine bottle|TraceWineBottle]]
 ]
 
-(if: $evidence_library_lamp_cord is 2)[
-    [[Examine the lamp cord found in the library]]
-]
 
-(if: $evidence_library_glass is 2)[
-    [[Examine the glass shard found in the library]]
-]
-
-(if: $evidence_library_bloodstains is 2)[
-    [[Examine the sample of blood found in the library]]
-]
-
-(if: $evidence_library_footprint is 2)[
-    [[Examine the footprint mould taken from the library]]
-]
-
-(if: $evidence_ben_burnt_gloves is 2)[
-    [[Examine the charred gloves found in Benjamin's room]]
-]
-
-(if: $evidence_ben_diary is 2)[
-    [[Examine the diary found in Benjamin's room]]
-]
-
-(if: $evidence_butler_gloves is 2)[
-    [[Examine the gloves found in the butler's room]]
-]
-
-(if: $evidence_butler_phone is 2)[
-    [[Examine the fingerprints taken from the phone in the butler's room]]
-]
-
-(if: $evidence_foyer_phone is 2)[
-    [[Examine the fingerprints taken from the phone in the Grand Foyer]]
-]
-
-(if: $evidence_alvin_gun is 2)[
-    [[Examine the gun found in Alvin's room]]
-]
-
-(if: $evidence_alvin_notes is 2)[
-    [[Examine the notes found in Alvin's room]]
-]
-
-(if: $evidence_guest_cigars is 2)[
-    [[Examine the pack of cigars found in the guest room]]
-]
-
-(if: $evidence_guest_knives is 2)[
-    [[Examine the knives found in the guest room]]
-]
-
-(if: $evidence_guest_lighter is 2)[
-    [[Examine the lighter found in the guest room]]
-]
-
-(if: $evidence_parlor_winebottle is 2)[
-    [[Examine the fingerprint samples taken from the wine bottle found in the Parlor]]
-]
-
-
-
-:: Porch {"position":"2000,1775","size":"100,100"}
+:: Porch {"position":"3950,1850","size":"100,100"}
 (display:"Increase time by 1")
 (display:"Print Time")
 
@@ -580,11 +758,11 @@ You step onto the ''Porch'', immediately greeted by the sound of rain pounding a
 "(text-colour:orange)[ [[Grand Foyer<-Follow me.]]]" he says.]
 
 
-:: Print Time [Functions] {"position":"2200,2000","size":"100,100"}
+:: Print Time [Functions] {"position":"4150,2075","size":"100,100"}
 (print:$time_hr)(text-style:"blink")[:](print:$time_min) pm
 
 
-:: Rufus1 {"position":"1687.5,375","size":"100,100"}
+:: Rufus1 {"position":"3625,450","size":"100,100"}
 (display:"Increase time by 1")
 (display:"Print Time")
 
@@ -596,7 +774,7 @@ You step onto the ''Porch'', immediately greeted by the sound of rain pounding a
 [[Rufus3<-"Is there anyone you think could have done it?]]
 
 
-:: Rufus2 {"position":"1800,375","size":"100,100"}
+:: Rufus2 {"position":"3750,450","size":"100,100"}
 (display:"Increase time by 1")
 (display:"Print Time")
 
@@ -608,7 +786,7 @@ You step onto the ''Porch'', immediately greeted by the sound of rain pounding a
 [[Rufus3<-"Is there anyone you think could have done it?]]
 
 
-:: Rufus3 {"position":"1875,250","size":"100,100"}
+:: Rufus3 {"position":"3825,325","size":"100,100"}
 (display:"Increase time by 1")
 (display:"Print Time")
 
@@ -620,7 +798,7 @@ You step onto the ''Porch'', immediately greeted by the sound of rain pounding a
 [[Rufus2<-"Do you know anything that anyone else was doing?"]]
 
 
-:: Selena1 {"position":"1575,800","size":"100,100"}
+:: Selena1 {"position":"3525,875","size":"100,100"}
 "I was relaxing in the Parlor when I heard the chef hang up the phone. He entered the Parlor and told me what happened," says Selena.
 
 [[Ballroom<-Stop Talking to Selena Franco]]
@@ -629,7 +807,7 @@ You step onto the ''Porch'', immediately greeted by the sound of rain pounding a
 [[Selena3<-"Is there anyone you think could have done it?]]
 
 
-:: Selena2 {"position":"1700,800","size":"100,100"}
+:: Selena2 {"position":"3650,875","size":"100,100"}
 "I knew that Alvin was going to read in the Library, since he usually does that before going to bed. I don't why he went to the Kitchen, it seems strange," says Selena.
 
 [[Ballroom<-Stop Talking to Selena Franco]]
@@ -638,7 +816,7 @@ You step onto the ''Porch'', immediately greeted by the sound of rain pounding a
 [[Selena3<-"Is there anyone you think could have done it?]]
 
 
-:: Selena3 {"position":"1825,800","size":"100,100"}
+:: Selena3 {"position":"3775,875","size":"100,100"}
 "It must have been the chef. No one else goes into the kitchen except for the butler sometimes," says Selena.
 
 [[Ballroom<-Stop Talking to Selena Franco]]
@@ -647,7 +825,20 @@ You step onto the ''Porch'', immediately greeted by the sound of rain pounding a
 [[Selena2<-"Do you know anything that anyone else was doing?"]]
 
 
-:: Staff Hallway #1 {"position":"1400,1350","size":"100,100"}
+:: ShoePrintFootprint {"position":"1150,3125","size":"100,100"}
+You have analyzed the footprint mould for shoe print size.
+
+**Results:**
+- Shoe print size: Size 11.
+
+[[Return to the Police Tent|ForensicAnalysis]]
+
+
+:: ShoePrintLibraryFootprint {"position":"3025,2775","size":"100,100"}
+
+
+
+:: Staff Hallway #1 {"position":"3350,1425","size":"100,100"}
 (display:"Increase time by 1")
 (display:"Print Time")
 
@@ -656,7 +847,7 @@ You step onto the ''Porch'', immediately greeted by the sound of rain pounding a
 Entering the Staff Hallway, you are greeted by a space designed for efficiency rather than aesthetics. The hallway is narrow, with low ceilings and plain, unadorned walls. The wooden floorboards, though sturdy, show signs of wear from years of use. A few doors line the hallway, leading to other functional areas of the mansion used by the staff. The dim lighting from the sconces on the walls casts faint shadows, and the sound of the storm outside is more noticeable here, with the wind occasionally rattling the windows. You can head to the(text-colour:orange)[ [[Butler's Room<-Butler's Room]]], the (text-colour:orange)[ [[Kitchen 1<-Kitchen]]] or the(text-colour:orange)[ [[Grand Foyer<-Grand Foyer]]].
 
 
-:: Start {"position":"1800,1825","size":"100,100"}
+:: Start {"position":"3750,1900","size":"100,100"}
 (set:$time_hr to 9,$time_min to 14)
 
 You've just been called out to a crime scene of a murder scene. You have at an old European style Victorian mansion. You are a forensic scientist. Good luck!
@@ -701,7 +892,7 @@ You've just been called out to a crime scene of a murder scene. You have at an o
 (set:$evidence_parlor_rug to 0)
 
 
-:: Talk to Benjamin Franco {"position":"2525,175","size":"100,100"}
+:: Talk to Benjamin Franco {"position":"4475,250","size":"100,100"}
 (display:"Increase time by 1")
 (display:"Print Time")
 
@@ -714,7 +905,7 @@ Benjamin Franco is Alvin and Selena's son.
 [[Ben3<-"Is there anyone you think could have done it?]]
 
 
-:: Talk to Jack Farmer {"position":"1575,350","size":"100,100"}
+:: Talk to Jack Farmer {"position":"3525,425","size":"100,100"}
 (display:"Increase time by 1")
 (display:"Print Time")
 
@@ -727,7 +918,7 @@ Jack Farmer is the gardener.
 [[Jack3<-"Is there anyone you think could have done it?]]
 
 
-:: Talk to Leonardo Greene {"position":"2375,100","size":"100,100"}
+:: Talk to Leonardo Greene {"position":"4325,175","size":"100,100"}
 (display:"Increase time by 1")
 (display:"Print Time")
 
@@ -740,7 +931,7 @@ Leonardo Greene is a guest.
 [[Leonardo3<-"Is there anyone you think could have done it?]]
 
 
-:: Talk to Luis McMillan {"position":"2025,75","size":"100,100"}
+:: Talk to Luis McMillan {"position":"3975,150","size":"100,100"}
 (display:"Increase time by 1")
 (display:"Print Time")
 
@@ -753,7 +944,7 @@ Luis McMillan is the chef.
 [[Luis3<-"Is there anyone you think could have done it?]]
 
 
-:: Talk to Patricia Curtis {"position":"2200,75","size":"100,100"}
+:: Talk to Patricia Curtis {"position":"4150,150","size":"100,100"}
 (display:"Increase time by 1")
 (display:"Print Time")
 
@@ -766,7 +957,7 @@ Patricia Curtis is the housekeeper.
 [[Patricia3<-"Is there anyone you think could have done it?]]
 
 
-:: Talk to Rufus Wagner {"position":"1875,125","size":"100,100"}
+:: Talk to Rufus Wagner {"position":"3825,200","size":"100,100"}
 (display:"Increase time by 1")
 (display:"Print Time")
 
@@ -779,7 +970,7 @@ Rufus Wagner is the butler of the house.
 [[Rufus3<-"Is there anyone you think could have done it?]]
 
 
-:: Talk to Selena Franco {"position":"1700,175","size":"100,100"}
+:: Talk to Selena Franco {"position":"3650,250","size":"100,100"}
 (display:"Increase time by 1")
 (display:"Print Time")
 
@@ -792,11 +983,104 @@ Selena Franco is Alvin's husband and Benjamin's mother.
 [[Selena3<-"Is there anyone you think could have done it?]]
 
 
-:: Test for DNA {"position":"1275,2925","size":"100,100"}
+:: TraceAlvinNotes {"position":"4412.5,2650","size":"100,100"}
 
 
 
-:: alvin bed {"position":"4150,1550","size":"100,100"}
+:: TraceBenDiary {"position":"3787.5,2650","size":"100,100"}
+
+
+
+:: TraceBenGloves {"position":"3662.5,2650","size":"100,100"}
+
+
+
+:: TraceBloodSample {"position":"3412.5,2650","size":"100,100"}
+
+
+
+:: TraceButlerGloves {"position":"3912.5,2650","size":"100,100"}
+
+
+
+:: TraceButlerPhone {"position":"4037.5,2650","size":"100,100"}
+
+
+
+:: TraceFootprint {"position":"2912.5,2650","size":"100,100"}
+You have performed a trace analysis on the footprint mould.
+
+**Results:**
+- No additional trace evidence found.
+
+[[Return to the Police Tent|ForensicAnalysis]]
+
+
+:: TraceFoyerPhone {"position":"4162.5,2650","size":"100,100"}
+
+
+
+:: TraceGlass {"position":"3287.5,2650","size":"100,100"}
+You have performed a trace analysis on the glass shard.
+
+**Results:**
+- No additional trace evidence found.
+
+[[Return to the Police Tent|ForensicAnalysis]]
+
+
+:: TraceGuestCigars {"position":"4537.5,2650","size":"100,100"}
+
+
+
+:: TraceGuestKnives {"position":"4662.5,2650","size":"100,100"}
+
+
+
+:: TraceGuestLighter {"position":"4787.5,2650","size":"100,100"}
+
+
+
+:: TraceGun {"position":"4287.5,2650","size":"100,100"}
+
+
+
+:: TraceKnife {"position":"2787.5,2650","size":"100,100"}
+You have performed a trace analysis on the knife.
+
+**Results:**
+- No additional trace evidence found.
+
+[[Return to the Police Tent|ForensicAnalysis]]
+
+
+:: TraceLampCord {"position":"3162.5,2650","size":"100,100"}
+You have performed a trace analysis on the lamp cord.
+
+**Results:**
+- No additional trace evidence found.
+
+[[Return to the Police Tent|ForensicAnalysis]]
+
+
+:: TraceLibraryFootprint {"position":"3537.5,2650","size":"100,100"}
+
+
+
+:: TraceWineBottle {"position":"4912.5,2650","size":"100,100"}
+
+
+
+:: TraceWok {"position":"3037.5,2650","size":"100,100"}
+You have performed a trace analysis on the wok.
+
+**Results:**
+- No additional trace evidence found.
+
+[[Return to the Police Tent|ForensicAnalysis]]
+
+
+:: alvin bed {"position":"6100,1625","size":"100,100"}
 (display:"Increase time by 1")
 (display:"Print Time")
 
@@ -807,7 +1091,7 @@ You examine the bed. It's a four-poster bed.
 [[Alvin's Room<-Stop examining]]
 
 
-:: alvin gun {"position":"3975,1725","size":"100,100"}
+:: alvin gun {"position":"5925,1800","size":"100,100"}
 (display:"Increase time by 1")
 (display:"Print Time")
 
@@ -822,7 +1106,7 @@ You examine the bed. It's a four-poster bed.
 [[Alvin's Room<-Stop examining]]
 
 
-:: alvin gun2 {"position":"3875,2075","size":"100,100"}
+:: alvin gun2 {"position":"5825,2150","size":"100,100"}
 (set:$evidence_alvin_gun to 2)
 (display:"Increase time by 1")
 (display:"Increase time by 1")
@@ -832,7 +1116,7 @@ You examine the bed. It's a four-poster bed.
 (go-to:"alvin gun")
 
 
-:: alvin notes {"position":"4275,1725","size":"100,100"}
+:: alvin notes {"position":"6225,1800","size":"100,100"}
 (display:"Increase time by 1")
 (display:"Print Time")
 
@@ -847,7 +1131,7 @@ You examine the bed. It's a four-poster bed.
 [[alvin bed<-Stop examining]]
 
 
-:: alvin notes2 {"position":"4275,1850","size":"100,100"}
+:: alvin notes2 {"position":"6225,1925","size":"100,100"}
 (set:$evidence_alvin_notes to 2)
 (display:"Increase time by 1")
 (display:"Increase time by 1")
@@ -855,7 +1139,7 @@ You examine the bed. It's a four-poster bed.
 (go-to:"alvin notes")
 
 
-:: ben diary {"position":"3575,1050","size":"100,100"}
+:: ben diary {"position":"5525,1125","size":"100,100"}
 (display:"Increase time by 1")
 (display:"Print Time")
 
@@ -870,7 +1154,7 @@ You examine the bed. It's a four-poster bed.
 [[Ben's Room<-Stop examining]]
 
 
-:: ben diary2 {"position":"3775,1225","size":"100,100"}
+:: ben diary2 {"position":"5725,1300","size":"100,100"}
 (set:$evidence_ben_diary to 2)
 (display:"Increase time by 1")
 (display:"Increase time by 1")
@@ -880,7 +1164,7 @@ You examine the bed. It's a four-poster bed.
 (go-to:"ben diary")
 
 
-:: ben fireplace {"position":"3825,875","size":"100,100"}
+:: ben fireplace {"position":"5775,950","size":"100,100"}
 (display:"Increase time by 1")
 (display:"Print Time")
 
@@ -895,7 +1179,7 @@ You examine the fireplace. (if:$action_fire_out is 0)[There seems to be somethin
 [[Ben's Room<-Stop examining]]
 
 
-:: ben gloves {"position":"3825,1000","size":"100,100"}
+:: ben gloves {"position":"5775,1075","size":"100,100"}
 (display:"Increase time by 1")
 (display:"Print Time")
 
@@ -912,7 +1196,7 @@ You examine the fireplace. (if:$action_fire_out is 0)[There seems to be somethin
 [[Ben's Room<-Stop Examining]]
 
 
-:: ben gloves2 {"position":"3950,1125","size":"100,100"}
+:: ben gloves2 {"position":"5900,1200","size":"100,100"}
 (set:$evidence_ben_burnt_gloves to 2)
 (display:"Increase time by 1")
 (display:"Increase time by 1")
@@ -920,7 +1204,7 @@ You examine the fireplace. (if:$action_fire_out is 0)[There seems to be somethin
 (go-to:"ben gloves")
 
 
-:: ben search {"position":"3375,1000","size":"100,100"}
+:: ben search {"position":"5325,1075","size":"100,100"}
 (display:"Increase time by 1")
 (display:"Print Time")
 
@@ -929,7 +1213,7 @@ You searched the whole room, but couldn't find a first-aid kit anywhere.
 (if:$found_firstaid_kit is 1)[(set:$found_firstaid_kit to 2)]
 
 
-:: butler awake {"position":"750,1075","size":"100,100"}
+:: butler awake {"position":"2700,1150","size":"100,100"}
 (set:$evidence_bulter_sleeping to 2)
 (display:"Increase time by 1")
 (display:"Increase time by 1")
@@ -937,7 +1221,7 @@ You searched the whole room, but couldn't find a first-aid kit anywhere.
 (go-to:"butler bed")
 
 
-:: butler bed {"position":"875,950","size":"100,100"}
+:: butler bed {"position":"2825,1025","size":"100,100"}
 (display:"Increase time by 1")
 (display:"Print Time")
 
@@ -954,7 +1238,7 @@ You searched the whole room, but couldn't find a first-aid kit anywhere.
 [[Butler's Room<-Stop examining]]
 
 
-:: butler desk {"position":"875,1375","size":"100,100"}
+:: butler desk {"position":"2825,1450","size":"100,100"}
 (display:"Increase time by 1")
 (display:"Print Time")
 
@@ -963,7 +1247,7 @@ On the butler's desk, you can see(text-colour:lime)[ [[butler gloves<-some glove
 [[Butler's Room<-Stop examining]]
 
 
-:: butler gloves {"position":"950,1575","size":"100,100"}
+:: butler gloves {"position":"2900,1650","size":"100,100"}
 (display:"Increase time by 1")
 (display:"Print Time")
 
@@ -977,7 +1261,7 @@ On the butler's desk, you can see(text-colour:lime)[ [[butler gloves<-some glove
 [[butler desk<-Stop examining]]
 
 
-:: butler gloves2 {"position":"850,1750","size":"100,100"}
+:: butler gloves2 {"position":"2800,1825","size":"100,100"}
 (set:$evidence_butler_gloves to 2)
 (display:"Increase time by 1")
 (display:"Increase time by 1")
@@ -987,7 +1271,7 @@ On the butler's desk, you can see(text-colour:lime)[ [[butler gloves<-some glove
 (go-to:"butler gloves")
 
 
-:: butler knife {"position":"750,1500","size":"100,100"}
+:: butler knife {"position":"2700,1575","size":"100,100"}
 (display:"Increase time by 1")
 (display:"Print Time")
 
@@ -1001,7 +1285,7 @@ On the butler's desk, you can see(text-colour:lime)[ [[butler gloves<-some glove
 [[butler desk<-Stop examining]]
 
 
-:: butler knife2 {"position":"750,1625","size":"100,100"}
+:: butler knife2 {"position":"2700,1700","size":"100,100"}
 (set:$evidence_butler_knife to 2)
 (display:"Increase time by 1")
 (display:"Increase time by 1")
@@ -1011,7 +1295,7 @@ On the butler's desk, you can see(text-colour:lime)[ [[butler gloves<-some glove
 (go-to:"butler knife")
 
 
-:: butler phone {"position":"875,1125","size":"100,100"}
+:: butler phone {"position":"2825,1200","size":"100,100"}
 (display:"Increase time by 1")
 (display:"Print Time")
 
@@ -1026,7 +1310,7 @@ You examine the phone. The cord looks broken and is unplugged.
 [[Butler's Room<-Stop examining]]
 
 
-:: butler phone2 {"position":"525,1450","size":"100,100"}
+:: butler phone2 {"position":"2475,1525","size":"100,100"}
 (set:$evidence_butler_phone to 2)
 (display:"Increase time by 1")
 (display:"Increase time by 1")
@@ -1036,7 +1320,7 @@ You examine the phone. The cord looks broken and is unplugged.
 (go-to:"butler phone")
 
 
-:: foyer phone {"position":"2300,1750","size":"100,100"}
+:: foyer phone {"position":"4250,1825","size":"100,100"}
 (display:"Increase time by 1")
 (display:"Print Time")
 
@@ -1051,7 +1335,7 @@ You take a close look at the phone.
 [[Grand Foyer<-Stop examining]]
 
 
-:: foyer phone2 {"position":"2475,1775","size":"100,100"}
+:: foyer phone2 {"position":"4425,1850","size":"100,100"}
 (set:$evidence_foyer_phone to 2)
 (display:"Increase time by 1")
 (display:"Increase time by 1")
@@ -1061,7 +1345,7 @@ You take a close look at the phone.
 (go-to:"foyer phone")
 
 
-:: guest cigarettes {"position":"1575,1850","size":"100,100"}
+:: guest cigarettes {"position":"3525,1925","size":"100,100"}
 (display:"Increase time by 1")
 (display:"Print Time")
 
@@ -1076,7 +1360,7 @@ You take a close look at the phone.
 [[Guest Bedroom<-Stop examining]]
 
 
-:: guest cigars2 {"position":"1500,2025","size":"100,100"}
+:: guest cigars2 {"position":"3450,2100","size":"100,100"}
 (set:$evidence_guest_cigars to 2)
 (display:"Increase time by 1")
 (display:"Increase time by 1")
@@ -1084,7 +1368,7 @@ You take a close look at the phone.
 (go-to:"guest cigarettes")
 
 
-:: guest knives {"position":"1375,1950","size":"100,100"}
+:: guest knives {"position":"3325,2025","size":"100,100"}
 (display:"Increase time by 1")
 (display:"Print Time")
 
@@ -1098,7 +1382,7 @@ You take a close look at the phone.
 [[Guest Bedroom<-Stop examining]]
 
 
-:: guest knives2 {"position":"1375,2075","size":"100,100"}
+:: guest knives2 {"position":"3325,2150","size":"100,100"}
 (set:$evidence_guest_knives to 2)
 (display:"Increase time by 1")
 (display:"Increase time by 1")
@@ -1108,7 +1392,7 @@ You take a close look at the phone.
 (go-to:"guest knives")
 
 
-:: guest lighter {"position":"1175,1975","size":"100,100"}
+:: guest lighter {"position":"3125,2050","size":"100,100"}
 (display:"Increase time by 1")
 (display:"Print Time")
 
@@ -1122,7 +1406,7 @@ You take a close look at the phone.
 [[Guest Bedroom<-Stop examining]]
 
 
-:: guest lighter2 {"position":"1150,2150","size":"100,100"}
+:: guest lighter2 {"position":"3100,2225","size":"100,100"}
 (set:$evidence_guest_lighter to 2)
 (display:"Increase time by 1")
 (display:"Increase time by 1")
@@ -1130,7 +1414,7 @@ You take a close look at the phone.
 (go-to:"guest lighter")
 
 
-:: library bookshelf {"position":"3375,2100","size":"100,100"}
+:: library bookshelf {"position":"5325,2175","size":"100,100"}
 (display:"Increase time by 1")
 (display:"Print Time")
 
@@ -1141,7 +1425,7 @@ You take a close look at the bookshelf. It has perfect rows of books on it.
 [[Library<-Stop examining]]
 
 
-:: library bookshelf 2 {"position":"3425,2275","size":"100,100"}
+:: library bookshelf 2 {"position":"5375,2350","size":"100,100"}
 (display:"Increase time by 1")
 (display:"Print Time")
 
@@ -1155,7 +1439,7 @@ You take a close look at the bookshelf. It has perfect rows of books on it.
 [[library bookshelf<-Stop examining]]
 
 
-:: library bookshelf3 {"position":"3425,2400","size":"100,100"}
+:: library bookshelf3 {"position":"5375,2475","size":"100,100"}
 (set:$evidence_library_lamp_cord to 2)
 (display:"Increase time by 1")
 (display:"Increase time by 1")
@@ -1163,7 +1447,7 @@ You take a close look at the bookshelf. It has perfect rows of books on it.
 (go-to:"library bookshelf 2")
 
 
-:: library carpet blood {"position":"3250,2350","size":"100,100"}
+:: library carpet blood {"position":"5200,2425","size":"100,100"}
 (display:"Increase time by 1")
 (display:"Print Time")
 
@@ -1178,7 +1462,7 @@ You take a close look at the bookshelf. It has perfect rows of books on it.
 [[library rug<-Stop examining]]
 
 
-:: library carpet blood2 {"position":"3250,2475","size":"100,100"}
+:: library carpet blood2 {"position":"5200,2550","size":"100,100"}
 (set:$evidence_library_bloodstains to 2)
 (display:"Increase time by 1")
 (display:"Increase time by 1")
@@ -1188,7 +1472,7 @@ You take a close look at the bookshelf. It has perfect rows of books on it.
 (go-to:"library carpet blood")
 
 
-:: library footprint {"position":"2850,2300","size":"100,100"}
+:: library footprint {"position":"4800,2375","size":"100,100"}
 (display:"Increase time by 1")
 (display:"Print Time")
 
@@ -1202,7 +1486,7 @@ You take a close look at the bookshelf. It has perfect rows of books on it.
 [[library rug<-Stop examining]]
 
 
-:: library footprint2 {"position":"2850,2425","size":"100,100"}
+:: library footprint2 {"position":"4800,2500","size":"100,100"}
 (set:$evidence_library_footprint to 2)
 (display:"Increase time by 1")
 (display:"Increase time by 1")
@@ -1212,7 +1496,7 @@ You take a close look at the bookshelf. It has perfect rows of books on it.
 (go-to:"library footprint")
 
 
-:: library glass {"position":"3050,2300","size":"100,100"}
+:: library glass {"position":"5000,2375","size":"100,100"}
 (display:"Increase time by 1")
 (display:"Print Time")
 
@@ -1227,7 +1511,7 @@ You take a close look at the bookshelf. It has perfect rows of books on it.
 [[library rug<-Stop examining]]
 
 
-:: library glass2 {"position":"3050,2425","size":"100,100"}
+:: library glass2 {"position":"5000,2500","size":"100,100"}
 (set:$evidence_library_glass to 2)
 (display:"Increase time by 1")
 (display:"Increase time by 1")
@@ -1237,7 +1521,7 @@ You take a close look at the bookshelf. It has perfect rows of books on it.
 (go-to:"library glass")
 
 
-:: library lamp {"position":"3475,1850","size":"100,100"}
+:: library lamp {"position":"5425,1925","size":"100,100"}
 (display:"Increase time by 1")
 (display:"Print Time")
 
@@ -1248,7 +1532,7 @@ You take a close look at the lamp. You notice that the cord is missing from the 
 [[Library<-Stop examining]]
 
 
-:: library mug {"position":"3250,1975","size":"100,100"}
+:: library mug {"position":"5200,2050","size":"100,100"}
 (display:"Increase time by 1")
 (display:"Print Time")
 
@@ -1257,7 +1541,7 @@ You take a close look at the mug. It is empty, but there are some coffee stains 
 [[Library<-Stop examining]]
 
 
-:: library painting {"position":"3250,2100","size":"100,100"}
+:: library painting {"position":"5200,2175","size":"100,100"}
 (display:"Increase time by 1")
 (display:"Print Time")
 
@@ -1266,7 +1550,7 @@ You take a close look at the painting. It's very old and faded, but it looks it'
 [[Library<-Stop examining]]
 
 
-:: library rug {"position":"3125,1975","size":"100,100"}
+:: library rug {"position":"5075,2050","size":"100,100"}
 (display:"Increase time by 1")
 (display:"Print Time")
 
@@ -1279,12 +1563,12 @@ You take a close look at the painting. It's very old and faded, but it looks it'
 [[Library<-Stop examining]]
 
 
-:: library rug2 {"position":"2900,2000","size":"100,100"}
+:: library rug2 {"position":"4850,2075","size":"100,100"}
 (set:$action_library_rug_moved to 1)
 (go-to:"library rug")
 
 
-:: parlor rug {"position":"2575,1475","size":"100,100"}
+:: parlor rug {"position":"4525,1550","size":"100,100"}
 (display:"Increase time by 1")
 (display:"Print Time")
 
@@ -1295,7 +1579,7 @@ You examine the rug. It looks like a pretty normal rug.
 [[Parlor<-Stop examining]]
 
 
-:: parlor wine bottle {"position":"2400,1525","size":"100,100"}
+:: parlor wine bottle {"position":"4350,1600","size":"100,100"}
 (display:"Increase time by 1")
 (display:"Print Time")
 
@@ -1310,7 +1594,7 @@ You examine the rug. It looks like a pretty normal rug.
 [[Parlor<-Stop examining]]
 
 
-:: parlor wine bottle2 {"position":"2525,1650","size":"100,100"}
+:: parlor wine bottle2 {"position":"4475,1725","size":"100,100"}
 (set:$evidence_parlor_winebottle to 2)
 (display:"Increase time by 1")
 (display:"Increase time by 1")
