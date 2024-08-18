@@ -24,6 +24,10 @@ Murder Manor
 The ''Master Bedroom'' exudes luxury, with a grand king-sized bed framed by heavy drapes and an intricately detailed ceiling. A(text-colour:lime)[ [[alvin gun<-gun]]] is on the polished wood bedside table. The dark wood-paneled walls and plush red rug beneath the bed enhance the room's warmth, while tall windows let in the faint light of the storm outside. You notice a small bit of paper sticking out from(text-colour:lime)[ [[alvin bed<-under the bed]]]. The room is filled with the sound of heavy rain pounding against the windows. You can head back to the(text-colour:orange)[ [[Mezzanine<-Mezzanine]]] at any time.
 
 
+:: Arrest Rufus {"position":"7750,400","size":"100,100"}
+
+
+
 :: BallisticsGun {"position":"4650,2775","size":"100,100"}
 You have conducted a ballistics test on the gun found in Alvin's room.
 
@@ -480,7 +484,7 @@ You have performed a fingerprint analysis on the wine bottle found in the dining
 [[Return to the Police Tent|ForensicAnalysis]]
 
 
-:: FingerprintWok {"position":"875,3225","size":"100,100"}
+:: FingerprintWok {"position":"900,3275","size":"100,100"}
 You have performed a fingerprint analysis on the wok found in the kitchen.
 
 **Results:**
@@ -493,7 +497,7 @@ You have performed a fingerprint analysis on the wok found in the kitchen.
 
 
 
-:: Game Over {"position":"6225,1250","size":"100,100"}
+:: Game Over {"position":"6225,1275","size":"100,100"}
 
 
 
@@ -546,6 +550,23 @@ You step into the ''Guest Bedroom'', and the room welcomes you with a sense of u
 You step into the Guest Walk-in-Wardrobe, and the room is a model of organization and luxury. The walls are lined with shelves and hanging rods, each section meticulously organized with clothing, shoes, and accessories. The floor is carpeted in a plush, deep grey, muffling your footsteps as you move through the space. A large, full-length mirror occupies one wall, reflecting the warm light from the overhead fixture. The rain outside is barely audible here, the thick walls insulating the room from the storm. There is a door behind you leading back to the(text-colour:orange)[ [[Guest Bedroom<- Guest Bedroom]]].
 
 
+:: I don't have evidence that it was in the kitchen during the murder {"position":"8300,1675","size":"100,100"}
+"I don't have evidence that it was in the kitchen during the murder."
+
+"See! The lamp cord is irrelevant!" says Benjamin.
+
+(if:)[[Present the signs of high tension on the victim's neck]]
+[[Present nothing (you will lose if you present nothing)|Game Over]]
+
+
+:: I have evidence that it was in the kitchen during the murder {"position":"8425,1275","size":"100,100"}
+"I have evidence that it was in the kitchen during the murder."
+
+Benjamin smiles. "Let's see this evidence."
+
+[[Present nothing (you will lose if you present nothing)|Game Over]]
+
+
 :: Increase time by 1 [Functions] {"position":"4250,2075","size":"100,100"}
 (set: $time_min to $time_min + 1)
 (if:$time_min > 59)[(set: $time_min to 60 - $time_min,$time_hr to $time_hr + 1)]
@@ -563,8 +584,16 @@ Everyone gasps.
 [[Present nothing (you will lose if you present nothing)|Game Over]]
 
 
-:: It was Benjamin McIntosh - Alvin's son! {"position":"6725,1300","size":"100,100"}
+:: It was Benjamin Franco - Alvin's son! {"position":"6725,1300","size":"100,100"}
+"It was... Benjamin Franco!"
 
+Everyone gasps.
+
+"Let's see what evidence you have," says Bejamin calmly.
+
+(if:)[ [[Present the gloves found in the fireplace in Benjamin's room]]]
+(if:)[ [[Present the footprint found under the victim's body|Present the footprint found under the victim's body2]]]
+[[Present nothing (you will lose if you present nothing)|Game Over]]
 
 
 :: It was Jack Farmer - the gardener! {"position":"6975,300","size":"100,100"}
@@ -577,12 +606,28 @@ Everyone gasps.
 [[Present nothing (you will lose if you present nothing)|Game Over]]
 
 
-:: It was Leonardo Greene - the guest! {"position":"6850,1100","size":"100,100"}
+:: It was Leonardo Greene - the guest! {"position":"6925,1150","size":"100,100"}
+"It was... Leonardo Greene, the guest!"
 
+Everyone gasps.
+
+"Really? I didn't know that." says Leonardo.
+
+"Do you have any evidence to back up your claim?" asks Benjamin.
+
+(if:$evidence_guest_knives > 0)[ [[Present the knives found in the guest room]]]
+[[Present nothing (you will lose if you present nothing)|Game Over]]
 
 
 :: It was Luis McMillan - the chef! {"position":"6975,950","size":"100,100"}
+"It was... Luis McMillan, the chef!"
 
+Everyone gasps.
+
+"What? What did you say? You have no evidence, no right to accuse me!" screams Luis.
+
+(if:$evidence_court_kitchenfootprint to 1)[ [[Present the footprint found under the victim's body]]]
+[[Present nothing (you will lose if you present nothing)|Game Over]]
 
 
 :: It was Patricia Curtis - the housekeeper! {"position":"7075,400","size":"100,100"}
@@ -665,7 +710,7 @@ On the ground is a dead man wearing a suit. A knife is sticking out of their che
 There is(text-colour:orange)[ [[Dining Hall<-a door leading to the Dining Hall]]], and another(text-colour:orange)[ [[Staff Hallway #1<-small door leading to the Staff Hallway]]].
 
 (if:$chef_leading is 0)[
-(if:$time_hr > 9 or $time_min > 39)[The team has finished investigating. The knife stuck into the body had two sets of fingerprints on it, althrough only one was recoverable. There was also a size 11 footprint found under the victim's body. Utensils have done knocked over. Some blood on a wok found. The victim is wearing size 12 shoes. There was also signs of high tension around the victim's neck.
+(if:$time_hr > 9 or $time_min > 39)[The team has finished investigating. The knife stuck into the body had two sets of fingerprints on it, althrough only one was recoverable. There was also a footprint found under the victim's body. Utensils have done knocked over. Some blood on a wok found. The victim is wearing size 12 shoes. There was also signs of high tension around the victim's neck.
 
 The team hands you all the evidence.(set:$evidence_kitchen_all to 0)]]
 
@@ -983,7 +1028,7 @@ It's time to accuse someone. ''Who murdered Alvin Franco?''
 [[It was Patricia Curtis - the housekeeper!]]
 [[It was Leonardo Greene - the guest!]]
 [[It was Jack Farmer - the gardener!]]
-[[It was Benjamin McIntosh - Alvin's son!]]
+[[It was Benjamin Franco - Alvin's son!]]
 
 
 :: Present Rufus's testimony claiming he called the police {"position":"7350,450","size":"100,100"}
@@ -1003,6 +1048,70 @@ Rufus looks confused.
 [[Present nothing (you will lose if you present nothing)|Game Over]]
 
 
+:: Present the blood analysis on the lamp cord {"position":"8075,1500","size":"100,100"}
+"You see this blood on the cord? That is from the victim. Since the gloves prove you handled the cord..."
+
+"Hang on a second." says Benjamin, starting to sound angry. "Alvin was found in the kitchen! He was killed by a knife! This lamp cord has no relevance to the case! Unless you can connect it to being in the kitchen?"
+
+[[I have evidence that it was in the kitchen during the murder]]
+[[I don't have evidence that it was in the kitchen during the murder]]
+
+
+:: Present the blood under the rug from the library {"position":"8850,1600","size":"100,100"}
+"Under the rug, in the library. The victim's blood was found there."
+
+"Uh..." says Benjamin.
+
+(if:)[[Present the glass shard with Benjamin's blood]]
+[[Present nothing (you will lose if you present nothing)|Game Over]]
+
+
+:: Present the fingerprint analysis on the gloves {"position":"7725,1450","size":"100,100"}
+"There are fingerprints on the inside of the gloves. And yes, they match yours."
+
+"Well... I don't see how the lamp cord is even relevant to the case." says Benjamin.
+
+(if:)[[Present the blood analysis on the lamp cord]]
+[[Present nothing (you will lose if you present nothing)|Game Over]]
+
+
+:: Present the footprint found under the victim's body {"position":"7425,925","size":"100,100"}
+"There was a footprint found under the victim's body. Size 11, the same as you."
+
+"I'm not the only one with size 11 shoes. Plus, I work in the kitchen a lot. Of course my footprint would be there. Do you have any conclusive evidence?" screams Luis.
+
+[[Present nothing (you will lose if you present nothing)|Game Over]]
+
+
+:: Present the footprint found under the victim's body2 {"position":"7000,1600","size":"100,100"}
+"There was a footprint found under the victim's body. Size 11, the same as you."
+
+"Well, well. I'm not the only one with size 11 shoes. I don't see how it proves anything. The footprint could have been put there at any time before the murder. It just proves that I wasn't there after the murder, doesn't it?" says Benjamin.
+
+You should present something else.
+
+(if:)[ [[Present the gloves found in the fireplace in Benjamin's room]]]
+[[Present nothing (you will lose if you present nothing)|Game Over]]
+
+
+:: Present the glass shard with Benjamin's blood {"position":"9000,1725","size":"100,100"}
+"You know what? Alvin wasn't murdered in the kitchen. He was murdered in the library, by his own son. He was strangled with a lamp cord. Alvin struggled, breaking the library window, and causing a shard of glass to make a cut in Benjamin's forehead. The glass shard was also found under the rug, of course with Benjamin's blood. Once Alvin was dead, you threw the lamp cord behind a bookshelf and dragged"
+
+"Uh..." says Benjamin.
+
+(if:)[[Present the glass shard with Benjamin's blood]]
+[[Present nothing (you will lose if you present nothing)|Game Over]]
+
+
+:: Present the gloves found in the fireplace in Benjamin's room {"position":"7100,1400","size":"100,100"}
+"I found these charred gloves in your fireplace."
+
+"... and what does that mean exactly?" asks Benjamin.
+
+(if:)[[Present the lamp cord with the glove fibers]]
+[[Present nothing (you will lose if you present nothing)|Game Over]]
+
+
 :: Present the gun found in Alvin's room {"position":"6775,25","size":"100,100"}
 You present the gun.
 
@@ -1016,7 +1125,44 @@ Everyone looks confused.
 
 
 :: Present the kitchen knife found in the victim. {"position":"7575,450","size":"100,100"}
+"The knife found in the victim's body. Guess who's fingerprints were on it? Rufus, it had your fingerprints on it!"
 
+Everyone gasps.
+
+"What? How is that possible? I don't even touch the kitchen knives." says Rufus. "Uh..."
+
+[[Arrest Rufus]]
+[[Say you were kidding (you will lose if you say this)|Game Over]]
+
+
+:: Present the knives found in the guest room {"position":"7350,1150","size":"100,100"}
+You present the knives.
+
+"One of them is missing. Could that have been the murder weapon?" you say.
+
+"I've got the knife right here." says Leonardo, pulling a large knife out of his pocket. It does seem to match the ones found in the guest room more than the murder weapon did.
+
+[[Say oops, sorry (you will lose if you present nothing)|Game Over]]
+
+
+:: Present the knocked over utensils {"position":"8725,1850","size":"100,100"}
+"There are some knocked over utensils in the kitchen..."
+
+"Actually, I remember knocking them over when I found the body," says Rufus.
+
+"See?" says Benjamin. "It wasn't me."
+
+(if:)[[Present the blood under the rug from the library]]
+[[Present nothing (you will lose if you present nothing)|Game Over]]
+
+
+:: Present the lamp cord with the glove fibers {"position":"7425,1450","size":"100,100"}
+"I found this lamp cord behind a bookshelf in the library. And on it, there are leather glove fibers. And I don't believe that anyone else owns leather gloves..."
+
+"Are you sure those gloves are mine? It's impossible to tell since there are so charred." asks Benjamin.
+
+(if:)[[Present the fingerprint analysis on the gloves]]
+[[Present nothing (you will lose if you present nothing)|Game Over]]
 
 
 :: Present the notes found in Alvin's room {"position":"6750,225","size":"100,100"}
@@ -1030,6 +1176,16 @@ Everyone looks slightly confused.
 
 (if:$evidence_alvin_gun > 0)[ [[Present the gun found in Alvin's room]]]
 [[Well... I don't really have any more evidence... (you will lose if you say this)|Game Over]]
+
+
+:: Present the signs of high tension on the victim's neck {"position":"8550,1675","size":"100,100"}
+"The victim had some bruises and signs of high tension on his neck. I would say, good signs that he was strangled."
+
+"If the victim has strangled, they would have tried to escape! And yet, there were no signs of a struggle in the kitchen!" says Benjamin, sounding both angry and worried.
+
+(if:)[[Present the knocked over utensils]]
+(if:)[[Present the blood under the rug from the library]]
+[[Present nothing (you will lose if you present nothing)|Game Over]]
 
 
 :: Print Time [Functions] {"position":"4150,2075","size":"100,100"}
@@ -1052,7 +1208,7 @@ Everyone looks slightly confused.
 (display:"Increase time by 1")
 (display:"Print Time")
 
-"I know Alvin was in the Library and that the Chef was getting something from this van, but that's all I'm afraid," says Rufus.
+"I know Alvin was in the Library and that the Chef was getting something from his van, but that's all I'm afraid," says Rufus.
 
 [[Ballroom<-Stop Talking to Rufus Wagner]]
 
@@ -1103,7 +1259,7 @@ Everyone looks slightly confused.
 You have analyzed the footprint mould for shoe print size.
 
 **Results:**
-- Shoe print size: Size 11.
+- Shoe print size: Size 11.(set:$evidence_court_kitchenfootprint to 1)
 
 [[Return to the Police Tent|ForensicAnalysis]]
 
@@ -1113,7 +1269,7 @@ ShoePrintLibraryFootprint
 You have analyzed the footprint mould from the library for shoe size.
 
 **Results:**
-- Shoe size: Size 12.
+- Shoe size: Size 11.
 
 [[Return to the Police Tent|ForensicAnalysis]]
 
@@ -1173,6 +1329,7 @@ You've just been called out to a crime scene of a murder scene. You have at an o
 
 (set:$testimony_butler_1 to 0)
 (set:$evidence_court_kitchenknife to 0)
+(set:$evidence_court_kitchenfootprint to 0)
 
 
 :: Talk to Benjamin Franco {"position":"4475,250","size":"100,100"}
