@@ -36,7 +36,7 @@ You have conducted a ballistics test on the gun found in Alvin's room.
 **Results:**
 - The gun was never fired or loaded.
 
-[[Return to the Police Tent|ForensicAnalysis]]
+[[Return to the Police Tent|Police Tent]]
 
 
 :: Ballroom {"position":"4050,675","size":"200,200"}
@@ -117,7 +117,7 @@ You have analyzed the blood sample from the glass shard.
 **Results:**
 - The blood is from Benjamin.(set:$evidence_court_glass_blood to 1)
 
-[[Return to the Police Tent|ForensicAnalysis]]
+[[Return to the Police Tent|Police Tent]]
 
 
 :: BloodKnife {"position":"700,3275","size":"100,100"}
@@ -144,7 +144,7 @@ You have analyzed the blood sample found in the library under the rug.
 **Results:**
 - The blood is from the victim.(set:$evidence_court_underrug_blood to 1)
 
-[[Return to the Police Tent|ForensicAnalysis]]
+[[Return to the Police Tent|Police Tent]]
 
 
 :: BloodWok {"position":"1400,3250","size":"100,100"}
@@ -171,7 +171,7 @@ You have tested the notes found in Alvin's room for DNA.
 **Results:**
 - No DNA found apart from the fingerprints.
 
-[[Return to the Police Tent|ForensicAnalysis]]
+[[Return to the Police Tent|Police Tent]]
 
 
 :: DNABenDiary {"position":"3525,2775","size":"100,100"}
@@ -180,7 +180,7 @@ You have tested the diary found in Benjamin's room for DNA.
 **Results:**
 - No DNA found apart from the fingerprints.
 
-[[Return to the Police Tent|ForensicAnalysis]]
+[[Return to the Police Tent|Police Tent]]
 
 
 :: DNABenGloves {"position":"3275,2775","size":"100,100"}
@@ -189,7 +189,7 @@ You have tested the charred gloves found in Benjamin's room for DNA.
 **Results:**
 - No DNA found apart from the fingerprints.
 
-[[Return to the Police Tent|ForensicAnalysis]]
+[[Return to the Police Tent|Police Tent]]
 
 
 :: DNABloodSample {"position":"2525,2775","size":"100,100"}
@@ -198,7 +198,7 @@ You have tested the blood sample found in the library under the rug for DNA.
 **Results:**
 - The blood is from the victim.
 
-[[Return to the Police Tent|ForensicAnalysis]]
+[[Return to the Police Tent|Police Tent]]
 
 
 :: DNAButlerGloves {"position":"3775,2775","size":"100,100"}
@@ -207,7 +207,7 @@ You have tested the gloves found in the butler's room for DNA.
 **Results:**
 - No DNA found apart from the fingerprints.
 
-[[Return to the Police Tent|ForensicAnalysis]]
+[[Return to the Police Tent|Police Tent]]
 
 
 :: DNAButlerPhone {"position":"4025,2775","size":"100,100"}
@@ -216,7 +216,7 @@ You have tested the phone in the butler's room for DNA.
 **Results:**
 - No DNA found apart from the fingerprints.
 
-[[Return to the Police Tent|ForensicAnalysis]]
+[[Return to the Police Tent|Police Tent]]
 
 
 :: DNAFoyerPhone {"position":"4275,2775","size":"100,100"}
@@ -225,7 +225,7 @@ You have tested the phone in the Grand Foyer for DNA.
 **Results:**
 - No DNA found apart from the fingerprints.
 
-[[Return to the Police Tent|ForensicAnalysis]]
+[[Return to the Police Tent|Police Tent]]
 
 
 :: DNAGlass {"position":"2400,2775","size":"100,100"}
@@ -234,7 +234,7 @@ You have tested the glass shard for DNA.
 **Results:**
 - DNA analysis reveals the blood is from the victim.
 
-[[Return to the Police Tent|ForensicAnalysis]]
+[[Return to the Police Tent|Police Tent]]
 
 
 :: DNAGuestCigars {"position":"5150,2775","size":"100,100"}
@@ -243,7 +243,7 @@ You have tested the cigarette butts for DNA.
 **Results:**
 - No DNA found apart from the fingerprints.
 
-[[Return to the Police Tent|ForensicAnalysis]]
+[[Return to the Police Tent|Police Tent]]
 
 
 :: DNAGuestKnives {"position":"5400,2775","size":"100,100"}
@@ -252,7 +252,7 @@ You have tested the kitchen knives for DNA.
 **Results:**
 - No DNA found.
 
-[[Return to the Police Tent|ForensicAnalysis]]
+[[Return to the Police Tent|Police Tent]]
 
 
 :: DNAGuestLighter {"position":"5650,2775","size":"100,100"}
@@ -261,7 +261,7 @@ You have tested the lighter found in Leonardo's room for DNA.
 **Results:**
 - No DNA found apart from the fingerprints.
 
-[[Return to the Police Tent|ForensicAnalysis]]
+[[Return to the Police Tent|Police Tent]]
 
 
 :: DNAGun {"position":"4525,2775","size":"100,100"}
@@ -270,7 +270,7 @@ You have tested the gun found in Alvin's room for DNA.
 **Results:**
 - No DNA found apart from the fingerprints.
 
-[[Return to the Police Tent|ForensicAnalysis]]
+[[Return to the Police Tent|Police Tent]]
 
 
 :: DNAKnife {"position":"1775,2775","size":"100,100"}
@@ -279,7 +279,7 @@ You have tested the knife found in the victim's body for DNA.
 **Results:**
 - DNA analysis reveals the blood is from the victim.
 
-[[Return to the Police Tent|ForensicAnalysis]]
+[[Return to the Police Tent|Police Tent]]
 
 
 :: DNALampCord {"position":"2025,2775","size":"100,100"}
@@ -288,7 +288,7 @@ You have tested the lamp cord for DNA.
 **Results:**
 - DNA analysis reveals the blood is from the victim, Alvin Franco.
 
-[[Return to the Police Tent|ForensicAnalysis]]
+[[Return to the Police Tent|Police Tent]]
 
 
 :: DNALibraryFootprint {"position":"2900,2775","size":"100,100"}
@@ -298,7 +298,7 @@ You have tested the footprint mould from the library for DNA.
 **Results:**
 - No DNA found.
 
-[[Return to the Police Tent|ForensicAnalysis]]
+[[Return to the Police Tent|Police Tent]]
 
 
 :: DNAWineBottle {"position":"5900,2775","size":"100,100"}
@@ -307,7 +307,7 @@ You have tested the wine bottle for DNA.
 **Results:**
 - No DNA found.
 
-[[Return to the Police Tent|ForensicAnalysis]]
+[[Return to the Police Tent|Police Tent]]
 
 
 :: DNAWok {"position":"2500,2900","size":"100,100"}
@@ -316,7 +316,7 @@ You have tested the wok for DNA.
 **Results:**
 - DNA analysis reveals the blood is from the butler.
 
-[[Return to the Police Tent|ForensicAnalysis]]
+[[Return to the Police Tent|Police Tent]]
 
 
 :: Dining Hall {"position":"3850,1000","size":"100,100"}
@@ -347,7 +347,7 @@ You have performed a fingerprint analysis on the diary found in Benjamin's room.
 **Results:**
 - Fingerprints from Benjamin.
 
-[[Return to the Police Tent|ForensicAnalysis]]
+[[Return to the Police Tent|Police Tent]]
 
 
 :: FingerprintBenGloves {"position":"3150,2775","size":"100,100"}
@@ -356,7 +356,7 @@ You have performed a fingerprint analysis on the charred gloves found in Benjami
 **Results:**
 - Fingerprints from Benjamin on the inside; damaged fingerprints on the outside could belong to Alvin, the butler, or someone else.(set:$evidence_court_ben_gloves to 1)
 
-[[Return to the Police Tent|ForensicAnalysis]]
+[[Return to the Police Tent|Police Tent]]
 
 
 :: FingerprintBloodSample {"position":"1775,3250","size":"100,100"}
@@ -365,7 +365,7 @@ You have performed a fingerprint analysis on the blood sample found in the libra
 **Results:**
 - No fingerprints found.
 
-[[Return to the Police Tent|ForensicAnalysis]]
+[[Return to the Police Tent|Police Tent]]
 
 
 :: FingerprintButlerGloves {"position":"3650,2775","size":"100,100"}
@@ -374,7 +374,7 @@ You have performed a fingerprint analysis on the gloves found in the butler's ro
 **Results:**
 - Fingerprints from the butler.
 
-[[Return to the Police Tent|ForensicAnalysis]]
+[[Return to the Police Tent|Police Tent]]
 
 
 :: FingerprintButlerPhone {"position":"3900,2775","size":"100,100"}
@@ -383,7 +383,7 @@ You have performed a fingerprint analysis on the phone in the butler's room.
 **Results:**
 - Fingerprints from the butler.
 
-[[Return to the Police Tent|ForensicAnalysis]]
+[[Return to the Police Tent|Police Tent]]
 
 
 :: FingerprintFootprint {"position":"900,3125","size":"100,100"}
@@ -401,7 +401,7 @@ You have performed a fingerprint analysis on the phone in the Grand Foyer.
 **Results:**
 - Fingerprints from the butler, chef, and old fingerprints.
 
-[[Return to the Police Tent|ForensicAnalysis]]
+[[Return to the Police Tent|Police Tent]]
 
 
 :: FingerprintGlass {"position":"2150,2775","size":"100,100"}
@@ -410,7 +410,7 @@ You have performed a fingerprint analysis on the glass shard found in the librar
 **Results:**
 - No fingerprints found.
 
-[[Return to the Police Tent|ForensicAnalysis]]
+[[Return to the Police Tent|Police Tent]]
 
 
 :: FingerprintGuestCigars {"position":"5025,2775","size":"100,100"}
@@ -419,7 +419,7 @@ You have performed a fingerprint analysis on the cigarette butts found in the as
 **Results:**
 - Fingerprints from Leonardo.
 
-[[Return to the Police Tent|ForensicAnalysis]]
+[[Return to the Police Tent|Police Tent]]
 
 
 :: FingerprintGuestKnives {"position":"5275,2775","size":"100,100"}
@@ -428,7 +428,7 @@ You have performed a fingerprint analysis on the kitchen knives.
 **Results:**
 - No fingerprints found.
 
-[[Return to the Police Tent|ForensicAnalysis]]
+[[Return to the Police Tent|Police Tent]]
 
 
 :: FingerprintGuestLighter {"position":"5525,2775","size":"100,100"}
@@ -437,7 +437,7 @@ You have performed a fingerprint analysis on the lighter found in Leonardo's roo
 **Results:**
 - Fingerprints from Leonardo.
 
-[[Return to the Police Tent|ForensicAnalysis]]
+[[Return to the Police Tent|Police Tent]]
 
 
 :: FingerprintGun {"position":"4400,2775","size":"100,100"}
@@ -446,7 +446,7 @@ You have performed a fingerprint analysis on the gun found in Alvin's room.
 **Results:**
 - Fingerprints from Alvin.
 
-[[Return to the Police Tent|ForensicAnalysis]]
+[[Return to the Police Tent|Police Tent]]
 
 
 :: FingerprintKnife {"position":"725,3125","size":"100,100"}
@@ -474,7 +474,7 @@ You have performed a fingerprint analysis on the footprint mould taken from the 
 **Results:**
 - No fingerprints found.
 
-[[Return to the Police Tent|ForensicAnalysis]]
+[[Return to the Police Tent|Police Tent]]
 
 
 :: FingerprintWineBottle {"position":"5775,2775","size":"100,100"}
@@ -483,7 +483,7 @@ You have performed a fingerprint analysis on the wine bottle found in the dining
 **Results:**
 - No fingerprints found.
 
-[[Return to the Police Tent|ForensicAnalysis]]
+[[Return to the Police Tent|Police Tent]]
 
 
 :: FingerprintWok {"position":"900,3275","size":"100,100"}
@@ -495,7 +495,7 @@ You have performed a fingerprint analysis on the wok found in the kitchen.
 [[Return to the Police Tent|Police Tent]]
 
 
-:: ForensicAnalysis {"position":"1775,2900","size":"100,100"}
+:: Police Tent {"position":"1775,2900","size":"100,100"}
 
 
 
@@ -511,7 +511,7 @@ You have examined the glass fragments from the glass shard.
 **Results:**
 - Glass originates from the library window.
 
-[[Return to the Police Tent|ForensicAnalysis]]
+[[Return to the Police Tent|Police Tent]]
 
 
 :: Grand Foyer {"position":"4000,1600","size":"100,100"}
@@ -1287,7 +1287,7 @@ You have analyzed the footprint mould from the library for shoe size.
 **Results:**
 - Shoe size: Size 11.
 
-[[Return to the Police Tent|ForensicAnalysis]]
+[[Return to the Police Tent|Police Tent]]
 
 
 :: Staff Hallway #1 {"position":"3350,1425","size":"100,100"}
@@ -1452,7 +1452,7 @@ You have performed a trace analysis on the notes.
 **Results:**
 - No additional trace evidence found.
 
-[[Return to the Police Tent|ForensicAnalysis]]
+[[Return to the Police Tent|Police Tent]]
 
 
 :: TraceBenDiary {"position":"3787.5,2650","size":"100,100"}
@@ -1461,7 +1461,7 @@ You have performed a trace analysis on the diary.
 **Results:**
 - No additional trace evidence found.
 
-[[Return to the Police Tent|ForensicAnalysis]]
+[[Return to the Police Tent|Police Tent]]
 
 
 :: TraceBenGloves {"position":"3662.5,2650","size":"100,100"}
@@ -1470,7 +1470,7 @@ You have performed a trace analysis on the charred gloves.
 **Results:**
 - No additional trace evidence found.
 
-[[Return to the Police Tent|ForensicAnalysis]]
+[[Return to the Police Tent|Police Tent]]
 
 
 :: TraceBloodSample {"position":"3412.5,2650","size":"100,100"}
@@ -1480,7 +1480,7 @@ You have performed a trace analysis on the blood sample.
 **Results:**
 - No additional trace evidence found.
 
-[[Return to the Police Tent|ForensicAnalysis]]
+[[Return to the Police Tent|Police Tent]]
 
 
 :: TraceButlerGloves {"position":"3912.5,2650","size":"100,100"}
@@ -1489,7 +1489,7 @@ You have performed a trace analysis on the gloves.
 **Results:**
 - No additional trace evidence found.
 
-[[Return to the Police Tent|ForensicAnalysis]]
+[[Return to the Police Tent|Police Tent]]
 
 
 :: TraceButlerPhone {"position":"4025,2650","size":"100,100"}
@@ -1498,7 +1498,7 @@ You have performed a trace analysis on the phone.
 **Results:**
 - No additional trace evidence found.
 
-[[Return to the Police Tent|ForensicAnalysis]]
+[[Return to the Police Tent|Police Tent]]
 
 
 :: TraceFootprint {"position":"2912.5,2650","size":"100,100"}
@@ -1507,7 +1507,7 @@ You have performed a trace analysis on the footprint mould.
 **Results:**
 - No additional trace evidence found.
 
-[[Return to the Police Tent|ForensicAnalysis]]
+[[Return to the Police Tent|Police Tent]]
 
 
 :: TraceFoyerPhone {"position":"4162.5,2650","size":"100,100"}
@@ -1516,7 +1516,7 @@ You have performed a trace analysis on the phone.
 **Results:**
 - No additional trace evidence found.
 
-[[Return to the Police Tent|ForensicAnalysis]]
+[[Return to the Police Tent|Police Tent]]
 
 
 :: TraceGlass {"position":"3287.5,2650","size":"100,100"}
@@ -1525,7 +1525,7 @@ You have performed a trace analysis on the glass shard.
 **Results:**
 - No additional trace evidence found.
 
-[[Return to the Police Tent|ForensicAnalysis]]
+[[Return to the Police Tent|Police Tent]]
 
 
 :: TraceGuestCigars {"position":"4537.5,2650","size":"100,100"}
@@ -1534,7 +1534,7 @@ You have performed a trace analysis on the cigarette butts.
 **Results:**
 - No additional trace evidence found.
 
-[[Return to the Police Tent|ForensicAnalysis]]
+[[Return to the Police Tent|Police Tent]]
 
 
 :: TraceGuestKnives {"position":"4662.5,2650","size":"100,100"}
@@ -1543,7 +1543,7 @@ You have performed a trace analysis on the kitchen knives.
 **Results:**
 - No additional trace evidence found.
 
-[[Return to the Police Tent|ForensicAnalysis]]
+[[Return to the Police Tent|Police Tent]]
 
 
 :: TraceGuestLighter {"position":"4787.5,2650","size":"100,100"}
@@ -1552,7 +1552,7 @@ You have performed a trace analysis on the lighter.
 **Results:**
 - No additional trace evidence found.
 
-[[Return to the Police Tent|ForensicAnalysis]]
+[[Return to the Police Tent|Police Tent]]
 
 
 :: TraceGun {"position":"4287.5,2650","size":"100,100"}
@@ -1561,7 +1561,7 @@ You have performed a trace analysis on the gun.
 **Results:**
 - No additional trace evidence found.
 
-[[Return to the Police Tent|ForensicAnalysis]]
+[[Return to the Police Tent|Police Tent]]
 
 
 :: TraceKnife {"position":"2787.5,2650","size":"100,100"}
@@ -1570,7 +1570,7 @@ You have performed a trace analysis on the knife.
 **Results:**
 - No additional trace evidence found.
 
-[[Return to the Police Tent|ForensicAnalysis]]
+[[Return to the Police Tent|Police Tent]]
 
 
 :: TraceLampCord {"position":"3162.5,2650","size":"100,100"}
@@ -1579,7 +1579,7 @@ You have performed a trace analysis on the lamp cord.
 **Results:**
 - Small fibers from leather gloves found(set:$evidence_court_lampcord_trace to 1)
 
-[[Return to the Police Tent|ForensicAnalysis]]
+[[Return to the Police Tent|Police Tent]]
 
 
 :: TraceLibraryFootprint {"position":"3537.5,2650","size":"100,100"}
@@ -1588,7 +1588,7 @@ You have performed a trace analysis on the footprint mould.
 **Results:**
 - No additional trace evidence found.
 
-[[Return to the Police Tent|ForensicAnalysis]]
+[[Return to the Police Tent|Police Tent]]
 
 
 :: TraceWineBottle {"position":"4912.5,2650","size":"100,100"}
@@ -1597,7 +1597,7 @@ You have performed a trace analysis on the wine bottle.
 **Results:**
 - No additional trace evidence found.
 
-[[Return to the Police Tent|ForensicAnalysis]]
+[[Return to the Police Tent|Police Tent]]
 
 
 :: TraceWok {"position":"3037.5,2650","size":"100,100"}
@@ -1606,7 +1606,7 @@ You have performed a trace analysis on the wok.
 **Results:**
 - No additional trace evidence found.
 
-[[Return to the Police Tent|ForensicAnalysis]]
+[[Return to the Police Tent|Police Tent]]
 
 
 :: alvin bed {"position":"6100,1625","size":"100,100"}
