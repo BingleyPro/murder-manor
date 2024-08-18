@@ -25,7 +25,9 @@ The ''Master Bedroom'' exudes luxury, with a grand king-sized bed framed by heav
 
 
 :: Arrest Rufus {"position":"7750,400","size":"100,100"}
+It's been a few days since you arrested Rufus. But the chief of police just rang you up to say they found evidence proving that it wasn't him, and the real murderer was actually Benjamin Franco, who can't be found now.
 
+Well, it seems you lost. But you can always(text-colour:purple)[ [[Start<-try again]]].
 
 
 :: BallisticsGun {"position":"4650,2775","size":"100,100"}
@@ -113,7 +115,7 @@ You enter into ''Ben's Room'', which feels cozy yet refined, with a bed draped i
 You have analyzed the blood sample from the glass shard.
 
 **Results:**
-- The blood is from the victim.
+- The blood is from Benjamin.(set:$evidence_court_glass_blood to 1)
 
 [[Return to the Police Tent|ForensicAnalysis]]
 
@@ -124,23 +126,23 @@ You have analyzed the blood sample from the knife.
 **Results:**
 - The blood sample is from the victim.
 
-[[Return to the Police Tent|ForensicAnalysis]]
+[[Return to the Police Tent|Police Tent]]
 
 
 :: BloodLampCord {"position":"1525,3250","size":"100,100"}
 You have analyzed the blood sample from the lamp cord.
 
 **Results:**
-- The blood is from the victim, Alvin Franco.
+- The blood is from the victim, Alvin Franco.(set:$evidence_court_lampcord_blood to 1)
 
-[[Return to the Police Tent|ForensicAnalysis]]
+[[Return to the Police Tent|Police Tent]]
 
 
 :: BloodSampleAnalysis {"position":"2650,2775","size":"100,100"}
 You have analyzed the blood sample found in the library under the rug.
 
 **Results:**
-- The blood is from the victim.
+- The blood is from the victim.(set:$evidence_court_underrug_blood to 1)
 
 [[Return to the Police Tent|ForensicAnalysis]]
 
@@ -149,9 +151,9 @@ You have analyzed the blood sample found in the library under the rug.
 You have analyzed the blood sample from the wok.
 
 **Results:**
-- The blood is from the butler.
+- The blood is from the butler.(set:$evidence_court_wok_blood to 1)
 
-[[Return to the Police Tent|ForensicAnalysis]]
+[[Return to the Police Tent|Police Tent]]
 
 
 :: Butler's Room {"position":"3050,1075","size":"100,100"}
@@ -352,7 +354,7 @@ You have performed a fingerprint analysis on the diary found in Benjamin's room.
 You have performed a fingerprint analysis on the charred gloves found in Benjamin's room.
 
 **Results:**
-- Fingerprints from Benjamin on the inside; damaged fingerprints on the outside could belong to Alvin, the butler, or someone else.
+- Fingerprints from Benjamin on the inside; damaged fingerprints on the outside could belong to Alvin, the butler, or someone else.(set:$evidence_court_ben_gloves to 1)
 
 [[Return to the Police Tent|ForensicAnalysis]]
 
@@ -390,7 +392,7 @@ You have performed a fingerprint analysis on the footprint mould taken from unde
 **Results:**
 - No fingerprints found.
 
-[[Return to the Police Tent|ForensicAnalysis]]
+[[Return to the Police Tent|Police Tent]]
 
 
 :: FingerprintFoyerPhone {"position":"4150,2775","size":"100,100"}
@@ -462,7 +464,7 @@ You have performed a fingerprint analysis on the lamp cord found in the library.
 **Results:**
 - Fingerprints match the victim, Alvin.
 
-[[Return to the Police Tent|ForensicAnalysis]]
+[[Return to the Police Tent|Police Tent]]
 
 
 :: FingerprintLibraryFootprint {"position":"2775,2775","size":"100,100"}
@@ -490,7 +492,7 @@ You have performed a fingerprint analysis on the wok found in the kitchen.
 **Results:**
 - Fingerprints match the chef, Luis McMillan.
 
-[[Return to the Police Tent|ForensicAnalysis]]
+[[Return to the Police Tent|Police Tent]]
 
 
 :: ForensicAnalysis {"position":"1775,2900","size":"100,100"}
@@ -498,7 +500,9 @@ You have performed a fingerprint analysis on the wok found in the kitchen.
 
 
 :: Game Over {"position":"6225,1275","size":"100,100"}
+"It seems we can't trust you anymore. Go home!" says Selena.
 
+Well, it seems you lost. But you can always(text-colour:purple)[ [[Start<-try again]]].
 
 
 :: GlassGlass {"position":"2275,2775","size":"100,100"}
@@ -555,7 +559,7 @@ You step into the Guest Walk-in-Wardrobe, and the room is a model of organizatio
 
 "See! The lamp cord is irrelevant!" says Benjamin.
 
-(if:)[[Present the signs of high tension on the victim's neck]]
+(if:$evidence_kitchen_all is 1)[[Present the signs of high tension on the victim's neck]]
 [[Present nothing (you will lose if you present nothing)|Game Over]]
 
 
@@ -591,8 +595,8 @@ Everyone gasps.
 
 "Let's see what evidence you have," says Bejamin calmly.
 
-(if:)[ [[Present the gloves found in the fireplace in Benjamin's room]]]
-(if:)[ [[Present the footprint found under the victim's body|Present the footprint found under the victim's body2]]]
+(if:$evidence_ben_burnt_gloves is 2)[ [[Present the gloves found in the fireplace in Benjamin's room]]]
+(if:evidence_court_kitchenfootprint is 1)[ [[Present the footprint found under the victim's body|Present the footprint found under the victim's body2]]]
 [[Present nothing (you will lose if you present nothing)|Game Over]]
 
 
@@ -626,7 +630,7 @@ Everyone gasps.
 
 "What? What did you say? You have no evidence, no right to accuse me!" screams Luis.
 
-(if:$evidence_court_kitchenfootprint to 1)[ [[Present the footprint found under the victim's body]]]
+(if:$evidence_court_kitchenfootprint is 1)[ [[Present the footprint found under the victim's body]]]
 [[Present nothing (you will lose if you present nothing)|Game Over]]
 
 
@@ -710,9 +714,9 @@ On the ground is a dead man wearing a suit. A knife is sticking out of their che
 There is(text-colour:orange)[ [[Dining Hall<-a door leading to the Dining Hall]]], and another(text-colour:orange)[ [[Staff Hallway #1<-small door leading to the Staff Hallway]]].
 
 (if:$chef_leading is 0)[
-(if:$time_hr > 9 or $time_min > 39)[The team has finished investigating. The knife stuck into the body had two sets of fingerprints on it, althrough only one was recoverable. There was also a footprint found under the victim's body. Utensils have done knocked over. Some blood on a wok found. The victim is wearing size 12 shoes. There was also signs of high tension around the victim's neck.
+(if:$time_hr > 9 or $time_min > 39)[The team has finished investigating. The knife stuck into the body had two sets of fingerprints on it, althrough only one was recoverable. There was also a footprint found under the victim's body. Utensils have been knocked over. Some blood on a wok found. The victim is wearing size 12 shoes. There was also signs of high tension and fresh bruises around the victim's neck.
 
-The team hands you all the evidence.(set:$evidence_kitchen_all to 0)]]
+The team hands you all the evidence.(set:$evidence_kitchen_all to 1)]]
 
 (if:$chef_leading is 1)["Here is the scene. I can't stand it here, so I will head off to my room." the Chef says as he leaves through another door.
 
@@ -1062,7 +1066,7 @@ Rufus looks confused.
 
 "Uh..." says Benjamin.
 
-(if:)[[Present the glass shard with Benjamin's blood]]
+(if:$evidence_court_glass_blood is 1)[[Present the glass shard with Benjamin's blood]]
 [[Present nothing (you will lose if you present nothing)|Game Over]]
 
 
@@ -1071,7 +1075,7 @@ Rufus looks confused.
 
 "Well... I don't see how the lamp cord is even relevant to the case." says Benjamin.
 
-(if:)[[Present the blood analysis on the lamp cord]]
+(if:$evidence_court_lampcord_blood is 1)[[Present the blood analysis on the lamp cord]]
 [[Present nothing (you will lose if you present nothing)|Game Over]]
 
 
@@ -1090,16 +1094,20 @@ Rufus looks confused.
 
 You should present something else.
 
-(if:)[ [[Present the gloves found in the fireplace in Benjamin's room]]]
+(if:evidence_ben_burnt_gloves is 2)[ [[Present the gloves found in the fireplace in Benjamin's room]]]
 [[Present nothing (you will lose if you present nothing)|Game Over]]
 
 
 :: Present the glass shard with Benjamin's blood {"position":"9000,1725","size":"100,100"}
-"You know what? Alvin wasn't murdered in the kitchen. He was murdered in the library, by his own son. He was strangled with a lamp cord. Alvin struggled, breaking the library window, and causing a shard of glass to make a cut in Benjamin's forehead. The glass shard was also found under the rug, of course with Benjamin's blood. Once Alvin was dead, you threw the lamp cord behind a bookshelf and dragged"
+"You know what? Alvin wasn't murdered in the kitchen. He was murdered in the library, by his own son. He was strangled with a lamp cord. Alvin struggled, breaking the library window, and causing a shard of glass to make a cut in Benjamin's forehead. The glass shard was also found under the rug, of course with Benjamin's blood. Once Alvin was dead, you threw the lamp cord behind a bookshelf and dragged him downstairs to the kitchen. You then carefully grabbed a knife and stabbed it in to the body."
 
-"Uh..." says Benjamin.
+Benjamin is quiet for a few seconds. "Who discovered the body?"
 
-(if:)[[Present the glass shard with Benjamin's blood]]
+The chef and the butler both say "Me!" at the same time.
+
+Benjamin looks at you. "So... can you explain that?"
+
+(if:$evidence_court_wok_blood is 1)[[Present the wok with the butler's blood]]
 [[Present nothing (you will lose if you present nothing)|Game Over]]
 
 
@@ -1108,7 +1116,7 @@ You should present something else.
 
 "... and what does that mean exactly?" asks Benjamin.
 
-(if:)[[Present the lamp cord with the glove fibers]]
+(if:$evidence_court_lampcord_trace is 1)[[Present the lamp cord with the glove fibers]]
 [[Present nothing (you will lose if you present nothing)|Game Over]]
 
 
@@ -1152,7 +1160,7 @@ You present the knives.
 
 "See?" says Benjamin. "It wasn't me."
 
-(if:)[[Present the blood under the rug from the library]]
+(if:$evidence_court_underrug_blood)[[Present the blood under the rug from the library]]
 [[Present nothing (you will lose if you present nothing)|Game Over]]
 
 
@@ -1161,7 +1169,7 @@ You present the knives.
 
 "Are you sure those gloves are mine? It's impossible to tell since there are so charred." asks Benjamin.
 
-(if:)[[Present the fingerprint analysis on the gloves]]
+(if:$evidence_court_ben_gloves)[[Present the fingerprint analysis on the gloves]]
 [[Present nothing (you will lose if you present nothing)|Game Over]]
 
 
@@ -1183,9 +1191,17 @@ Everyone looks slightly confused.
 
 "If the victim has strangled, they would have tried to escape! And yet, there were no signs of a struggle in the kitchen!" says Benjamin, sounding both angry and worried.
 
-(if:)[[Present the knocked over utensils]]
-(if:)[[Present the blood under the rug from the library]]
+(if:$evidence_kitchen_all)[[Present the knocked over utensils]]
+(if:$evidence_court_underrug_blood is 1)[[Present the blood under the rug from the library]]
 [[Present nothing (you will lose if you present nothing)|Game Over]]
+
+
+:: Present the wok with the butler's blood {"position":"9375,1850","size":"100,100"}
+"The butler discovered the body first, and was shocked and accidently knocked over some utensils. The butler went to the phone in the Grand Foyer to call the police. But the chef found the body while the butler was making the call. He saw his knife in the body and panicked. He grabbed the wok and knocked the butler over the head. The chef then used the butler's hand to place fingerprints on the knife, then carried the butler to bed. And I know this because a bit of the butler's blood was found on the outside of the wok."
+
+Benjamin looks furious for a second, but then appears calm once again. "Alright. Good job. I did murder Alvin. I was acting on behalf of everything here. He owed all of us money. But anyway. Arrest me if you will. But watch your steps from now on. Because I will come back. And you will be my next victim."
+
+The police officers take Benjamin away. Congratulations! You solved the case!
 
 
 :: Print Time [Functions] {"position":"4150,2075","size":"100,100"}
@@ -1261,7 +1277,7 @@ You have analyzed the footprint mould for shoe print size.
 **Results:**
 - Shoe print size: Size 11.(set:$evidence_court_kitchenfootprint to 1)
 
-[[Return to the Police Tent|ForensicAnalysis]]
+[[Return to the Police Tent|Police Tent]]
 
 
 :: ShoePrintLibraryFootprint {"position":"3025,2775","size":"100,100"}
@@ -1330,6 +1346,13 @@ You've just been called out to a crime scene of a murder scene. You have at an o
 (set:$testimony_butler_1 to 0)
 (set:$evidence_court_kitchenknife to 0)
 (set:$evidence_court_kitchenfootprint to 0)
+(set:$evidence_court_lampcord_trace to 0)
+(set:$evidence_court_lampcord_blood to 0)
+(set:$evidence_court_ben_gloves to 0)
+
+(set:$evidence_court_underrug_blood to 0)
+(set:$evidence_court_glass_blood to 0)
+(set:$evidence_court_wok_blood to 0)
 
 
 :: Talk to Benjamin Franco {"position":"4475,250","size":"100,100"}
@@ -1554,7 +1577,7 @@ You have performed a trace analysis on the knife.
 You have performed a trace analysis on the lamp cord.
 
 **Results:**
-- No additional trace evidence found.
+- Small fibers from leather gloves found(set:$evidence_court_lampcord_trace to 1)
 
 [[Return to the Police Tent|ForensicAnalysis]]
 
