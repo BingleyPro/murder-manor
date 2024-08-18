@@ -238,7 +238,7 @@ You have tested the glass shard for DNA.
 
 
 :: DNAGuestCigars {"position":"5150,2775","size":"100,100"}
-You have tested the cigarette butts for DNA.
+You have tested the cigarette pack in the guest bedroom for DNA.
 
 **Results:**
 - No DNA found apart from the fingerprints.
@@ -247,7 +247,7 @@ You have tested the cigarette butts for DNA.
 
 
 :: DNAGuestKnives {"position":"5400,2775","size":"100,100"}
-You have tested the kitchen knives for DNA.
+You have tested the knives found in the guest bedroom for DNA.
 
 **Results:**
 - No DNA found.
@@ -414,7 +414,7 @@ You have performed a fingerprint analysis on the glass shard found in the librar
 
 
 :: FingerprintGuestCigars {"position":"5025,2775","size":"100,100"}
-You have performed a fingerprint analysis on the cigarette butts found in the ashtray.
+You have performed a fingerprint analysis on the cigarrette pack found in the guest room.
 
 **Results:**
 - Fingerprints from Leonardo.
@@ -423,7 +423,7 @@ You have performed a fingerprint analysis on the cigarette butts found in the as
 
 
 :: FingerprintGuestKnives {"position":"5275,2775","size":"100,100"}
-You have performed a fingerprint analysis on the kitchen knives.
+You have performed a fingerprint analysis on the knives found in the guest room.
 
 **Results:**
 - No fingerprints found.
@@ -478,7 +478,7 @@ You have performed a fingerprint analysis on the footprint mould taken from the 
 
 
 :: FingerprintWineBottle {"position":"5775,2775","size":"100,100"}
-You have performed a fingerprint analysis on the wine bottle found in the dining room.
+You have performed a fingerprint analysis on the wine bottle found in the parlor.
 
 **Results:**
 - No fingerprints found.
@@ -493,10 +493,6 @@ You have performed a fingerprint analysis on the wok found in the kitchen.
 - Fingerprints match the chef, Luis McMillan.
 
 [[Return to the Police Tent|Police Tent]]
-
-
-:: Police Tent {"position":"1775,2900","size":"100,100"}
-
 
 
 :: Game Over {"position":"6225,1275","size":"100,100"}
@@ -881,7 +877,7 @@ At the center of the room, a(text-colour:lime)[ [[parlor rug<-plush cream-colour
 [[Patricia2<-"Do you know anything that anyone else was doing?"]]
 
 
-:: Police Tent {"position":"3850,2275","size":"100,100"}
+:: Police Tent {"position":"3875,2225","size":"100,100"}
 (display:"Increase time by 1")
 (display:"Print Time")
 
@@ -1304,6 +1300,13 @@ Entering the Staff Hallway, you are greeted by a space designed for efficiency r
 
 You've just been called out to a crime scene of a murder scene. You have at an old European style Victorian mansion. You are a forensic scientist. Good luck!
 
+''Important Information''
+- Any text in orange is clickable. When you click it, it will move you to the room indicated. This will add one minute to your time.
+- Any text in lime is clickable. When you click it, you can examine evidence, which generally adds one minite to your time.
+- Any other colour clickable text is generally for collecting evidence or performing an analysis. This could add any number to your time.
+- If the time becomes ''11:00'' or later, you have no time left to collect evidence or perform any analysis, so use your time carefully.
+- There may be some bugs you encounter.
+
 [[Porch<-Click here to start the game!]]
 
 (set:$chef_leading to 1)
@@ -1510,7 +1513,7 @@ You have performed a trace analysis on the footprint mould.
 [[Return to the Police Tent|Police Tent]]
 
 
-:: TraceFoyerPhone {"position":"4162.5,2650","size":"100,100"}
+:: TraceFoyerPhone {"position":"4150,2650","size":"100,100"}
 You have performed a trace analysis on the phone.
 
 **Results:**
@@ -1528,8 +1531,8 @@ You have performed a trace analysis on the glass shard.
 [[Return to the Police Tent|Police Tent]]
 
 
-:: TraceGuestCigars {"position":"4537.5,2650","size":"100,100"}
-You have performed a trace analysis on the cigarette butts.
+:: TraceGuestCigars {"position":"4550,2650","size":"100,100"}
+You have performed a trace analysis on the cigarrette pack found in the guest room.
 
 **Results:**
 - No additional trace evidence found.
@@ -1538,7 +1541,7 @@ You have performed a trace analysis on the cigarette butts.
 
 
 :: TraceGuestKnives {"position":"4662.5,2650","size":"100,100"}
-You have performed a trace analysis on the kitchen knives.
+You have performed a trace analysis on the knives found in the guest room.
 
 **Results:**
 - No additional trace evidence found.
@@ -1555,7 +1558,7 @@ You have performed a trace analysis on the lighter.
 [[Return to the Police Tent|Police Tent]]
 
 
-:: TraceGun {"position":"4287.5,2650","size":"100,100"}
+:: TraceGun {"position":"4300,2650","size":"100,100"}
 You have performed a trace analysis on the gun.
 
 **Results:**
