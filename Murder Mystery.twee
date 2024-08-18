@@ -36,7 +36,7 @@ You have conducted a ballistics test on the gun found in Alvin's room.
 **Results:**
 - The gun was never fired or loaded.
 
-[[Return to the Police Tent|Police Tent]]
+[[Return to the Police Tent|Police Tent]](display:"Increase time by 1")(display:"Increase time by 1")(display:"Increase time by 1")
 
 
 :: Ballroom {"position":"4050,675","size":"200,200"}
@@ -45,17 +45,17 @@ You have conducted a ballistics test on the gun found in Alvin's room.
 
 <img width=400 src="https://tinypic.host/images/2024/08/13/d4c5fd5e228ce1315a85f419f7e78573-198732668.jpg"\>
 
-You step into the Ballroom, and the scale of the room immediately strikes you. The ceiling soars overhead, adorned with elaborate frescoes and gilded moldings. The polished marble floor stretches out before you, its surface reflecting the soft glow of the chandeliers that hang from above. Tall, arched windows line the walls, though the heavy rain outside blurs the view of the gardens beyond. The room is vast, with enough space to accommodate a large gathering, yet it feels intimate due to the careful arrangement of the seating areas along the walls. A grand piano sits in one corner, its lid propped open, ready to fill the room with music. The(text-colour:orange)[ [[Main Hallway<-door behind you leads back to the Main Hallway]]].
+You step into the Ballroom, and the scale of the room immediately strikes you. The ceiling soars overhead, adorned with elaborate frescoes and gilded moldings. The polished marble floor stretches out before you, its surface reflecting the soft glow of the chandeliers that hang from above. Tall, arched windows line the walls, though the heavy rain outside blurs the view of the gardens beyond. The room is vast, with enough space to accommodate a large gathering, yet it feels intimate due to the careful arrangement of the seating areas along the walls. A grand piano sits in one corner, its lid propped open, ready to fill the room with music. (if:$time_11 is 0)[The(text-colour:orange)[ [[Main Hallway<-door behind you leads back to the Main Hallway]]].]
 
 Some of the police officers have gathered everyone in the house into this room. One of them must have done the murder.
 
-[[Talk to Selena Franco]]
+(if:$time_11 is 0)[ [[Talk to Selena Franco]]
 [[Talk to Luis McMillan]]
 [[Talk to Patricia Curtis]]
 [[Talk to Leonardo Greene]]
 [[Talk to Jack Farmer]]
 [[Talk to Benjamin Franco]]
-(if:$evidence_butler_sleeping is 2)[ [[Talk to Rufus Wagner]]]
+(if:$evidence_butler_sleeping is 2)[ [[Talk to Rufus Wagner]]]]
 
 If you think you know who ''murdered the victim'', it's time to(text-colour:red)[ [[Present Evidence<-present your evidence]]]. But remember, if you don't have enough evidence or choose the wrong person, you lose. There is no going back.
 
@@ -117,7 +117,7 @@ You have analyzed the blood sample from the glass shard.
 **Results:**
 - The blood is from Benjamin.(set:$evidence_court_glass_blood to 1)
 
-[[Return to the Police Tent|Police Tent]]
+[[Return to the Police Tent|Police Tent]](display:"Increase time by 1")(display:"Increase time by 1")(display:"Increase time by 1")
 
 
 :: BloodKnife {"position":"700,3275","size":"100,100"}
@@ -126,7 +126,7 @@ You have analyzed the blood sample from the knife.
 **Results:**
 - The blood sample is from the victim.
 
-[[Return to the Police Tent|Police Tent]]
+[[Return to the Police Tent|Police Tent]](display:"Increase time by 1")(display:"Increase time by 1")(display:"Increase time by 1")
 
 
 :: BloodLampCord {"position":"1525,3250","size":"100,100"}
@@ -135,7 +135,7 @@ You have analyzed the blood sample from the lamp cord.
 **Results:**
 - The blood is from the victim, Alvin Franco.(set:$evidence_court_lampcord_blood to 1)
 
-[[Return to the Police Tent|Police Tent]]
+[[Return to the Police Tent|Police Tent]](display:"Increase time by 1")(display:"Increase time by 1")(display:"Increase time by 1")
 
 
 :: BloodSampleAnalysis {"position":"2650,2775","size":"100,100"}
@@ -144,7 +144,7 @@ You have analyzed the blood sample found in the library under the rug.
 **Results:**
 - The blood is from the victim.(set:$evidence_court_underrug_blood to 1)
 
-[[Return to the Police Tent|Police Tent]]
+[[Return to the Police Tent|Police Tent]](display:"Increase time by 1")(display:"Increase time by 1")(display:"Increase time by 1")
 
 
 :: BloodWok {"position":"1400,3250","size":"100,100"}
@@ -153,7 +153,7 @@ You have analyzed the blood sample from the wok.
 **Results:**
 - The blood is from the butler.(set:$evidence_court_wok_blood to 1)
 
-[[Return to the Police Tent|Police Tent]]
+[[Return to the Police Tent|Police Tent]](display:"Increase time by 1")(display:"Increase time by 1")(display:"Increase time by 1")
 
 
 :: Butler's Room {"position":"3050,1075","size":"100,100"}
@@ -171,7 +171,7 @@ You have tested the notes found in Alvin's room for DNA.
 **Results:**
 - No DNA found apart from the fingerprints.
 
-[[Return to the Police Tent|Police Tent]]
+[[Return to the Police Tent|Police Tent]](display:"Increase time by 1")(display:"Increase time by 1")(display:"Increase time by 1")
 
 
 :: DNABenDiary {"position":"3525,2775","size":"100,100"}
@@ -180,7 +180,7 @@ You have tested the diary found in Benjamin's room for DNA.
 **Results:**
 - No DNA found apart from the fingerprints.
 
-[[Return to the Police Tent|Police Tent]]
+[[Return to the Police Tent|Police Tent]](display:"Increase time by 1")(display:"Increase time by 1")(display:"Increase time by 1")
 
 
 :: DNABenGloves {"position":"3275,2775","size":"100,100"}
@@ -189,16 +189,16 @@ You have tested the charred gloves found in Benjamin's room for DNA.
 **Results:**
 - No DNA found apart from the fingerprints.
 
-[[Return to the Police Tent|Police Tent]]
+[[Return to the Police Tent|Police Tent]](display:"Increase time by 1")(display:"Increase time by 1")(display:"Increase time by 1")
 
 
 :: DNABloodSample {"position":"2525,2775","size":"100,100"}
 You have tested the blood sample found in the library under the rug for DNA.
 
 **Results:**
-- The blood is from the victim.
+- No other DNA except for blood.
 
-[[Return to the Police Tent|Police Tent]]
+[[Return to the Police Tent|Police Tent]](display:"Increase time by 1")(display:"Increase time by 1")(display:"Increase time by 1")
 
 
 :: DNAButlerGloves {"position":"3775,2775","size":"100,100"}
@@ -207,7 +207,7 @@ You have tested the gloves found in the butler's room for DNA.
 **Results:**
 - No DNA found apart from the fingerprints.
 
-[[Return to the Police Tent|Police Tent]]
+[[Return to the Police Tent|Police Tent]](display:"Increase time by 1")(display:"Increase time by 1")(display:"Increase time by 1")
 
 
 :: DNAButlerPhone {"position":"4025,2775","size":"100,100"}
@@ -216,7 +216,7 @@ You have tested the phone in the butler's room for DNA.
 **Results:**
 - No DNA found apart from the fingerprints.
 
-[[Return to the Police Tent|Police Tent]]
+[[Return to the Police Tent|Police Tent]](display:"Increase time by 1")(display:"Increase time by 1")(display:"Increase time by 1")
 
 
 :: DNAFoyerPhone {"position":"4275,2775","size":"100,100"}
@@ -225,7 +225,7 @@ You have tested the phone in the Grand Foyer for DNA.
 **Results:**
 - No DNA found apart from the fingerprints.
 
-[[Return to the Police Tent|Police Tent]]
+[[Return to the Police Tent|Police Tent]](display:"Increase time by 1")(display:"Increase time by 1")(display:"Increase time by 1")
 
 
 :: DNAGlass {"position":"2400,2775","size":"100,100"}
@@ -234,7 +234,7 @@ You have tested the glass shard for DNA.
 **Results:**
 - DNA analysis reveals the blood is from the victim.
 
-[[Return to the Police Tent|Police Tent]]
+[[Return to the Police Tent|Police Tent]](display:"Increase time by 1")(display:"Increase time by 1")(display:"Increase time by 1")
 
 
 :: DNAGuestCigars {"position":"5150,2775","size":"100,100"}
@@ -243,7 +243,7 @@ You have tested the cigarette pack in the guest bedroom for DNA.
 **Results:**
 - No DNA found apart from the fingerprints.
 
-[[Return to the Police Tent|Police Tent]]
+[[Return to the Police Tent|Police Tent]](display:"Increase time by 1")(display:"Increase time by 1")(display:"Increase time by 1")
 
 
 :: DNAGuestKnives {"position":"5400,2775","size":"100,100"}
@@ -252,7 +252,7 @@ You have tested the knives found in the guest bedroom for DNA.
 **Results:**
 - No DNA found.
 
-[[Return to the Police Tent|Police Tent]]
+[[Return to the Police Tent|Police Tent]](display:"Increase time by 1")(display:"Increase time by 1")(display:"Increase time by 1")
 
 
 :: DNAGuestLighter {"position":"5650,2775","size":"100,100"}
@@ -261,7 +261,7 @@ You have tested the lighter found in Leonardo's room for DNA.
 **Results:**
 - No DNA found apart from the fingerprints.
 
-[[Return to the Police Tent|Police Tent]]
+[[Return to the Police Tent|Police Tent]](display:"Increase time by 1")(display:"Increase time by 1")(display:"Increase time by 1")
 
 
 :: DNAGun {"position":"4525,2775","size":"100,100"}
@@ -270,35 +270,34 @@ You have tested the gun found in Alvin's room for DNA.
 **Results:**
 - No DNA found apart from the fingerprints.
 
-[[Return to the Police Tent|Police Tent]]
+[[Return to the Police Tent|Police Tent]](display:"Increase time by 1")(display:"Increase time by 1")(display:"Increase time by 1")
 
 
 :: DNAKnife {"position":"1775,2775","size":"100,100"}
 You have tested the knife found in the victim's body for DNA.
 
 **Results:**
-- DNA analysis reveals the blood is from the victim.
+- No other DNA except for blood.
 
-[[Return to the Police Tent|Police Tent]]
+[[Return to the Police Tent|Police Tent]](display:"Increase time by 1")(display:"Increase time by 1")(display:"Increase time by 1")
 
 
 :: DNALampCord {"position":"2025,2775","size":"100,100"}
 You have tested the lamp cord for DNA.
 
 **Results:**
-- DNA analysis reveals the blood is from the victim, Alvin Franco.
+- No other DNA except for blood.
 
-[[Return to the Police Tent|Police Tent]]
+[[Return to the Police Tent|Police Tent]](display:"Increase time by 1")(display:"Increase time by 1")(display:"Increase time by 1")
 
 
 :: DNALibraryFootprint {"position":"2900,2775","size":"100,100"}
-DNALibraryFootprint
 You have tested the footprint mould from the library for DNA.
 
 **Results:**
 - No DNA found.
 
-[[Return to the Police Tent|Police Tent]]
+[[Return to the Police Tent|Police Tent]](display:"Increase time by 1")(display:"Increase time by 1")(display:"Increase time by 1")
 
 
 :: DNAWineBottle {"position":"5900,2775","size":"100,100"}
@@ -307,16 +306,16 @@ You have tested the wine bottle for DNA.
 **Results:**
 - No DNA found.
 
-[[Return to the Police Tent|Police Tent]]
+[[Return to the Police Tent|Police Tent]](display:"Increase time by 1")(display:"Increase time by 1")(display:"Increase time by 1")
 
 
 :: DNAWok {"position":"2500,2900","size":"100,100"}
 You have tested the wok for DNA.
 
 **Results:**
-- DNA analysis reveals the blood is from the butler.
+- No other DNA except for blood.
 
-[[Return to the Police Tent|Police Tent]]
+[[Return to the Police Tent|Police Tent]](display:"Increase time by 1")(display:"Increase time by 1")(display:"Increase time by 1")
 
 
 :: Dining Hall {"position":"3850,1000","size":"100,100"}
@@ -327,7 +326,7 @@ You have tested the wok for DNA.
 
 You step into the Dining Hall, greeted by a sense of grandeur and formality. A long, polished dining table dominates the center of the room, surrounded by high-backed chairs upholstered in deep burgundy leather. The walls are adorned with dark wood paneling, accented by ornate moldings and tapestries that depict scenes of pastoral life. Overhead, a large chandelier hangs, its crystal droplets shimmering in the candlelight. The windows on one side of the room are tall and arched, though the heavy rain outside obscures the view. A sideboard against one wall holds an array of fine china and silverware, and a large, intricately carved fireplace on the opposite wall crackles with a warm fire.
 
-(if:$chef_leading is 0)[A (text-colour:orange)[ [[Kitchen 1<-a door is located to your left]]], and there is also(text-colour:orange)[ [[Main Hallway<-a door behind you]]].]
+(if:$chef_leading is 0)[A (text-colour:orange)[ [[Kitchen 1<-a door is located to your left leading to the Kitchen]]], and there is also(text-colour:orange)[ [[Main Hallway<-a door behind you leading to the Main Hallway]]].]
 
 (if:$chef_leading is 1)[The chef steps through(text-colour:orange)[ [[Kitchen 1<-another door]]].]
 
@@ -338,7 +337,7 @@ You have performed a fingerprint analysis on the notes found in Alvin's room.
 **Results:**
 - Fingerprints from Alvin and everyone else in the house.
 
-[[Return to the Police Tent|Police Tent]]
+[[Return to the Police Tent|Police Tent]](display:"Increase time by 1")(display:"Increase time by 1")(display:"Increase time by 1")
 
 
 :: FingerprintBenDiary {"position":"3400,2775","size":"100,100"}
@@ -347,7 +346,7 @@ You have performed a fingerprint analysis on the diary found in Benjamin's room.
 **Results:**
 - Fingerprints from Benjamin.
 
-[[Return to the Police Tent|Police Tent]]
+[[Return to the Police Tent|Police Tent]](display:"Increase time by 1")(display:"Increase time by 1")(display:"Increase time by 1")
 
 
 :: FingerprintBenGloves {"position":"3150,2775","size":"100,100"}
@@ -356,7 +355,7 @@ You have performed a fingerprint analysis on the charred gloves found in Benjami
 **Results:**
 - Fingerprints from Benjamin on the inside; damaged fingerprints on the outside could belong to Alvin, the butler, or someone else.(set:$evidence_court_ben_gloves to 1)
 
-[[Return to the Police Tent|Police Tent]]
+[[Return to the Police Tent|Police Tent]](display:"Increase time by 1")(display:"Increase time by 1")(display:"Increase time by 1")
 
 
 :: FingerprintBloodSample {"position":"1775,3250","size":"100,100"}
@@ -365,7 +364,7 @@ You have performed a fingerprint analysis on the blood sample found in the libra
 **Results:**
 - No fingerprints found.
 
-[[Return to the Police Tent|Police Tent]]
+[[Return to the Police Tent|Police Tent]](display:"Increase time by 1")(display:"Increase time by 1")(display:"Increase time by 1")
 
 
 :: FingerprintButlerGloves {"position":"3650,2775","size":"100,100"}
@@ -374,7 +373,7 @@ You have performed a fingerprint analysis on the gloves found in the butler's ro
 **Results:**
 - Fingerprints from the butler.
 
-[[Return to the Police Tent|Police Tent]]
+[[Return to the Police Tent|Police Tent]](display:"Increase time by 1")(display:"Increase time by 1")(display:"Increase time by 1")
 
 
 :: FingerprintButlerPhone {"position":"3900,2775","size":"100,100"}
@@ -383,7 +382,7 @@ You have performed a fingerprint analysis on the phone in the butler's room.
 **Results:**
 - Fingerprints from the butler.
 
-[[Return to the Police Tent|Police Tent]]
+[[Return to the Police Tent|Police Tent]](display:"Increase time by 1")(display:"Increase time by 1")(display:"Increase time by 1")
 
 
 :: FingerprintFootprint {"position":"900,3125","size":"100,100"}
@@ -392,7 +391,7 @@ You have performed a fingerprint analysis on the footprint mould taken from unde
 **Results:**
 - No fingerprints found.
 
-[[Return to the Police Tent|Police Tent]]
+[[Return to the Police Tent|Police Tent]](display:"Increase time by 1")(display:"Increase time by 1")(display:"Increase time by 1")
 
 
 :: FingerprintFoyerPhone {"position":"4150,2775","size":"100,100"}
@@ -401,7 +400,7 @@ You have performed a fingerprint analysis on the phone in the Grand Foyer.
 **Results:**
 - Fingerprints from the butler, chef, and old fingerprints.
 
-[[Return to the Police Tent|Police Tent]]
+[[Return to the Police Tent|Police Tent]](display:"Increase time by 1")(display:"Increase time by 1")(display:"Increase time by 1")
 
 
 :: FingerprintGlass {"position":"2150,2775","size":"100,100"}
@@ -410,7 +409,7 @@ You have performed a fingerprint analysis on the glass shard found in the librar
 **Results:**
 - No fingerprints found.
 
-[[Return to the Police Tent|Police Tent]]
+[[Return to the Police Tent|Police Tent]](display:"Increase time by 1")(display:"Increase time by 1")(display:"Increase time by 1")
 
 
 :: FingerprintGuestCigars {"position":"5025,2775","size":"100,100"}
@@ -419,7 +418,7 @@ You have performed a fingerprint analysis on the cigarrette pack found in the gu
 **Results:**
 - Fingerprints from Leonardo.
 
-[[Return to the Police Tent|Police Tent]]
+[[Return to the Police Tent|Police Tent]](display:"Increase time by 1")(display:"Increase time by 1")(display:"Increase time by 1")
 
 
 :: FingerprintGuestKnives {"position":"5275,2775","size":"100,100"}
@@ -428,7 +427,7 @@ You have performed a fingerprint analysis on the knives found in the guest room.
 **Results:**
 - No fingerprints found.
 
-[[Return to the Police Tent|Police Tent]]
+[[Return to the Police Tent|Police Tent]](display:"Increase time by 1")(display:"Increase time by 1")(display:"Increase time by 1")
 
 
 :: FingerprintGuestLighter {"position":"5525,2775","size":"100,100"}
@@ -437,7 +436,7 @@ You have performed a fingerprint analysis on the lighter found in Leonardo's roo
 **Results:**
 - Fingerprints from Leonardo.
 
-[[Return to the Police Tent|Police Tent]]
+[[Return to the Police Tent|Police Tent]](display:"Increase time by 1")(display:"Increase time by 1")(display:"Increase time by 1")
 
 
 :: FingerprintGun {"position":"4400,2775","size":"100,100"}
@@ -446,7 +445,7 @@ You have performed a fingerprint analysis on the gun found in Alvin's room.
 **Results:**
 - Fingerprints from Alvin.
 
-[[Return to the Police Tent|Police Tent]]
+[[Return to the Police Tent|Police Tent]](display:"Increase time by 1")(display:"Increase time by 1")(display:"Increase time by 1")
 
 
 :: FingerprintKnife {"position":"725,3125","size":"100,100"}
@@ -455,7 +454,7 @@ You have performed a fingerprint analysis on the knife found in the victim's bod
 **Results:**
 - Fingerprints match the butler, Rufus Wagner.(set:$evidence_court_kitchenknife to 0)
 
-[[Return to the Police Tent|Police Tent]]
+[[Return to the Police Tent|Police Tent]](display:"Increase time by 1")(display:"Increase time by 1")(display:"Increase time by 1")
 
 
 :: FingerprintLampCord {"position":"1400,3125","size":"100,100"}
@@ -464,7 +463,7 @@ You have performed a fingerprint analysis on the lamp cord found in the library.
 **Results:**
 - Fingerprints match the victim, Alvin.
 
-[[Return to the Police Tent|Police Tent]]
+[[Return to the Police Tent|Police Tent]](display:"Increase time by 1")(display:"Increase time by 1")(display:"Increase time by 1")
 
 
 :: FingerprintLibraryFootprint {"position":"2775,2775","size":"100,100"}
@@ -474,7 +473,7 @@ You have performed a fingerprint analysis on the footprint mould taken from the 
 **Results:**
 - No fingerprints found.
 
-[[Return to the Police Tent|Police Tent]]
+[[Return to the Police Tent|Police Tent]](display:"Increase time by 1")(display:"Increase time by 1")(display:"Increase time by 1")
 
 
 :: FingerprintWineBottle {"position":"5775,2775","size":"100,100"}
@@ -483,7 +482,7 @@ You have performed a fingerprint analysis on the wine bottle found in the parlor
 **Results:**
 - No fingerprints found.
 
-[[Return to the Police Tent|Police Tent]]
+[[Return to the Police Tent|Police Tent]](display:"Increase time by 1")(display:"Increase time by 1")(display:"Increase time by 1")
 
 
 :: FingerprintWok {"position":"900,3275","size":"100,100"}
@@ -492,7 +491,7 @@ You have performed a fingerprint analysis on the wok found in the kitchen.
 **Results:**
 - Fingerprints match the chef, Luis McMillan.
 
-[[Return to the Police Tent|Police Tent]]
+[[Return to the Police Tent|Police Tent]](display:"Increase time by 1")(display:"Increase time by 1")(display:"Increase time by 1")
 
 
 :: Game Over {"position":"6225,1275","size":"100,100"}
@@ -507,7 +506,7 @@ You have examined the glass fragments from the glass shard.
 **Results:**
 - Glass originates from the library window.
 
-[[Return to the Police Tent|Police Tent]]
+[[Return to the Police Tent|Police Tent]](display:"Increase time by 1")(display:"Increase time by 1")(display:"Increase time by 1")
 
 
 :: Grand Foyer {"position":"4000,1600","size":"100,100"}
@@ -592,7 +591,7 @@ Everyone gasps.
 "Let's see what evidence you have," says Bejamin calmly.
 
 (if:$evidence_ben_burnt_gloves is 2)[ [[Present the gloves found in the fireplace in Benjamin's room]]]
-(if:evidence_court_kitchenfootprint is 1)[ [[Present the footprint found under the victim's body|Present the footprint found under the victim's body2]]]
+(if:$evidence_court_kitchenfootprint is 1)[ [[Present the footprint found under the victim's body|Present the footprint found under the victim's body2]]]
 [[Present nothing (you will lose if you present nothing)|Game Over]]
 
 
@@ -757,7 +756,7 @@ If you want to complete an analysis on any evidence, head outside to the police 
 
 (if:$water_bucket is 0)["Hmm... I'll place my bets on Ben. Don't really have any reason too, though. Oh, hey, do you want a water bucket?" says Leonardo.
 
-Leonardo hands you a bucket full of water.]
+Leonardo hands you a bucket full of water.(set:$water_bucket to 1)]
 
 [[Ballroom<-Stop Talking to Leonardo Greene]]
 
@@ -838,7 +837,7 @@ Ascending the Grand Staircase, you arrive at the Mezzanine above the Grand Foyer
 
 You step into the ''Parlor'', and the room exudes an air of refined elegance. The walls are adorned with dark oak paneling, rich in texture and warmth, creating a cozy yet sophisticated atmosphere. A large, intricately carved fireplace dominates the left wall, its hearth crackling with a lively fire that casts flickering shadows across the room. The mantel above is adorned with an ornate gilded mirror, reflecting the golden light of the fire. There is a(text-colour:lime)[ [[parlor wine bottle<-wine bottle]]] on the ground.
 
-At the center of the room, a(text-colour:lime)[ [[parlor rug<-plush cream-coloured rug]]] covers the polished wooden floor, its soft fibers muffling your footsteps. Positioned on the rug are four armchairs and a matching sofa, all upholstered in deep burgundy velvet. The furniture is arranged around a low, mahogany coffee table, upon which rests a delicate porcelain tea set and a few well-thumbed books. To the right, large, mullioned windows stretch nearly from floor to ceiling, offering a view of the storm raging outside. The rain beats heavily against the glass, distorting the view of the darkened garden beyond. Behind you is the(text-colour:orange)[ [[Grand Foyer<-door you entered from]]]
+At the center of the room, a(text-colour:lime)[ [[parlor rug<-plush cream-coloured rug]]] covers the polished wooden floor, its soft fibers muffling your footsteps. Positioned on the rug are four armchairs and a matching sofa, all upholstered in deep burgundy velvet. The furniture is arranged around a low, mahogany coffee table, upon which rests a delicate porcelain tea set and a few well-thumbed books. To the right, large, mullioned windows stretch nearly from floor to ceiling, offering a view of the storm raging outside. The rain beats heavily against the glass, distorting the view of the darkened garden beyond. Behind you is the(text-colour:orange)[ [[Grand Foyer<-door you entered from leading to the Grand Foyer]]]
 
 
 :: Patricia1 {"position":"4150,400","size":"100,100"}
@@ -904,7 +903,7 @@ You enter the ''Police Tent''. Here, you can examine any piece of evidence you'v
 ---
 
 **Detailed Analysis for Each Evidence Type:**
-(if: $evidence_kitchen_all is 2)[
+(if: $evidence_kitchen_all is 1)[
 - **Knife found in the victim's body:**
   * [[Perform fingerprint analysis on knife|FingerprintKnife]]
   * [[Test knife for DNA|DNAKnife]]
@@ -1165,7 +1164,7 @@ You present the knives.
 
 "Are you sure those gloves are mine? It's impossible to tell since there are so charred." asks Benjamin.
 
-(if:$evidence_court_ben_gloves)[[Present the fingerprint analysis on the gloves]]
+(if:$evidence_court_ben_gloves is 1)[[Present the fingerprint analysis on the gloves]]
 [[Present nothing (you will lose if you present nothing)|Game Over]]
 
 
@@ -1187,7 +1186,7 @@ Everyone looks slightly confused.
 
 "If the victim has strangled, they would have tried to escape! And yet, there were no signs of a struggle in the kitchen!" says Benjamin, sounding both angry and worried.
 
-(if:$evidence_kitchen_all)[[Present the knocked over utensils]]
+(if:$evidence_kitchen_all > 0)[[Present the knocked over utensils]]
 (if:$evidence_court_underrug_blood is 1)[[Present the blood under the rug from the library]]
 [[Present nothing (you will lose if you present nothing)|Game Over]]
 
@@ -1202,6 +1201,18 @@ The police officers take Benjamin away. Congratulations! You solved the case!
 
 :: Print Time [Functions] {"position":"4150,2075","size":"100,100"}
 (print:$time_hr)(text-style:"blink")[:](print:$time_min) pm
+
+(if:$time_hr is 10)[
+(if:$time_min > 40)[''At 11:00 you will automatically be sent to the Ballroom!'']
+]
+
+(if:$time_hr is 11)[
+
+
+(if:$time_11 is 0)[(set:$time_11 to 1)
+(go-to:"time11")]
+
+]
 
 
 :: Rufus1 {"position":"3625,450","size":"100,100"}
@@ -1273,7 +1284,7 @@ You have analyzed the footprint mould for shoe print size.
 **Results:**
 - Shoe print size: Size 11.(set:$evidence_court_kitchenfootprint to 1)
 
-[[Return to the Police Tent|Police Tent]]
+[[Return to the Police Tent|Police Tent]](display:"Increase time by 1")(display:"Increase time by 1")(display:"Increase time by 1")
 
 
 :: ShoePrintLibraryFootprint {"position":"3025,2775","size":"100,100"}
@@ -1283,7 +1294,7 @@ You have analyzed the footprint mould from the library for shoe size.
 **Results:**
 - Shoe size: Size 11.
 
-[[Return to the Police Tent|Police Tent]]
+[[Return to the Police Tent|Police Tent]](display:"Increase time by 1")(display:"Increase time by 1")(display:"Increase time by 1")
 
 
 :: Staff Hallway #1 {"position":"3350,1425","size":"100,100"}
@@ -1298,14 +1309,17 @@ Entering the Staff Hallway, you are greeted by a space designed for efficiency r
 :: Start {"position":"3750,1900","size":"100,100"}
 (set:$time_hr to 9,$time_min to 14)
 
+(align:"=><=")[''Murder Manor'']
+
 You've just been called out to a crime scene of a murder scene. You have at an old European style Victorian mansion. You are a forensic scientist. Good luck!
 
 ''Important Information''
-- Any text in orange is clickable. When you click it, it will move you to the room indicated. This will add one minute to your time.
-- Any text in lime is clickable. When you click it, you can examine evidence, which generally adds one minite to your time.
+- Any text in (text-colour:orange)[orange] is clickable. When you click it, it will move you to the room indicated. This will add one minute to your time.
+- Any text in (text-colour:green)[lime] is clickable. When you click it, you can examine evidence, which generally adds one minite to your time.
 - Any other colour clickable text is generally for collecting evidence or performing an analysis. This could add any number to your time.
 - If the time becomes ''11:00'' or later, you have no time left to collect evidence or perform any analysis, so use your time carefully.
 - There may be some bugs you encounter.
+- This game is fully playable by this .html file. ''Images'' are only loaded if you have internet, but they are not required to play.
 
 [[Porch<-Click here to start the game!]]
 
@@ -1356,6 +1370,8 @@ You've just been called out to a crime scene of a murder scene. You have at an o
 (set:$evidence_court_underrug_blood to 0)
 (set:$evidence_court_glass_blood to 0)
 (set:$evidence_court_wok_blood to 0)
+
+(set:$time_11 to 0)
 
 
 :: Talk to Benjamin Franco {"position":"4475,250","size":"100,100"}
@@ -1455,7 +1471,7 @@ You have performed a trace analysis on the notes.
 **Results:**
 - No additional trace evidence found.
 
-[[Return to the Police Tent|Police Tent]]
+[[Return to the Police Tent|Police Tent]](display:"Increase time by 1")(display:"Increase time by 1")(display:"Increase time by 1")
 
 
 :: TraceBenDiary {"position":"3787.5,2650","size":"100,100"}
@@ -1464,7 +1480,7 @@ You have performed a trace analysis on the diary.
 **Results:**
 - No additional trace evidence found.
 
-[[Return to the Police Tent|Police Tent]]
+[[Return to the Police Tent|Police Tent]](display:"Increase time by 1")(display:"Increase time by 1")(display:"Increase time by 1")
 
 
 :: TraceBenGloves {"position":"3662.5,2650","size":"100,100"}
@@ -1473,7 +1489,7 @@ You have performed a trace analysis on the charred gloves.
 **Results:**
 - No additional trace evidence found.
 
-[[Return to the Police Tent|Police Tent]]
+[[Return to the Police Tent|Police Tent]](display:"Increase time by 1")(display:"Increase time by 1")(display:"Increase time by 1")
 
 
 :: TraceBloodSample {"position":"3412.5,2650","size":"100,100"}
@@ -1483,7 +1499,7 @@ You have performed a trace analysis on the blood sample.
 **Results:**
 - No additional trace evidence found.
 
-[[Return to the Police Tent|Police Tent]]
+[[Return to the Police Tent|Police Tent]](display:"Increase time by 1")(display:"Increase time by 1")(display:"Increase time by 1")
 
 
 :: TraceButlerGloves {"position":"3912.5,2650","size":"100,100"}
@@ -1492,7 +1508,7 @@ You have performed a trace analysis on the gloves.
 **Results:**
 - No additional trace evidence found.
 
-[[Return to the Police Tent|Police Tent]]
+[[Return to the Police Tent|Police Tent]](display:"Increase time by 1")(display:"Increase time by 1")(display:"Increase time by 1")
 
 
 :: TraceButlerPhone {"position":"4025,2650","size":"100,100"}
@@ -1501,16 +1517,16 @@ You have performed a trace analysis on the phone.
 **Results:**
 - No additional trace evidence found.
 
-[[Return to the Police Tent|Police Tent]]
+[[Return to the Police Tent|Police Tent]](display:"Increase time by 1")(display:"Increase time by 1")(display:"Increase time by 1")
 
 
-:: TraceFootprint {"position":"2912.5,2650","size":"100,100"}
+:: TraceFootprint {"position":"2925,2650","size":"100,100"}
 You have performed a trace analysis on the footprint mould.
 
 **Results:**
 - No additional trace evidence found.
 
-[[Return to the Police Tent|Police Tent]]
+[[Return to the Police Tent|Police Tent]](display:"Increase time by 1")(display:"Increase time by 1")(display:"Increase time by 1")
 
 
 :: TraceFoyerPhone {"position":"4150,2650","size":"100,100"}
@@ -1519,7 +1535,7 @@ You have performed a trace analysis on the phone.
 **Results:**
 - No additional trace evidence found.
 
-[[Return to the Police Tent|Police Tent]]
+[[Return to the Police Tent|Police Tent]](display:"Increase time by 1")(display:"Increase time by 1")(display:"Increase time by 1")
 
 
 :: TraceGlass {"position":"3287.5,2650","size":"100,100"}
@@ -1528,7 +1544,7 @@ You have performed a trace analysis on the glass shard.
 **Results:**
 - No additional trace evidence found.
 
-[[Return to the Police Tent|Police Tent]]
+[[Return to the Police Tent|Police Tent]](display:"Increase time by 1")(display:"Increase time by 1")(display:"Increase time by 1")
 
 
 :: TraceGuestCigars {"position":"4550,2650","size":"100,100"}
@@ -1537,7 +1553,7 @@ You have performed a trace analysis on the cigarrette pack found in the guest ro
 **Results:**
 - No additional trace evidence found.
 
-[[Return to the Police Tent|Police Tent]]
+[[Return to the Police Tent|Police Tent]](display:"Increase time by 1")(display:"Increase time by 1")(display:"Increase time by 1")
 
 
 :: TraceGuestKnives {"position":"4662.5,2650","size":"100,100"}
@@ -1546,7 +1562,7 @@ You have performed a trace analysis on the knives found in the guest room.
 **Results:**
 - No additional trace evidence found.
 
-[[Return to the Police Tent|Police Tent]]
+[[Return to the Police Tent|Police Tent]](display:"Increase time by 1")(display:"Increase time by 1")(display:"Increase time by 1")
 
 
 :: TraceGuestLighter {"position":"4787.5,2650","size":"100,100"}
@@ -1555,7 +1571,7 @@ You have performed a trace analysis on the lighter.
 **Results:**
 - No additional trace evidence found.
 
-[[Return to the Police Tent|Police Tent]]
+[[Return to the Police Tent|Police Tent]](display:"Increase time by 1")(display:"Increase time by 1")(display:"Increase time by 1")
 
 
 :: TraceGun {"position":"4300,2650","size":"100,100"}
@@ -1564,7 +1580,7 @@ You have performed a trace analysis on the gun.
 **Results:**
 - No additional trace evidence found.
 
-[[Return to the Police Tent|Police Tent]]
+[[Return to the Police Tent|Police Tent]](display:"Increase time by 1")(display:"Increase time by 1")(display:"Increase time by 1")
 
 
 :: TraceKnife {"position":"2787.5,2650","size":"100,100"}
@@ -1573,7 +1589,7 @@ You have performed a trace analysis on the knife.
 **Results:**
 - No additional trace evidence found.
 
-[[Return to the Police Tent|Police Tent]]
+[[Return to the Police Tent|Police Tent]](display:"Increase time by 1")(display:"Increase time by 1")(display:"Increase time by 1")
 
 
 :: TraceLampCord {"position":"3162.5,2650","size":"100,100"}
@@ -1582,7 +1598,7 @@ You have performed a trace analysis on the lamp cord.
 **Results:**
 - Small fibers from leather gloves found(set:$evidence_court_lampcord_trace to 1)
 
-[[Return to the Police Tent|Police Tent]]
+[[Return to the Police Tent|Police Tent]](display:"Increase time by 1")(display:"Increase time by 1")(display:"Increase time by 1")
 
 
 :: TraceLibraryFootprint {"position":"3537.5,2650","size":"100,100"}
@@ -1591,7 +1607,7 @@ You have performed a trace analysis on the footprint mould.
 **Results:**
 - No additional trace evidence found.
 
-[[Return to the Police Tent|Police Tent]]
+[[Return to the Police Tent|Police Tent]](display:"Increase time by 1")(display:"Increase time by 1")(display:"Increase time by 1")
 
 
 :: TraceWineBottle {"position":"4912.5,2650","size":"100,100"}
@@ -1600,7 +1616,7 @@ You have performed a trace analysis on the wine bottle.
 **Results:**
 - No additional trace evidence found.
 
-[[Return to the Police Tent|Police Tent]]
+[[Return to the Police Tent|Police Tent]](display:"Increase time by 1")(display:"Increase time by 1")(display:"Increase time by 1")
 
 
 :: TraceWok {"position":"3037.5,2650","size":"100,100"}
@@ -1609,7 +1625,7 @@ You have performed a trace analysis on the wok.
 **Results:**
 - No additional trace evidence found.
 
-[[Return to the Police Tent|Police Tent]]
+[[Return to the Police Tent|Police Tent]](display:"Increase time by 1")(display:"Increase time by 1")(display:"Increase time by 1")
 
 
 :: alvin bed {"position":"6100,1625","size":"100,100"}
@@ -1715,7 +1731,7 @@ You examine the fireplace. (if:$action_fire_out is 0)[There seems to be somethin
 (display:"Increase time by 1")
 (display:"Print Time")
 
-(if:$action_fire_out to 0)[(set:$action_fire_out to 1)]
+(if:$action_fire_out is 0)[(set:$action_fire_out to 1)]
 
 (if:$evidence_ben_burnt_gloves is 0)[(set:$evidence_ben_burnt_gloves to 1)]
 
@@ -1738,6 +1754,10 @@ You examine the fireplace. (if:$action_fire_out is 0)[There seems to be somethin
 
 :: ben search {"position":"5325,1075","size":"100,100"}
 (display:"Increase time by 1")
+(display:"Increase time by 1")
+(display:"Increase time by 1")
+(display:"Increase time by 1")
+(display:"Increase time by 1")
 (display:"Print Time")
 
 You searched the whole room, but couldn't find a first-aid kit anywhere.
@@ -1745,8 +1765,8 @@ You searched the whole room, but couldn't find a first-aid kit anywhere.
 (if:$found_firstaid_kit is 1)[(set:$found_firstaid_kit to 2)]
 
 
-:: butler awake {"position":"2700,1150","size":"100,100"}
-(set:$evidence_bulter_sleeping to 2)
+:: butler awake {"position":"2675,1100","size":"100,100"}
+(set:$evidence_butler_sleeping to 2)
 (display:"Increase time by 1")
 (display:"Increase time by 1")
 (set:$butler_just_awoke to 1)
@@ -1759,11 +1779,11 @@ You searched the whole room, but couldn't find a first-aid kit anywhere.
 
 (if:$evidence_butler_sleeping is 0)[(set:$evidence_butler_sleeping to 1)]
 
-(if:$evidence_butler_sleeping is 1)[The butler is sleeping in their bed. They look very tired.]
+(if:$evidence_butler_sleeping is 1)[The butler is sleeping in their bed. They look very tired.
 
-(if:$evidence_butler_sleeping is 1)[ [[butler awake<-Wake up the butler]]]
+[[butler awake<-Wake up the butler]]]
 
-(if:$butler_just_awoke is 1)["Oh, it's the police. Hmm... I don't remember falling asleep here..." says the butler as he leaves the room. (set:$butler_just_awoke to 1)]
+(if:$butler_just_awoke is 1)["Oh, it's the police. Hmm... I don't remember falling asleep here..." says the butler as he leaves the room. (set:$butler_just_awoke to 0)]
 
 (if:$evidence_butler_sleeping is 2)[The butler was sleeping here before.]
 
@@ -2043,7 +2063,7 @@ You take a close look at the bookshelf. It has perfect rows of books on it.
 [[library rug<-Stop examining]]
 
 
-:: library glass2 {"position":"5000,2500","size":"100,100"}
+:: library glass2 {"position":"4925,2500","size":"100,100"}
 (set:$evidence_library_glass to 2)
 (display:"Increase time by 1")
 (display:"Increase time by 1")
@@ -2134,3 +2154,7 @@ You examine the rug. It looks like a pretty normal rug.
 (display:"Increase time by 1")
 (display:"Increase time by 1")
 (go-to:"parlor wine bottle")
+
+
+:: time11 {"position":"4425,1050","size":"100,100"}
+You rush to the(text-colour:orange)[ [[Ballroom]]].
