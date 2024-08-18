@@ -25,7 +25,12 @@ The ''Master Bedroom'' exudes luxury, with a grand king-sized bed framed by heav
 
 
 :: BallisticsGun {"position":"4650,2775","size":"100,100"}
+You have conducted a ballistics test on the gun found in Alvin's room.
 
+**Results:**
+- The gun was never fired or loaded.
+
+[[Return to the Police Tent|ForensicAnalysis]]
 
 
 :: Ballroom {"position":"4050,675","size":"200,200"}
@@ -45,6 +50,8 @@ Some of the police officers have gathered everyone in the house into this room. 
 [[Talk to Jack Farmer]]
 [[Talk to Benjamin Franco]]
 (if:$evidence_butler_sleeping is 2)[ [[Talk to Rufus Wagner]]]
+
+If you think you know who ''murdered the victim'', it's time to(text-colour:red)[ [[Present Evidence<-present your evidence]]]. But remember, if you don't have enough evidence or choose the wrong person, you lose. There is no going back.
 
 
 :: Ben's Room {"position":"5450,950","size":"100,100"}
@@ -126,7 +133,12 @@ You have analyzed the blood sample from the lamp cord.
 
 
 :: BloodSampleAnalysis {"position":"2650,2775","size":"100,100"}
+You have analyzed the blood sample found in the library under the rug.
 
+**Results:**
+- The blood is from the victim.
+
+[[Return to the Police Tent|ForensicAnalysis]]
 
 
 :: BloodWok {"position":"1400,3250","size":"100,100"}
@@ -148,31 +160,66 @@ You step into the Butler's Room, and the atmosphere shifts from the utilitarian 
 
 
 :: DNAAlvinNotes {"position":"4900,2775","size":"100,100"}
+You have tested the notes found in Alvin's room for DNA.
 
+**Results:**
+- No DNA found apart from the fingerprints.
+
+[[Return to the Police Tent|ForensicAnalysis]]
 
 
 :: DNABenDiary {"position":"3525,2775","size":"100,100"}
+You have tested the diary found in Benjamin's room for DNA.
 
+**Results:**
+- No DNA found apart from the fingerprints.
+
+[[Return to the Police Tent|ForensicAnalysis]]
 
 
 :: DNABenGloves {"position":"3275,2775","size":"100,100"}
+You have tested the charred gloves found in Benjamin's room for DNA.
 
+**Results:**
+- No DNA found apart from the fingerprints.
+
+[[Return to the Police Tent|ForensicAnalysis]]
 
 
 :: DNABloodSample {"position":"2525,2775","size":"100,100"}
+You have tested the blood sample found in the library under the rug for DNA.
 
+**Results:**
+- The blood is from the victim.
+
+[[Return to the Police Tent|ForensicAnalysis]]
 
 
 :: DNAButlerGloves {"position":"3775,2775","size":"100,100"}
+You have tested the gloves found in the butler's room for DNA.
 
+**Results:**
+- No DNA found apart from the fingerprints.
+
+[[Return to the Police Tent|ForensicAnalysis]]
 
 
 :: DNAButlerPhone {"position":"4025,2775","size":"100,100"}
+You have tested the phone in the butler's room for DNA.
 
+**Results:**
+- No DNA found apart from the fingerprints.
+
+[[Return to the Police Tent|ForensicAnalysis]]
 
 
 :: DNAFoyerPhone {"position":"4275,2775","size":"100,100"}
+You have tested the phone in the Grand Foyer for DNA.
 
+**Results:**
+- No DNA found apart from the fingerprints.
+
+[[Return to the Police Tent|ForensicAnalysis]]
 
 
 :: DNAGlass {"position":"2400,2775","size":"100,100"}
@@ -185,19 +232,39 @@ You have tested the glass shard for DNA.
 
 
 :: DNAGuestCigars {"position":"5150,2775","size":"100,100"}
+You have tested the cigarette butts for DNA.
 
+**Results:**
+- No DNA found apart from the fingerprints.
+
+[[Return to the Police Tent|ForensicAnalysis]]
 
 
 :: DNAGuestKnives {"position":"5400,2775","size":"100,100"}
+You have tested the kitchen knives for DNA.
 
+**Results:**
+- No DNA found.
+
+[[Return to the Police Tent|ForensicAnalysis]]
 
 
 :: DNAGuestLighter {"position":"5650,2775","size":"100,100"}
+You have tested the lighter found in Leonardo's room for DNA.
 
+**Results:**
+- No DNA found apart from the fingerprints.
+
+[[Return to the Police Tent|ForensicAnalysis]]
 
 
 :: DNAGun {"position":"4525,2775","size":"100,100"}
+You have tested the gun found in Alvin's room for DNA.
 
+**Results:**
+- No DNA found apart from the fingerprints.
+
+[[Return to the Police Tent|ForensicAnalysis]]
 
 
 :: DNAKnife {"position":"1775,2775","size":"100,100"}
@@ -219,11 +286,22 @@ You have tested the lamp cord for DNA.
 
 
 :: DNALibraryFootprint {"position":"2900,2775","size":"100,100"}
+DNALibraryFootprint
+You have tested the footprint mould from the library for DNA.
 
+**Results:**
+- No DNA found.
+
+[[Return to the Police Tent|ForensicAnalysis]]
 
 
 :: DNAWineBottle {"position":"5900,2775","size":"100,100"}
+You have tested the wine bottle for DNA.
 
+**Results:**
+- No DNA found.
+
+[[Return to the Police Tent|ForensicAnalysis]]
 
 
 :: DNAWok {"position":"2500,2900","size":"100,100"}
@@ -249,27 +327,57 @@ You step into the Dining Hall, greeted by a sense of grandeur and formality. A l
 
 
 :: FingerprintAlvinNotes {"position":"4775,2775","size":"100,100"}
+You have performed a fingerprint analysis on the notes found in Alvin's room.
 
+**Results:**
+- Fingerprints from Alvin and everyone else in the house.
+
+[[Return to the Police Tent|Police Tent]]
 
 
 :: FingerprintBenDiary {"position":"3400,2775","size":"100,100"}
+You have performed a fingerprint analysis on the diary found in Benjamin's room.
 
+**Results:**
+- Fingerprints from Benjamin.
+
+[[Return to the Police Tent|ForensicAnalysis]]
 
 
 :: FingerprintBenGloves {"position":"3150,2775","size":"100,100"}
+You have performed a fingerprint analysis on the charred gloves found in Benjamin's room.
 
+**Results:**
+- Fingerprints from Benjamin on the inside; damaged fingerprints on the outside could belong to Alvin, the butler, or someone else.
+
+[[Return to the Police Tent|ForensicAnalysis]]
 
 
 :: FingerprintBloodSample {"position":"1775,3250","size":"100,100"}
+You have performed a fingerprint analysis on the blood sample found in the library under the rug.
 
+**Results:**
+- No fingerprints found.
+
+[[Return to the Police Tent|ForensicAnalysis]]
 
 
 :: FingerprintButlerGloves {"position":"3650,2775","size":"100,100"}
+You have performed a fingerprint analysis on the gloves found in the butler's room.
 
+**Results:**
+- Fingerprints from the butler.
+
+[[Return to the Police Tent|ForensicAnalysis]]
 
 
 :: FingerprintButlerPhone {"position":"3900,2775","size":"100,100"}
+You have performed a fingerprint analysis on the phone in the butler's room.
 
+**Results:**
+- Fingerprints from the butler.
+
+[[Return to the Police Tent|ForensicAnalysis]]
 
 
 :: FingerprintFootprint {"position":"900,3125","size":"100,100"}
@@ -282,7 +390,12 @@ You have performed a fingerprint analysis on the footprint mould taken from unde
 
 
 :: FingerprintFoyerPhone {"position":"4150,2775","size":"100,100"}
+You have performed a fingerprint analysis on the phone in the Grand Foyer.
 
+**Results:**
+- Fingerprints from the butler, chef, and old fingerprints.
+
+[[Return to the Police Tent|ForensicAnalysis]]
 
 
 :: FingerprintGlass {"position":"2150,2775","size":"100,100"}
@@ -295,26 +408,46 @@ You have performed a fingerprint analysis on the glass shard found in the librar
 
 
 :: FingerprintGuestCigars {"position":"5025,2775","size":"100,100"}
+You have performed a fingerprint analysis on the cigarette butts found in the ashtray.
 
+**Results:**
+- Fingerprints from Leonardo.
+
+[[Return to the Police Tent|ForensicAnalysis]]
 
 
 :: FingerprintGuestKnives {"position":"5275,2775","size":"100,100"}
+You have performed a fingerprint analysis on the kitchen knives.
 
+**Results:**
+- No fingerprints found.
+
+[[Return to the Police Tent|ForensicAnalysis]]
 
 
 :: FingerprintGuestLighter {"position":"5525,2775","size":"100,100"}
+You have performed a fingerprint analysis on the lighter found in Leonardo's room.
 
+**Results:**
+- Fingerprints from Leonardo.
+
+[[Return to the Police Tent|ForensicAnalysis]]
 
 
 :: FingerprintGun {"position":"4400,2775","size":"100,100"}
+You have performed a fingerprint analysis on the gun found in Alvin's room.
 
+**Results:**
+- Fingerprints from Alvin.
+
+[[Return to the Police Tent|ForensicAnalysis]]
 
 
 :: FingerprintKnife {"position":"725,3125","size":"100,100"}
 You have performed a fingerprint analysis on the knife found in the victim's body.
 
 **Results:**
-- Fingerprints match the butler, Rufus Wagner.
+- Fingerprints match the butler, Rufus Wagner.(set:$evidence_court_kitchenknife to 0)
 
 [[Return to the Police Tent|Police Tent]]
 
@@ -329,11 +462,22 @@ You have performed a fingerprint analysis on the lamp cord found in the library.
 
 
 :: FingerprintLibraryFootprint {"position":"2775,2775","size":"100,100"}
+FingerprintLibraryFootprint
+You have performed a fingerprint analysis on the footprint mould taken from the library.
 
+**Results:**
+- No fingerprints found.
+
+[[Return to the Police Tent|ForensicAnalysis]]
 
 
 :: FingerprintWineBottle {"position":"5775,2775","size":"100,100"}
+You have performed a fingerprint analysis on the wine bottle found in the dining room.
 
+**Results:**
+- No fingerprints found.
+
+[[Return to the Police Tent|ForensicAnalysis]]
 
 
 :: FingerprintWok {"position":"875,3225","size":"100,100"}
@@ -346,6 +490,10 @@ You have performed a fingerprint analysis on the wok found in the kitchen.
 
 
 :: ForensicAnalysis {"position":"1775,2900","size":"100,100"}
+
+
+
+:: Game Over {"position":"6225,1250","size":"100,100"}
 
 
 
@@ -401,6 +549,71 @@ You step into the Guest Walk-in-Wardrobe, and the room is a model of organizatio
 :: Increase time by 1 [Functions] {"position":"4250,2075","size":"100,100"}
 (set: $time_min to $time_min + 1)
 (if:$time_min > 59)[(set: $time_min to 60 - $time_min,$time_hr to $time_hr + 1)]
+
+
+:: It was Alvin Franco - the victim! {"position":"6600,150","size":"100,100"}
+"It was... Alvin Franco, the victim himself!"
+
+Everyone gasps.
+
+"Where's your evidence?" demands Selena.
+
+(if:$evidence_alvin_notes is 2)[ [[Present the notes found in Alvin's room]]]
+(if:$evidence_alvin_gun > 0)[ [[Present the gun found in Alvin's room]]]
+[[Present nothing (you will lose if you present nothing)|Game Over]]
+
+
+:: It was Benjamin McIntosh - Alvin's son! {"position":"6725,1300","size":"100,100"}
+
+
+
+:: It was Jack Farmer - the gardener! {"position":"6975,300","size":"100,100"}
+"It was... Jack Farmer, the gardener!"
+
+Everyone gasps.
+
+"Hey, it wasn't me! Where's your evidence?" demands Jack.
+
+[[Present nothing (you will lose if you present nothing)|Game Over]]
+
+
+:: It was Leonardo Greene - the guest! {"position":"6850,1100","size":"100,100"}
+
+
+
+:: It was Luis McMillan - the chef! {"position":"6975,950","size":"100,100"}
+
+
+
+:: It was Patricia Curtis - the housekeeper! {"position":"7075,400","size":"100,100"}
+"It was... Patricia Curtis, the housekeeper!"
+
+Everyone gasps.
+
+"What do you mean? Where's your evidence?" demands Patricia.
+
+[[Present nothing (you will lose if you present nothing)|Game Over]]
+
+
+:: It was Rufus Wagner - the butler! {"position":"7150,600","size":"100,100"}
+"It was... Rufus Wagner, the butler!"
+
+Everyone gasps.
+
+"I beg your pardon? Where's this evidence that backs up your claim?" demands Rufus.
+
+(if:$testimony_butler_1 is 1)[ [[Present Rufus's testimony claiming he called the police]]]
+[[Present nothing (you will lose if you present nothing)|Game Over]]
+
+
+:: It was Selena Franco - Alvin's wife! {"position":"7125,775","size":"100,100"}
+"It was... Selena Franco, the victim's wife!"
+
+Everyone gasps.
+
+"What? Where's your evidence?" demands Selena.
+
+[[Present nothing (you will lose if you present nothing)|Game Over]]
 
 
 :: Jack1 {"position":"3525,550","size":"100,100"}
@@ -758,6 +971,67 @@ You step onto the ''Porch'', immediately greeted by the sound of rain pounding a
 "(text-colour:orange)[ [[Grand Foyer<-Follow me.]]]" he says.]
 
 
+:: Present Evidence {"position":"6225,500","size":"100,100"}
+You call everyone together.(if:$evidence_butler_sleeping is not 2)[ A police officer heads into the room followed by someone else, the butler of the house.]
+
+It's time to accuse someone. ''Who murdered Alvin Franco?''
+
+[[It was Alvin Franco - the victim!]]
+[[It was Selena Franco - Alvin's wife!]]
+[[It was Luis McMillan - the chef!]]
+[[It was Rufus Wagner - the butler!]]
+[[It was Patricia Curtis - the housekeeper!]]
+[[It was Leonardo Greene - the guest!]]
+[[It was Jack Farmer - the gardener!]]
+[[It was Benjamin McIntosh - Alvin's son!]]
+
+
+:: Present Rufus's testimony claiming he called the police {"position":"7350,450","size":"100,100"}
+"Rufus Wagner. When I spoke to you, you said that you called the police."
+
+"Yes, I faintly remember finding the body and calling the police..." admits Rufus.
+
+"Hey! Wait a minute, I found the body and called the police!" says Luis.
+
+Rufus looks confused.
+
+"Exactly. The butler must be lying then!"
+
+"Why would I lie, though? And anyway, what evidence do you have that I could have done it?" demands Rufus.
+
+(if:$evidence_court_kitchenknife to 1)[ [[Present the kitchen knife found in the victim.]]]
+[[Present nothing (you will lose if you present nothing)|Game Over]]
+
+
+:: Present the gun found in Alvin's room {"position":"6775,25","size":"100,100"}
+You present the gun.
+
+"This gun was found in Alvin's room. It proves it must have been Alvin!"
+
+Everyone looks confused.
+
+"Alvin wasn't killed by a gun, was he?" asks Selena.
+
+[[Uh... no (you will lose if you say this)|Game Over]]
+
+
+:: Present the kitchen knife found in the victim. {"position":"7575,450","size":"100,100"}
+
+
+
+:: Present the notes found in Alvin's room {"position":"6750,225","size":"100,100"}
+You present the notes.
+
+"There were notes found in Alvin's room. It seems he owes money to quite a few of you."
+
+Everyone looks slightly confused.
+
+"Wouldn't that make one of us the suspect?" asks Selena. "Do you have any more evidence to back this up?"
+
+(if:$evidence_alvin_gun > 0)[ [[Present the gun found in Alvin's room]]]
+[[Well... I don't really have any more evidence... (you will lose if you say this)|Game Over]]
+
+
 :: Print Time [Functions] {"position":"4150,2075","size":"100,100"}
 (print:$time_hr)(text-style:"blink")[:](print:$time_min) pm
 
@@ -766,7 +1040,7 @@ You step onto the ''Porch'', immediately greeted by the sound of rain pounding a
 (display:"Increase time by 1")
 (display:"Print Time")
 
-"I found the body in the Kitchen. It was such a surprise, I knocked over some utensils. I went to call the police, and that's the last thing I remember before you woke me up," says Rufus.
+"I found the body in the Kitchen. It was such a surprise, I knocked over some utensils. I went to call the police, and that's the last thing I remember before you woke me up," says Rufus.(set:$testimony_butler_1 to 1)
 
 [[Ballroom<-Stop Talking to Rufus Wagner]]
 
@@ -835,7 +1109,13 @@ You have analyzed the footprint mould for shoe print size.
 
 
 :: ShoePrintLibraryFootprint {"position":"3025,2775","size":"100,100"}
+ShoePrintLibraryFootprint
+You have analyzed the footprint mould from the library for shoe size.
 
+**Results:**
+- Shoe size: Size 12.
+
+[[Return to the Police Tent|ForensicAnalysis]]
 
 
 :: Staff Hallway #1 {"position":"3350,1425","size":"100,100"}
@@ -890,6 +1170,9 @@ You've just been called out to a crime scene of a murder scene. You have at an o
 
 (set:$evidence_parlor_winebottle to 0)
 (set:$evidence_parlor_rug to 0)
+
+(set:$testimony_butler_1 to 0)
+(set:$evidence_court_kitchenknife to 0)
 
 
 :: Talk to Benjamin Franco {"position":"4475,250","size":"100,100"}
@@ -983,28 +1266,59 @@ Selena Franco is Alvin's husband and Benjamin's mother.
 [[Selena3<-"Is there anyone you think could have done it?]]
 
 
-:: TraceAlvinNotes {"position":"4412.5,2650","size":"100,100"}
+:: TraceAlvinNotes {"position":"4425,2650","size":"100,100"}
+You have performed a trace analysis on the notes.
 
+**Results:**
+- No additional trace evidence found.
+
+[[Return to the Police Tent|ForensicAnalysis]]
 
 
 :: TraceBenDiary {"position":"3787.5,2650","size":"100,100"}
+You have performed a trace analysis on the diary.
 
+**Results:**
+- No additional trace evidence found.
+
+[[Return to the Police Tent|ForensicAnalysis]]
 
 
 :: TraceBenGloves {"position":"3662.5,2650","size":"100,100"}
+You have performed a trace analysis on the charred gloves.
 
+**Results:**
+- No additional trace evidence found.
+
+[[Return to the Police Tent|ForensicAnalysis]]
 
 
 :: TraceBloodSample {"position":"3412.5,2650","size":"100,100"}
+TraceBloodSample
+You have performed a trace analysis on the blood sample.
 
+**Results:**
+- No additional trace evidence found.
+
+[[Return to the Police Tent|ForensicAnalysis]]
 
 
 :: TraceButlerGloves {"position":"3912.5,2650","size":"100,100"}
+You have performed a trace analysis on the gloves.
+
+**Results:**
+- No additional trace evidence found.
+
+[[Return to the Police Tent|ForensicAnalysis]]
 
 
+:: TraceButlerPhone {"position":"4025,2650","size":"100,100"}
+You have performed a trace analysis on the phone.
 
-:: TraceButlerPhone {"position":"4037.5,2650","size":"100,100"}
+**Results:**
+- No additional trace evidence found.
 
+[[Return to the Police Tent|ForensicAnalysis]]
 
 
 :: TraceFootprint {"position":"2912.5,2650","size":"100,100"}
@@ -1017,7 +1331,12 @@ You have performed a trace analysis on the footprint mould.
 
 
 :: TraceFoyerPhone {"position":"4162.5,2650","size":"100,100"}
+You have performed a trace analysis on the phone.
 
+**Results:**
+- No additional trace evidence found.
+
+[[Return to the Police Tent|ForensicAnalysis]]
 
 
 :: TraceGlass {"position":"3287.5,2650","size":"100,100"}
@@ -1030,19 +1349,39 @@ You have performed a trace analysis on the glass shard.
 
 
 :: TraceGuestCigars {"position":"4537.5,2650","size":"100,100"}
+You have performed a trace analysis on the cigarette butts.
 
+**Results:**
+- No additional trace evidence found.
+
+[[Return to the Police Tent|ForensicAnalysis]]
 
 
 :: TraceGuestKnives {"position":"4662.5,2650","size":"100,100"}
+You have performed a trace analysis on the kitchen knives.
 
+**Results:**
+- No additional trace evidence found.
+
+[[Return to the Police Tent|ForensicAnalysis]]
 
 
 :: TraceGuestLighter {"position":"4787.5,2650","size":"100,100"}
+You have performed a trace analysis on the lighter.
 
+**Results:**
+- No additional trace evidence found.
+
+[[Return to the Police Tent|ForensicAnalysis]]
 
 
 :: TraceGun {"position":"4287.5,2650","size":"100,100"}
+You have performed a trace analysis on the gun.
 
+**Results:**
+- No additional trace evidence found.
+
+[[Return to the Police Tent|ForensicAnalysis]]
 
 
 :: TraceKnife {"position":"2787.5,2650","size":"100,100"}
@@ -1064,11 +1403,21 @@ You have performed a trace analysis on the lamp cord.
 
 
 :: TraceLibraryFootprint {"position":"3537.5,2650","size":"100,100"}
+You have performed a trace analysis on the footprint mould.
 
+**Results:**
+- No additional trace evidence found.
+
+[[Return to the Police Tent|ForensicAnalysis]]
 
 
 :: TraceWineBottle {"position":"4912.5,2650","size":"100,100"}
+You have performed a trace analysis on the wine bottle.
 
+**Results:**
+- No additional trace evidence found.
+
+[[Return to the Police Tent|ForensicAnalysis]]
 
 
 :: TraceWok {"position":"3037.5,2650","size":"100,100"}
