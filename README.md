@@ -14,3 +14,7 @@ Important Information
 - Head outside to the Police Tent to do some analysis!
 - You may need to take notes, the game won't do that for you!
 - You can save your game at the Porch, but this is still experimental. There is also only one save slot. The save is saved in your browser's cookies.
+
+## Gallery
+![](https://github.com/BingleyPro/murder-manor/blob/main/gallery/image1.jpg?raw=true)
+![](https://github.com/BingleyPro/murder-manor/blob/main/gallery/image2.jpg?raw=true)
